@@ -40,6 +40,9 @@ Options All -Indexes
 <IfModule !mod_rewrite.c>
     # If we don't have mod_rewrite installed, all 404's
     # can be sent to index.php, and everything works as normal.
+    RewriteEngine on
+    RewriteRule  ^$ public/    [L]
+    RewriteRule  (.*) public/$1 [L]
     ErrorDocument 404 index.php
 </IfModule>
 

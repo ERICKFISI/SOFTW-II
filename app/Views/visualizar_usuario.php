@@ -40,15 +40,20 @@
                         <tr>
                           <th>Id</th>
                           <th>Nombre</th>
-                          <th>Nombre Usuario/DNI</th>
+                          <th>Nombre Usuario</th>
                           <th>Teléfono/Celular</th>
-                          <th>Perfiles</th>
+                          <th>Perfil</th>
+                          <th>DNI</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
-
-
                       <tbody>
+                        <td> <?php  $idusuario ?> </td>
+                        <td> <?php  $nombre ?> </td>
+                        <td> <?php  $nombreusuario ?> </td>
+                        <td> <?php  $telefono ?> </td>
+                        <td> <?php  $nombreperfil ?> </td>
+                        <td> <?php  $dni ?> </td>  
                       </tbody>
                     </table>
                   </div>
