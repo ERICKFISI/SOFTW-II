@@ -13,7 +13,6 @@
             <!-- /top navigation -->
 
             <!-- page content -->
-               
                 <div class="right_col" role="main">
                 <div class="">
                     <div class="page-title">
@@ -42,7 +41,7 @@
                                         <div class="form-group row">
                                             <label class="control-label col-md-3 col-sm-3 ">Contraseña</label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="password" class="form-control" name="contrasena" id="contrasena" required>
+                                                <input type="password" class="form-control" name="contrasena" id="contrasena" maxlength="8" required oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                             </div>
                                         </div>
                                         
@@ -56,14 +55,14 @@
                                         <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">DNI </label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="text" class="form-control" name="dni" id="dni" required>
+                                                <input type="number" class="form-control" name="dni" id="dni" maxlength="8" required oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
                                             </div>
                                         </div>
 
                                         <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Telefono</label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="number" class="form-control" name="telefono" id="telefono" required>
+                                                <input type="number" class="form-control" name="telefono" id="telefono" maxlength="9" required oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                             </div>
                                         </div>
                                         
