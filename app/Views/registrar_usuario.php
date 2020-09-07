@@ -13,145 +13,96 @@
             <!-- /top navigation -->
 
             <!-- page content -->
-            <div class="right_col" role="main">
+               
+                <div class="right_col" role="main">
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Registrar usuario</h3>
+                            <h3>Registrar Usuario</h3>
                         </div>
 
-                        <div class="title_right">
-                            <div class="col-md-5 col-sm-5 form-group pull-right top_search">
-                            </div>
-                        </div>
+                        
                     </div>
-                    <div class="clearfix"></div>
 
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
+                        <div class="col-md-3-6 ">
                             <div class="x_panel">
-                                <div class="x_title">
-                                    <!--<h2>Form validation <small>sub title</small></h2>-->
-
-                                    <div class="clearfix"></div>
-                                </div>
+                                
                                 <div class="x_content">
-                                    <form class="" action="registrar.php" method="post" novalidate>
-                                        <span class="section">Información personal</span>
-					                       <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">DNI<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="tel" class='tel' name="dni" required='required' data-validate-length-range="8" /></div>
-                                        </div>
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Nombre<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="nombre" placeholder="ex. John f. Kennedy" required="required" />
+                                    <br />
+                                    <form class="form-horizontal form-label-left h6" action="../usuario/create" method="POST">
+
+                                        <div class="form-group row ">
+                                            <label class="control-label col-md-3 col-sm-3 ">Nombre Usuario
+                                            </label>
+                                            <div class="col-md-9 col-sm-9 ">
+                                                <input type="text" class="form-control" name="nombreusuario" required>
                                             </div>
                                         </div>
-					<!--
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Occupation<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" class='optional' name="occupation" data-validate-length-range="5,15" type="text" /></div>
-                                        </div>
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">email<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" name="email" class='email' required="required" type="email" /></div>
-                                        </div>
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Confirm email address<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="email" class='email' name="confirm_email" data-validate-linked='email' required='required' /></div>
-                                        </div>
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Number <span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="number" class='number' name="number" data-validate-minmax="10,100" required='required'></div>
-                                        </div>
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Date<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" class='date' type="date" name="date" required='required'></div>
-                                        </div>
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Time<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" class='time' type="time" name="time" required='required'></div>
-                                       </div>
-                                        -->
-                        <div class="field item form-group">
-					  <label class="col-form-label col-md-3 col-sm-3  label-align"> Contraseña <span class="required">*</span></label>
-						 <div class="col-md-6 col-sm-6">
-							 <input class="form-control" type="password" id="password1" name="contra" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}" title="Minimum 8 Characters Including An Upper And Lower Case Letter, A Number And A Unique Character" required />
-
-							 <span style="position: absolute;right:15px;top:7px;" onclick="hideshow()" >
-								 <i id="slash" class="fa fa-eye-slash"></i>
-								 <i id="eye" class="fa fa-eye"></i>
-							 </span>
-						 </div>
-					 </div>
-					 <!--
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Repetir la contraseÃ±a<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="password" name="contra2" data-validate-linked='password' required='required' /></div>
-                                        </div>
-					-->
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">Teléfono<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <input class="form-control" type="tel" class='tel' name="telefono" required='required' data-validate-length-range="8,20" /></div>
-                                        </div>
-					<div class="form-group row">
-						<label class="col-md-3 col-sm-3  control-label">Perfiles
-							<br>
-							<small class="text-navy">Seleccione los perfiles</small>
-						</label>
-
-						<div class="col-md-9 col-sm-9 ">
-						    
-							<div class="form-group">
-                                <?php //foreach ($result as $registro):?>
-                                <div class="form-check">
-								<label>
-									<input type="checkbox" id="" name="perf[]" value="<?php //echo $registro['idperfil']; ?>"> <?php //echo $registro['descripcion']; ?>
-								</label>
-                                </div>
-                                <?//php endforeach;?>
-							</div>
-							
-							<!--
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" value=""> Option two. select more than one options
-								</label>
-							</div>
-							-->
-						</div>
-					</div>
-					
-					<!--
-                                        <div class="field item form-group">
-                                            <label class="col-form-label col-md-3 col-sm-3  label-align">message<span class="required">*</span></label>
-                                            <div class="col-md-6 col-sm-6">
-                                                <textarea required="required" name='message'></textarea></div>
-                                        </div>
-					-->
-                                        <div class="ln_solid">
-                                            <div class="form-group">
-                                                <div class="col-md-6 offset-md-3">
-                                                    <a  class="btn btn-primary" href="visualizar_usuario.php">Cancelar</a>               
-                                                    <button type='submit' onclick="return alert('La operación se guardó con éxito');" class="btn btn-success">Guardar</button>
-                                                </div>
+                                        
+                                        <div class="form-group row">
+                                            <label class="control-label col-md-3 col-sm-3 ">Contraseña</label>
+                                            <div class="col-md-9 col-sm-9 ">
+                                                <input type="password" class="form-control" name="contrasena" id="contrasena" required>
                                             </div>
                                         </div>
+                                        
+                                        <div class="form-group row ">
+                                            <label class="control-label col-md-3 col-sm-3 ">Nombre </label>
+                                            <div class="col-md-9 col-sm-9 ">
+                                                <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row ">
+                                            <label class="control-label col-md-3 col-sm-3 ">DNI </label>
+                                            <div class="col-md-9 col-sm-9 ">
+                                                <input type="text" class="form-control" name="dni" id="dni" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row ">
+                                            <label class="control-label col-md-3 col-sm-3 ">Telefono</label>
+                                            <div class="col-md-9 col-sm-9 ">
+                                                <input type="number" class="form-control" name="telefono" id="telefono" required>
+                                            </div>
+                                        </div>
+                                        
+                                        <br>
+
+                                     <div class="form-group row">
+                                        <label class="control-label col-md-3 col-sm-3 ">Perfil</label>
+                                          <div class="col-md-9 col-sm-9 ">
+                                            <select class="form-control" name="idperfil" id="idperfil" required>
+                                                          
+                                                <?php foreach ($perfiles as $perfil){   
+                                                    $nombreperfil = $perfil['nombre'];
+                                                    $idperfil = $perfil['idperfil']; ?>
+
+                                                <option value="<?php echo $idperfil?>"> <?php echo $nombreperfil ?> 
+                                                </option> <?php } ?>
+
+                                            </select>
+                                            </div>
+                                        </div>
+
+                                        
+                                        
+
+                                        <div class="ln_solid"></div>
+                                        <div class="form-group">
+                                            <div class="col-md-9 col-sm-9  offset-md-3">
+                                                <a href="" class="btn btn-primary">Cancelar</a>
+                                                <button type="submit" class="btn btn-success">Guardar</button>
+                                            </div>
+                                        </div>
+
                                     </form>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </div> 
+                        </div> 
+
+
+                        
                 </div>
             </div>
             <!-- /page content -->

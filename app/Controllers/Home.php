@@ -1,5 +1,6 @@
-<?php namespace App\Controllers;
-
+<?php 
+namespace App\Controllers;
+use App\Controllers\perfil;
 class Home extends BaseController
 {
 	public function index()
@@ -7,10 +8,16 @@ class Home extends BaseController
 		echo view('header');
 		echo view('login');
 	}
-	public function hola(){
+	public function registrarusuario(){
+		
 		echo view('header');
 		echo view('menu');
-		echo view('registrar_usuario');
+
+		$perfiles = new perfil();
+		$perfiles = $perfiles->index();
+		$data['perfiles'] = $perfiles;
+		echo view('registrar_usuario',$data);
+
 		echo view('footer');
 	}
 	//--------------------------------------------------------------------
