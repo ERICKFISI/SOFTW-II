@@ -1,41 +1,63 @@
 <?php 
 
 namespace App\Controllers;
-use CodeIgniter\Controller;
 use App\Models\UsuarioModel;
 
 
-class Usuario extends Controller{
+class Usuario extends Perfil{
 
-	public function index(){
+	/*public function index(){
 
-	}
+	}*/
 
 	public function create(){
 		
-		$usuario_model = new UsuarioModel();
-		$id_perfil = $_POST['idperfil']; 		
-		$existe_perfil = $perfil->validarPerfil($id_perfil);
+		if(isset($_POST['idperfil'])){   #RECEPCION FORULARIO
+			
+			$perfil = new Perfil();
 
-		$data = array('nombreusuario' => $_POST['nombreusuario'],
+			$usuario_model = new UsuarioModel();
+			$id_perfil = $_POST['idperfil'];	
+			$existe_perfil = $perfil->validarPerfil($id_perfil);
+
+			$data = array('nombreusuario' => $_POST['nombreusuario'], 
 					  'nombre' => $_POST['nombre'],
 			          'contrasena' => $_POST['contrasena'],
 			          'dni' => $_POST['dni'],
 			          'telefono' => $_POST['telefono'],
 			          'idperfil' => $_POST['idperfil']);
 				
+			$mensaje;
+
+			if($existe_perfil == 0){        #perfil no encontrado
+				$mensaje = 'Perfil invalido';
+			}
+
 			
-		$mensaje;
-		if($existe_perfil == 0){
-			$mensaje = 'Perfil invalido';
-		}
+			/*$nombre_usuario = $_POST['nombreusuario'];
+			$usuario = $usuario_model->where('nombreusuario',$nombre_usuario)->find();
 
-		$usuario = $usuario_model->insert($data);
-		$mensaje = 'Usuario añadido';
+			if(is_null($usuario)){*/
+				
+				#perfil encontrado
+				$usuario = $usuario_model->insert($data);
+				$mensaje = 'Usuario añadido';
 		
-		echo $mensaje;
+			#}
+			/*else{
+				#nombre de usuario no disponible
+				$mensaje = 'Ya existe una cuenta de usuario llamada '.$_POST['nombreusuario'];
+			}*/
+			
+			return $mensaje;
 
-		 return $mensaje;
+		}#fin IF
+
+		else{
+			$data = 'ERROR-404';
+			return $data;
+
+		}#fin ELSE
 	} 
 			
-}
+}#fin CLASS
