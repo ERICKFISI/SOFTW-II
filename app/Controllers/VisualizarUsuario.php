@@ -3,7 +3,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Controllers\perfil;
 use App\Models\UsuarioModel;
-class VisualizarUsuario extends Controller
+class VisualizarUsuario extends BaseController
 {
 	public function index()
 	{
@@ -44,7 +44,7 @@ class VisualizarUsuario extends Controller
 			'idperfil' => $request -> getPost('idperfil'),
 		];
 		$model -> update($id, $datos);
-		return redirect()->to( base_url().'/index.php/VisualizarUsuario');
+		return redirect()->to( base_url().'/index.php/VisualizarUsuario'); 
 	}
 	public function delete( $id )
 	{	
