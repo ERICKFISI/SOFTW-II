@@ -17,7 +17,7 @@
           <div class="">
             <div class="title">
               <div class="col-12">
-                <h3>Visualizar Usuarios</small></h3>
+                <h3>Visualizar Usuario</small></h3>
               </div>
             </div>
 
@@ -28,6 +28,7 @@
                 <div class="x_panel ">
                   <div class="x_title">
                     <a href="<?= base_url()."/index.php/home/registrarusuario";  ?>" class="btn btn-success">Registrar Usuario</a>
+                    <a href="<?= base_url()."/index.php/visualizarperfil";  ?>" class="btn btn-info">Visualizar Perfil</a>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -63,7 +64,7 @@
                             <div class="col-12 mx-auto text-align px-0">
                             <a href="<?= base_url()."/index.php/visualizarusuario/getupdate/".$value["idusuario"];?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
                             <div class="col-12 mx-auto text-align px-0" >
-                            <a href="<?= base_url()."/index.php/visualizarusuario/delete/".$value['idusuario'];?>"  onclick="return confirm('¿Está seguro que desea eliminar este usuario?');" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
+                            <a onclick="return alerta();" href="<?= base_url()."/index.php/visualizarusuario/delete/".$value['idusuario'];?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                             </div>
                             </div></td> 
                         </tr>  
@@ -89,3 +90,17 @@
         <!-- /footer content -->
       </div>
     </div>
+        <script type="text/javascript">
+      function alerta()
+      {
+        var m = confirm("¿Está seguro que desea eliminar este usuario?");
+        if (m) 
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+    </script>

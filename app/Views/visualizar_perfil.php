@@ -28,6 +28,7 @@
                 <div class="x_panel ">
                   <div class="x_title">
                     <a href="form_validation.php" class="btn btn-success">Registrar Perfil</a>
+                    <a href="<?= base_url()."/index.php/visualizarusuario";  ?>" class="btn btn-info">Visualizar Usuario</a>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">

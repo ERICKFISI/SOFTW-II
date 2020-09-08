@@ -113,7 +113,7 @@
                                         <div class="form-group">
                                             <div class="col-md-9 col-sm-9  offset-md-3">
                                                 <a href="<?= base_url()."/index.php/visualizarusuario";?>" class="btn btn-primary">Cancelar</a>
-                                                <button type="submit" class="btn btn-success">Guardar</button>
+                                                <button type="submit" class="btn btn-success" onclick=" return alerta();">Guardar</button>
                                             </div>
                                         </div>
 
@@ -164,6 +164,20 @@
 
 		}
 	</script>
+        <script type="text/javascript">
+      function alerta()
+      {
+        var m = confirm("¿Está seguro que desea modificar este usuario?");
+        if (m) 
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+    </script>
 
     <script>
         // initialize a validator instance from the "FormValidator" constructor.
