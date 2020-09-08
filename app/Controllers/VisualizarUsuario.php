@@ -64,3 +64,4 @@ class VisualizarUsuario extends BaseController {
     }
 
 }
+

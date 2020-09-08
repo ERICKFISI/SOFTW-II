@@ -142,6 +142,25 @@ CRITICAL - 2020-09-08 01:19:00 --> session_start(): A session had already been s
 #4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+<<<<<<< HEAD
+CRITICAL - 2020-09-08 07:05:54 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\sistema.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('sistema', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(15): view('sistema')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-08 07:12:41 --> Undefined index: nombreusuario
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\sistema.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('sistema', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(13): view('sistema')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Sistema->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sistema))
+=======
 CRITICAL - 2020-09-08 05:16:23 --> Class 'App\Controllers\DB' not found
 #0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(21): App\Controllers\Sistema->data_menus('1')
 #1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): App\Controllers\Sistema->Menu()
@@ -383,6 +402,17 @@ CRITICAL - 2020-09-08 06:43:02 --> Undefined variable: menu
 #3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Home.php(14): view('menu')
 #4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Home->registrarusuario()
 #5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+>>>>>>> 2b6f70b73f7ec81cefe0f2f026aa70b9ccf52ff1
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-08 07:51:41 --> Undefined variable: menu
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarUsuario.php(15): view('menu')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarUsuario->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarUsuario))
 #6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
