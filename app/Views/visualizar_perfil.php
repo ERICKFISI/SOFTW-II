@@ -27,7 +27,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel ">
                   <div class="x_title">
-                    <a href="form_validation.php" class="btn btn-success">Registrar Perfil</a>
+                    <a href="<?= base_url()."/index.php/registrarperfil";  ?>" class="btn btn-success">Registrar Perfil</a>
                     <a href="<?= base_url()."/index.php/visualizarusuario";  ?>" class="btn btn-info">Visualizar Usuario</a>
                     <div class="clearfix"></div>
                   </div>
@@ -54,7 +54,7 @@
                         <td> <?= $value[ "nombreperfil" ] ?> </td>
                         <td> <?php foreach ($Resultado2 as $key2 => $value2 ) 
                         { 
-                          if ( $value2["idperfil"] == $value["idperfil"] ) {?> 
+                          if ( $value2["idperfil2"] == $value["idperfil"] ) {?> 
                           <li> <?= $value2["nombremodulo"];?> </li> <?php }} ?>
                       </td>
                         <td>

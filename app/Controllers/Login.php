@@ -36,6 +36,8 @@ class Login extends BaseController {
         } else {
             die("<script>window.location='" . base_url() . "';</script>");
         }
+        // Si inicia sesion ¿a donde se le redigira y como?
+        return redirect()->to( base_url().'/index.php/VisualizarUsuario');
         // Si inicia sesion ï¿½a donde se le redigira y como?
     }
 
