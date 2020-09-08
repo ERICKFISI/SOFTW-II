@@ -28,5 +28,6 @@ class Login extends Controller
             return;
         }
         // Si inicia sesion ¿a donde se le redigira y como?
+        return redirect()->to( base_url().'/index.php/VisualizarUsuario');
     }
 }
