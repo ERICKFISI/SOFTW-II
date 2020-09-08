@@ -15,7 +15,7 @@ class VisualizarPerfil extends BaseController
 		$datos["Resultado"] = $model -> getResultArray();
 		$datos["Resultado2"] = $model2 -> getResultArray();
 		echo view( 'header' );
-		echo view( 'menu' );
+		echo view( 'menu',$data );
 		echo view( 'visualizar_perfil', $datos );
 		echo view( 'footer' );
 	}
