@@ -27,7 +27,7 @@
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel ">
                   <div class="x_title">
-                    <a href="form_validation.php" class="btn btn-success">Registrar Usuario</a>
+                    <a href="<?= base_url()."/index.php/home/registrarusuario";  ?>" class="btn btn-success">Registrar Usuario</a>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -61,7 +61,7 @@
                         <td>
                           <div class="col-12 mx-auto px-0"> 
                             <div class="col-12 mx-auto text-align px-0">
-                            <a href="<?= base_url()."/index.php/visualizarusuario/update/".$value["idusuario"];?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
+                            <a href="<?= base_url()."/index.php/visualizarusuario/getupdate/".$value["idusuario"];?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
                             <div class="col-12 mx-auto text-align px-0" >
                             <a href="<?= base_url()."/index.php/visualizarusuario/delete/".$value['idusuario'];?>"  onclick="return confirm('¿Está seguro que desea eliminar este usuario?');" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                             </div>

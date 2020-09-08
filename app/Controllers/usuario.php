@@ -49,13 +49,13 @@ class Usuario extends Perfil{
 				$mensaje = 'Ya existe una cuenta de usuario llamada '.$_POST['nombreusuario'];
 			}*/
 			
-			return $mensaje;
+			return redirect()->to( base_url().'/index.php/VisualizarUsuario'); 
 
 		}#fin IF
 
 		else{
 			$data = 'ERROR-404';
-			return $data;
+			return redirect()->to( base_url().'/index.php/VisualizarUsuario'); 
 
 		}#fin ELSE
 	} 

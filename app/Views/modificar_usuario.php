@@ -18,7 +18,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Registrar Usuario</h3>
+                            <h3>Modificar Usuario</h3>
                         </div>
 
                         
@@ -29,41 +29,40 @@
                                 
                                 <div class="x_content">
                                     <br />
-                                    <form class="form-horizontal form-label-left h6" action="../usuario/create" method="POST">
-
+                                    <?= form_open('visualizarusuario/update/'.$usuarios['idusuario'], 'class="form-horizontal form-label-left h6" ' ); ?>
                                         <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Nombre Usuario
                                             </label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="text" class="form-control" name="nombreusuario" required>
+                                                <?= form_input( ['type' => 'text', 'class' => 'form-control','value' => $usuarios['nombreusuario'] ,'name' => 'nombreusuario','required'] ); ?>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group row">
                                             <label class="control-label col-md-3 col-sm-3 ">Contraseña</label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="password" class="form-control" name="contrasena" id="contrasena" required>
+                                                <?= form_input( ['type' => 'password', 'class' => 'form-control', 'value' => $usuarios['contrasena'] ,'name' => 'contrasena','required'] ); ?>
                                             </div>
                                         </div>
                                         
                                         <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Nombre </label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="text" class="form-control" name="nombre" id="nombre" required>
+                                                <?= form_input( ['type' => 'text', 'class' => 'form-control','value' => $usuarios['nombre'] , 'name' => 'nombre', 'id'=> 'nombre' ,'required'] ); ?>
                                             </div>
                                         </div>
 
                                         <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">DNI </label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="text" class="form-control" name="dni" id="dni" required>
+                                                <?= form_input( ['type' => 'text', 'class' => 'form-control','value' => $usuarios['dni'] ,'name' => 'dni', 'id' => 'dni' ,'required'] ); ?>
                                             </div>
                                         </div>
 
                                         <div class="form-group row ">
                                             <label class="control-label col-md-3 col-sm-3 ">Telefono</label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="number" class="form-control" name="telefono" id="telefono" required>
+                                                <?= form_input( ['type' => 'number', 'class' => 'form-control', 'value' => $usuarios['telefono'] , 'name' => 'telefono', 'id' => 'telefono','required'] ); ?>
                                             </div>
                                         </div>
                                         
@@ -72,14 +71,36 @@
                                      <div class="form-group row">
                                         <label class="control-label col-md-3 col-sm-3 ">Perfil</label>
                                           <div class="col-md-9 col-sm-9 ">
-                                            <select class="form-control" name="idperfil" id="idperfil" required>
+                                            <?php 
+                                            $datos1 = [ 
+                                                'name' => 'idperfil',
+                                                'class' => 'form-control',
+                                                'id' => 'idperfil',
+                                                'required'
+                                             ];
+                                             $c = 1;
+                                            foreach ($perfiles as $perfil)
+                                            {
+                                                if ( $c == 1 ) 
+                                                {
+                                                    $datos2['x'] = [ $perfil['idperfil'] => $perfil['nombre'] ];
+                                                    ++$c;
+                                                }
+                                                else
+                                                {
+                                                    $a = [ $perfil['idperfil'] => $perfil['nombre'] ];
+                                                    $datos2['x'] = array_merge($datos2['x'],$a);
+                                                }
+                                                
+                                            }
+                                            echo form_dropdown( $datos1, $datos2['x'],$usuarios['idperfil'] ); ?>
                                                           
-                                                <?php foreach ($perfiles as $perfil){   
+                                                <?php /*foreach ($perfiles as $perfil){   
                                                     $nombreperfil = $perfil['nombre'];
                                                     $idperfil = $perfil['idperfil']; ?>
 
                                                 <option value="<?php echo $idperfil?>"> <?php echo $nombreperfil ?> 
-                                                </option> <?php } ?>
+                                                </option> <?php } */?>
 
                                             </select>
                                             </div>
@@ -91,7 +112,7 @@
                                         <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class="col-md-9 col-sm-9  offset-md-3">
-                                                <a href= "<?= base_url()."/index.php/visualizarusuario" ?>" class="btn btn-primary">Cancelar</a>
+                                                <a href="<?= base_url()."/index.php/visualizarusuario";?>" class="btn btn-primary">Cancelar</a>
                                                 <button type="submit" class="btn btn-success">Guardar</button>
                                             </div>
                                         </div>
@@ -120,8 +141,8 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="public/vendors/validator/multifield.js"></script>
-    <script src="public/vendors/validator/validator.js"></script>
+    <script src= "<?= base_url()."/public/vendors/validator/multifield.js" ?>"></script>
+    <script src= "<?= base_url()."/public/vendors/validator/validator.js" ?>"></script>
     
     <!-- Javascript functions	-->
 	<script>
