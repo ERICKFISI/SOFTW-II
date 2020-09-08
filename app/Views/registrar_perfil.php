@@ -17,7 +17,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Registrar Usuario</h3>
+                            <h3>Registrar Perfil</h3>
                         </div>
 
                         
@@ -28,16 +28,19 @@
                                 
                                 <div class="x_content">
                                     <br />
-                                    <form class="form-horizontal form-label-left h6" action="../usuario/create" method="POST">
+                                    <form class="form-horizontal form-label-left h6" action="registrarperfil/crear" method="POST">
 
                                         <div class="form-group row ">
-                                            <label class="control-label col-md-3 col-sm-3 ">Nombre Usuario
+                                            <label class="control-label col-md-3 col-sm-3 ">Nombre del perfil
                                             </label>
                                             <div class="col-md-9 col-sm-9 ">
-                                                <input type="text" class="form-control" name="nombreusuario" required>
+                                                <input type="text" class="form-control" name="nombreperfil" required>
                                             </div>
                                         </div>
-                                        
+
+
+
+                                        <!--
                                         <div class="form-group row">
                                             <label class="control-label col-md-3 col-sm-3 ">Contraseña</label>
                                             <div class="col-md-9 col-sm-9 ">
@@ -65,32 +68,14 @@
                                                 <input type="number" class="form-control" name="telefono" id="telefono" maxlength="9" required oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                             </div>
                                         </div>
-                                        
+                                         -->
                                         <br>
 
-                                     <div class="form-group row">
-                                        <label class="control-label col-md-3 col-sm-3 ">Perfil</label>
-                                          <div class="col-md-9 col-sm-9 ">
-                                            <select class="form-control" name="idperfil" id="idperfil" required>
-                                                          
-                                                <?php foreach ($perfiles as $perfil){   
-                                                    $nombreperfil = $perfil['nombre'];
-                                                    $idperfil = $perfil['idperfil']; ?>
-
-                                                <option value="<?php echo $idperfil?>"> <?php echo $nombreperfil ?> 
-                                                </option> <?php } ?>
-
-                                            </select>
-                                            </div>
-                                        </div>
-
-                                        
-                                        
 
                                         <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class="col-md-9 col-sm-9  offset-md-3">
-                                                <a href= "<?= base_url()."/index.php/visualizarusuario" ?>" class="btn btn-primary">Cancelar</a>
+                                                <a href="" class="btn btn-primary">Cancelar</a>
                                                 <button type="submit" class="btn btn-success">Guardar</button>
                                             </div>
                                         </div>

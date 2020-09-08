@@ -31,23 +31,35 @@ class Usuario extends Perfil{
 
 			if($existe_perfil == 0){        #perfil no encontrado
 				$mensaje = 'Perfil invalido';
+				return $mensaje; die;
 			}
 
-			
-			/*$nombre_usuario = $_POST['nombreusuario'];
-			$usuario = $usuario_model->where('nombreusuario',$nombre_usuario)->find();
+			$contar = new Usuario();
 
-			if(is_null($usuario)){*/
-				
-				#perfil encontrado
-				$usuario = $usuario_model->insert($data);
-				$mensaje = 'Usuario añadido';
-		
-			#}
-			/*else{
+			$contar_dni = $contar->contar($_POST['dni'],8);
+			if($contar_dni['valor'] == false){
+				$mensaje = 'El dni '.$contar_dni['mensaje']; /* Tamaño inadecuado*/
+				return $mensaje; die;
+			}
+
+			$contar_telefono = $contar->contar($_POST['telefono'],9);
+			if($contar_telefono['valor'] == false){
+				$mensaje = 'El telefono '.$contar_telefono['mensaje']; /* Tamaño inadecuado*/
+				return $mensaje; die;
+			}
+
+			$nombre_usuario = $_POST['nombreusuario'];
+			$usuario = $usuario_model->where('nombreusuario', $nombre_usuario,'estado',1)->find();
+
+			if(!empty($usuario)){
 				#nombre de usuario no disponible
 				$mensaje = 'Ya existe una cuenta de usuario llamada '.$_POST['nombreusuario'];
-			}*/
+			}
+			else{
+				#nombre de usuario disponible
+				$usuario = $usuario_model->insert($data);
+				$mensaje = 'Usuario añadido';
+			}
 			
 			return redirect()->to( base_url().'/index.php/VisualizarUsuario'); 
 
@@ -59,5 +71,18 @@ class Usuario extends Perfil{
 
 		}#fin ELSE
 	} 
+
+	private function contar($input,$max_length){
+		$length = strlen($input);
+		$data;
+
+		if($length != $max_length){
+			$data = array('valor' => false, 'mensaje' => ' debe tener un tamaño de '.$max_length.		  ' caracteres');
+		}
+		else{
+			$data = array('valor' => true);
+		}
+		return $data;
+	}
 			
 }#fin CLASS
