@@ -54,7 +54,7 @@
                         <td> <?= $value[ "nombreperfil" ] ?> </td>
                         <td> <?php foreach ($Resultado2 as $key2 => $value2 ) 
                         { 
-                          if ( $value2["idperfil"] == $value["idperfil"] ) {?> 
+                          if ( $value2["idperfil2"] == $value["idperfil"] ) {?> 
                           <li> <?= $value2["nombremodulo"];?> </li> <?php }} ?>
                       </td>
                         <td>
