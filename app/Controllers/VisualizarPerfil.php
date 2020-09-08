@@ -2,10 +2,13 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 
-class VisualizarPerfil extends Controller
+class VisualizarPerfil extends BaseController
 {
 	public function index()
 	{
+                    $data = array(
+            'menu' => $this->Menu()
+        );
 		$db = \Config\Database::connect();	
 		$model = $db -> query('SELECT perf.idperfil, perf.nombre AS nombreperfil FROM perfil AS perf INNER JOIN permiso AS perm ON perf.idperfil = perm.idperfil INNER JOIN modulo AS m ON m.idmodulo = perm.idmodulo WHERE perm.estado = 1 AND perf.estado = 1 AND m.estado = 1 GROUP BY perf.idperfil, nombreperfil');
 		$model2 = $db -> query('SELECT perf.idperfil AS idperfil2 ,  m.nombre AS nombremodulo FROM perfil AS perf INNER JOIN permiso AS perm ON perf.idperfil = perm.idperfil INNER JOIN modulo AS m ON m.idmodulo = perm.idmodulo WHERE perm.estado = 1 AND perf.estado = 1 AND m.estado = 1');
