@@ -391,6 +391,7 @@ CRITICAL - 2020-09-07 02:30:36 --> syntax error, unexpected 'endforeach' (T_ENDF
 #4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #6 {main}
+<<<<<<< HEAD
 CRITICAL - 2020-09-07 13:59:24 --> Undefined variable: perfiles
 #0 C:\xampp\htdocs\motorepuestosjc\app\Views\registrar_usuario.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 77, Array)
 #1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
@@ -909,6 +910,12 @@ CRITICAL - 2020-09-07 21:57:09 --> syntax error, unexpected 'echo' (T_ECHO), exp
 #0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('Login')
 #1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('Login')
 #2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+=======
+CRITICAL - 2020-09-07 23:49:55 --> Undefined index: usuario
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+>>>>>>> dbe04ad606c808f680b43dde47cc5c534a0103d6
 #3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}

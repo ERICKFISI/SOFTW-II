@@ -70,7 +70,7 @@
               <div class="menu_section">
                 <h3></h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Cerrar Sesión <span class="fa"></span></a>
+                    <li><a href="<?php echo base_url()?>/login/cerrar_session"><i class="fa fa-bug"></i> Cerrar Sesión <span class="fa"></span></a>
                   </li>
                     </ul>
                   </li>                  
