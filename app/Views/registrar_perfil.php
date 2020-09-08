@@ -37,9 +37,13 @@
                                                 <input type="text" class="form-control" name="nombreperfil" required>
                                             </div>
                                         </div>
-
-
-
+					<?php foreach ($registros as $registro):?>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" value="<?php echo $registro->idmodulo;?>" id="<?php echo $registro->idmodulo;?>" name="checks[]"><?php echo $registro->nombre; ?>
+						</label>
+					</div>
+					<?php endforeach;?>
                                         <!--
                                         <div class="form-group row">
                                             <label class="control-label col-md-3 col-sm-3 ">Contraseña</label>
