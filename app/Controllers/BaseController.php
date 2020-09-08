@@ -103,7 +103,7 @@ class BaseController extends Controller {
                 $m = $m . ' <ul class="nav child_menu">';
                 $sub = $value['enlaces'];
                 foreach ($sub as $key => $value2) {
-                    $m = $m . "<li><a onclick=javascript:cargar_page('" . $value2['url'] . "');   style='cursor:pointer;'>" . $value2['texto'] . "</a></li>";
+                    $m = $m . "<li><a href= ".base_url()."".$value2['url']."   style='cursor:pointer;'>" . $value2['texto'] . "</a></li>";
                 }
                 $m = $m . '</ul>';
                 $m = $m . '</li>';
