@@ -1,0 +1,144 @@
+CRITICAL - 2020-09-08 00:24:46 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-09-08 00:29:23 --> Trying to get property 'nombreusuario' of non-object
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 00:30:02 --> Trying to get property 'nombreusuario' of non-object
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 00:31:06 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(21): count(NULL)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-08 00:57:31 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\sistema.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('sistema', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): view('sistema')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-08 00:57:47 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\sistema.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('sistema', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): view('sistema')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-08 00:58:29 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\sistema.php(2): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 2, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('sistema', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): view('sistema')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-08 00:59:05 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 10, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:00 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:01 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:02 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:03 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:03 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:04 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:05 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:01:06 --> Undefined variable: _SESSION
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(11): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 11, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\sistema->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\sistema))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:12:28 --> Use of undefined constant nombre - assumed 'nombre' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-08 01:18:09 --> session_destroy(): Trying to destroy uninitialized session
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy...', 'C:\\xampp\\htdocs...', 44, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(44): session_destroy()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->cerrar_session()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-08 01:19:00 --> session_start(): A session had already been started - ignoring
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'session_start()...', 'C:\\xampp\\htdocs...', 27, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(27): session_start()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
