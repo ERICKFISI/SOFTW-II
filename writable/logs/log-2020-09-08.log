@@ -506,6 +506,7 @@ CRITICAL - 2020-09-08 07:55:12 --> Undefined variable: menu
 #6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2020-09-08 08:11:33 --> Table 'motorepuestosjc.view_menupadres' doesn't exist
 #0 C:\xampp\htdocs\motorepuestosjc\system\Database\MySQLi\Connection.php(331): mysqli->query('SELECT * FROM v...')
 #1 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
@@ -519,6 +520,9 @@ CRITICAL - 2020-09-08 08:11:33 --> Table 'motorepuestosjc.view_menupadres' doesn
 #9 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #10 {main}
 CRITICAL - 2020-09-08 08:16:58 --> Undefined variable: menu
+=======
+CRITICAL - 2020-09-08 08:17:59 --> Undefined variable: menu
+>>>>>>> 57ec59bbc10b4e2e7d4073bd61c0d8c19d02bbcc
 #0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
 #1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
@@ -528,13 +532,64 @@ CRITICAL - 2020-09-08 08:16:58 --> Undefined variable: menu
 #6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+<<<<<<< HEAD
 CRITICAL - 2020-09-08 08:17:03 --> Undefined variable: menu
 #0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
 #1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
 #2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
 #3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(15): view('menu')
+=======
+CRITICAL - 2020-09-08 08:19:58 --> Undefined variable: menu
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(18): view('menu')
 #4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->index()
 #5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
 #6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2020-09-08 08:20:00 --> Undefined variable: menu
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(18): view('menu')
+>>>>>>> 57ec59bbc10b4e2e7d4073bd61c0d8c19d02bbcc
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+<<<<<<< HEAD
+=======
+CRITICAL - 2020-09-08 08:20:14 --> Undefined variable: menu
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Registrarperfil.php(18): view('menu')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Registrarperfil->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrarperfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-08 08:20:31 --> Undefined variable: menu
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Registrarperfil.php(18): view('menu')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Registrarperfil->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrarperfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-08 08:20:43 --> Undefined variable: menu
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\menu.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('menu', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Registrarperfil.php(18): view('menu')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Registrarperfil->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Registrarperfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+>>>>>>> 57ec59bbc10b4e2e7d4073bd61c0d8c19d02bbcc
