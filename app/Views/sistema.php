@@ -11,14 +11,12 @@
     </div>
 </div>
 <!-- /top navigation -->
-
 <!-- page content -->
 <div class="right_col" role="main">
     <div class="">
         <div class="col-lg-12 ">
             <div class="x_panel">
                 <div class="page-title">
-
                     <h3>Bienvenido al Sistema de Motorepuestos JC</h3>
                     <BR>
                 </div>
