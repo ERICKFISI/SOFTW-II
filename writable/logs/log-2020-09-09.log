@@ -1,0 +1,36 @@
+CRITICAL - 2020-09-09 17:30:32 --> Trying to get property 'idmodulo' of non-object
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 62, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): App\Controllers\BaseController->data_menus('1')
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): App\Controllers\BaseController->Menu()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Sistema->index()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sistema))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 17:31:04 --> Object of class stdClass could not be converted to string
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(4096, 'Object of class...', 'C:\\xampp\\htdocs...', 62, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): App\Controllers\BaseController->data_menus('1')
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): App\Controllers\BaseController->Menu()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Sistema->index()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sistema))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 17:31:49 --> Object of class stdClass could not be converted to string
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(4096, 'Object of class...', 'C:\\xampp\\htdocs...', 62, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): App\Controllers\BaseController->data_menus('1')
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): App\Controllers\BaseController->Menu()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Sistema->index()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sistema))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 17:32:31 --> Object of class stdClass could not be converted to string
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(62): CodeIgniter\Debug\Exceptions->errorHandler(4096, 'Object of class...', 'C:\\xampp\\htdocs...', 62, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): App\Controllers\BaseController->data_menus('1')
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\sistema.php(12): App\Controllers\BaseController->Menu()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Sistema->index()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sistema))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
