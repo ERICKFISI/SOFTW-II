@@ -23,8 +23,8 @@ class VisualizarUsuario extends BaseController {
     }
 
     public function getupdate($id) {
-            $data = array(
-            'menu' => $this->Menu()
+        $data = array(
+        'menu' => $this->Menu()
         );
         helper('form');
         echo view('header');
@@ -35,7 +35,7 @@ class VisualizarUsuario extends BaseController {
         $usuarios = new UsuarioModel();
         $data['usuarios'] = $usuarios->where('estado', 1)->find($id);
         $data['perfiles'] = $perfiles;
-        echo view('modificar_usuario', $data);
+        echo view('modificar_perfil', $data);
 
         echo view('footer');
     }

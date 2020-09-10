@@ -1,0 +1,791 @@
+CRITICAL - 2020-09-09 20:10:32 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('visualizarperfi...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('visualizarperfi...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-09 20:11:00 --> Undefined index: idperfil
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(13): App\Controllers\BaseController->Menu()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->index()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:11:15 --> Undefined index: idperfil
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 45, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(13): App\Controllers\BaseController->Menu()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->index()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:11:25 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(19): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:12:53 --> Call to undefined function form_open()
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_usuar...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_usuar...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:12:53 --> Call to undefined function form_open()
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_usuar...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_usuar...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'images', 'img.jpg')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:13:34 --> Call to undefined function form_open()
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_usuar...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_usuar...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:14:55 --> syntax error, unexpected '?>'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:15:18 --> Call to a member function nombre() on array
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:18:02 --> Trying to get property 'idperfil' of non-object
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:18:24 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:18:44 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:19:22 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:19:24 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:19:56 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:20:05 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:20:20 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:20:37 --> syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting '-' or identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING)
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:22:50 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:23:28 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:23:30 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:24:17 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:24:19 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:24:58 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:01 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:12 --> Undefined variable: data
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:20 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:32 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:33 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:49 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:50 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:51 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:52 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:25:55 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(37): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:27:42 --> syntax error, unexpected 'permisos' (T_STRING), expecting ',' or ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('visualizarperfi...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('visualizarperfi...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-09 20:28:02 --> syntax error, unexpected 'permisos' (T_STRING), expecting ',' or ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('visualizarperfi...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('visualizarperfi...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-09 20:28:35 --> syntax error, unexpected 'permisos' (T_STRING), expecting ',' or ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('visualizarperfi...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('visualizarperfi...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-09 20:28:47 --> syntax error, unexpected 'perfiles' (T_STRING), expecting ',' or ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('visualizarperfi...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('visualizarperfi...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-09 20:29:01 --> Call to undefined method App\Controllers\Perfil::where()
+#0 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-09-09 20:31:48 --> Array to string conversion
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:33:16 --> syntax error, unexpected ';', expecting ',' or ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:33:22 --> Call to a member function idperfil() on array
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:34:05 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:34:07 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(31): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 31, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:34:30 --> Call to a member function idperfil() on array
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:34:45 --> Call to a member function idperfil() on array
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:34:47 --> Call to a member function idperfil() on array
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:35:53 --> Call to a member function idperfil() on array
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-09 20:40:32 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:41:21 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-09 20:43:37 --> Undefined variable: Modulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 43, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:55:48 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:57:15 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:57:16 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:57:18 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:58:20 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:59:14 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:59:32 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:59:34 --> Undefined index: idmodulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 20:59:46 --> Undefined index: idperfil
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:07:10 --> syntax error, unexpected ';', expecting ',' or ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('visualizarperfi...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('visualizarperfi...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-09 21:07:35 --> Undefined index: idperfil
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:08:48 --> Undefined index: $modulo
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:09:15 --> Illegal offset type
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal offset ...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('1')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:09:37 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:09:37 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:09:37 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:10:11 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:10:11 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:10:12 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:10:12 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:10:52 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:10:52 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:19:27 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:19:27 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:19:27 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'images', 'img.jpg')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:19:43 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:19:43 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:19:43 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'images', 'img.jpg')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:19:44 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:20:07 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:20:07 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:20:07 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'images', 'img.jpg')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-09 21:20:07 --> Undefined offset: 0
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarPerfil.php(39): view('modificar_perfi...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
