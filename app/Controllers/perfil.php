@@ -4,7 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\PerfilModel;
 
-class Perfil extends Controller{
+class Perfil extends BaseController{
 
 	public function index(){
 		$perfil_model = new PerfilModel();

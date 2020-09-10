@@ -9,35 +9,20 @@ use App\Models\UsuarioModel;
 class VisualizarUsuario extends BaseController {
 
     public function index() {
-        $data = array(
-            'menu' => $this->Menu()
-        );
         $db = \Config\Database::connect();
         $model = $db->query('SELECT p.nombre AS nombreperfil, u.idusuario, u.nombreusuario, u.nombre, u.dni, u.telefono,u.estado AS estadousuario, p.estado AS estadoperfil FROM perfil AS p INNER JOIN usuario AS u ON p.idperfil = u.idperfil');
         $datos["Resultado"] = $model->getResultArray();
-
-        echo view('header');
-        echo view('menu',$data);
-        echo view('visualizar_usuario', $datos);
-        echo view('footer');
+        echo $this->use_layout('visualizar_usuario', $datos);
     }
 
     public function getupdate($id) {
-            $data = array(
-            'menu' => $this->Menu()
-        );
         helper('form');
-        echo view('header');
-        echo view('menu',$data);
-
         $perfiles = new perfil();
         $perfiles = $perfiles->index();
         $usuarios = new UsuarioModel();
         $data['usuarios'] = $usuarios->where('estado', 1)->find($id);
         $data['perfiles'] = $perfiles;
-        echo view('modificar_usuario', $data);
-
-        echo view('footer');
+        echo $this->use_layout('modificar_usuario', $data);
     }
 
     public function update($id) {
@@ -64,4 +49,3 @@ class VisualizarUsuario extends BaseController {
     }
 
 }
-

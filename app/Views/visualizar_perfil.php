@@ -1,20 +1,4 @@
-        <div class="top_nav">
-            <div class="nav_menu">
-                <div class="nav toggle">
-                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                </div>
-                <nav class="nav navbar-nav">
-                <ul class=" navbar-right">
-  
-                </ul>
-              </nav>
-            </div>
-          </div>
-        <!-- /top navigation -->
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
             <div class="title">
               <div class="col-12">
                 <h3>Visualizar Perfil</small></h3>
@@ -60,7 +44,7 @@
                         <td>
                           <div class="col-12 mx-auto px-0"> 
                             <div class="col-12 mx-auto text-align px-0">
-                            <a href="<?= base_url()."/visualizarperfil/update/".$value["idperfil"];?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
+                            <a href="<?= base_url()."/visualizarperfil/getupdate/".$value["idperfil"];?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
                             <div class="col-12 mx-auto text-align px-0" >
                             <a href="<?= base_url()."/visualizarperfil/delete/".$value['idperfil'];?>"  onclick="return confirm('¿Está seguro que desea eliminar este perfil?');" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                             </div>

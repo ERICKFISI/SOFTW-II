@@ -12,18 +12,11 @@ class Home extends BaseController {
     }
 
     public function registrarusuario() {
-        $data = array(
-            'menu' => $this->Menu()
-        );
-        echo view('header');
-        echo view('menu',$data);
 
         $perfiles = new perfil();
         $perfiles = $perfiles->index();
         $data['perfiles'] = $perfiles;
-        echo view('registrar_usuario', $data);
-
-        echo view('footer');
+        echo $this->use_layout('registrar_usuario', $data);
     }
 
     //--------------------------------------------------------------------

@@ -103,7 +103,7 @@ class BaseController extends Controller {
                 $m = $m . ' <ul class="nav child_menu">';
                 $sub = $value['enlaces'];
                 foreach ($sub as $key => $value2) {
-                    $m = $m . "<li><a href= ".base_url()."".$value2['url']."   style='cursor:pointer;'>" . $value2['texto'] . "</a></li>";
+                    $m = $m . "<li><a href= " . base_url() . "" . $value2['url'] . "   style='cursor:pointer;'>" . $value2['texto'] . "</a></li>";
                 }
                 $m = $m . '</ul>';
                 $m = $m . '</li>';
@@ -112,6 +112,14 @@ class BaseController extends Controller {
         $m = $m . '</ul>';
         return $m;
         //fin menu php
+    }
+
+    public function use_layout($view, $data = [], $layout = "sistema") {
+        $data['menu'] = $this->Menu();
+        $data = array(
+            'cont' => view($view, $data, ['saveData' => true])
+        );
+        return view('/layout/' . $layout, $data);
     }
 
 }
