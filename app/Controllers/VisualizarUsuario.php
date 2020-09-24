@@ -15,7 +15,8 @@ class VisualizarUsuario extends BaseController {
         echo $this->use_layout('visualizar_usuario', $datos);
     }
 
-    public function getupdate($id) {
+    public function getupdate($id) 
+    {
         helper('form');
         $perfiles = new perfil();
         $perfiles = $perfiles->index();

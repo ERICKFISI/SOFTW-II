@@ -18,36 +18,38 @@ class VisualizarPerfil extends BaseController
 	}
 	public function getupdate( $id )
 	{
-		$data = array(
-        'menu' => $this->Menu()
-        );
-        echo view('header');
-        echo view('menu',$data);
-
+		helper('form');
         $perfiles = new ModeloPerfil();
         $permisos = new ModeloPermiso();
         $modulos = new ModeloModulo();
         $data['permisos'] = $permisos->where( ['idperfil' => $id ,'estado' => 1])->findAll();
         $data['perfiles'] = $perfiles -> where( 'estado', 1 ) -> find( $id );
         $data['modulos'] = $modulos -> where( 'estado', 1 ) -> findAll();
-        echo view('modificar_perfil', $data);
-        echo view('footer');
+        echo $this->use_layout('modificar_perfil', $data);
 	}
 	public function update( $id )
 	{
-		$bd = \Config\Database::connect();
+		$request = \Config\Services::request();
 		$perfil = new ModeloPerfil();
-		$perfil -> update( [$id, 'nombreperfil' => $_POST['nombreperfil']] );
-		foreach ($_POST['checks'] as $permisos) {
+		$datos = [
+            'nombre' => $request->getPost('nombre'),
+        ];
+		$perfil -> update( $id, $datos);
+        $perm = new ModeloPermiso();
+		$perm = $perm-> where( 'idperfil', $id ) ->set( 'estado', 0 ) -> update();
+		foreach ($request -> getPost('checks') as $permisos) {
 		$permiso = new ModeloPermiso();
-		$permiso = $permiso-> where( ['idperfil' => $id , 'idmodulo' => $permisos] );
-		if ( is_null($permiso) )
+		$permiso = $permiso -> where( ['idperfil' => $id , 'idmodulo' => $permisos] ) -> find();
+		if ( empty($permiso) )
+
 		{
-			$permiso = $bd -> query( 'INSERT INTO (idperfil, idmodulo) VALUES( $id, $permisos )' );
+			$permiso = new ModeloPermiso();
+			$permiso -> set( 'idperfil', $id ) -> set( 'idmodulo', $permisos ) -> insert();
 		}
 		else
 		{
-			$permiso = $bd -> query( 'UPDATE permiso SET estado = 1 WHERE idmodulo = $permisos AND idperfil = $id' );
+			$permiso = new ModeloPermiso();
+			$permiso -> where( ['idperfil' => $id , 'idmodulo' => $permisos] ) -> set( 'estado', 1 ) ->update();
 		}
 		}
 		return redirect()->to(base_url() . '/index.php/VisualizarPerfil');

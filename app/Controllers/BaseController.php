@@ -85,7 +85,7 @@ class BaseController extends Controller {
 
     function menu_start($menu) {
         ///menu php
-        $m = '<ul class="nav side-menu">';
+               $m = '<ul class="nav side-menu">';
 //    echo "<pre>";print_r($menu);exit;
         foreach ($menu as $key => $value) {
             $tam_submenus = count($value['enlaces']);
