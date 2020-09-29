@@ -19,6 +19,21 @@ class Marcaproducto extends BaseController{
 			return $data;
 		}
 
+    public function traerPorId($id)
+    {
+        $marca_model = new MarcaModel();
+		$marca = $marca_model->where('estado', 1)->find($id);
+		$data;
+		if(!is_null($marca)){
+			$data = $marca;
+			}
+			else{
+				$data = array('No se encontro la marca');
+			}
+			return $data;
+    }
+
+
 		public function validarMarca($id_marca){
 			$marca_model = new MarcaModel();
 			$marca = $marca_model->where('estado',1)->find($id_marca);

@@ -32,6 +32,24 @@ class VisualizarProducto extends BaseController
         echo $this->use_layout('modificar_producto', $data);
     }
 
+    public function getupdatever($id) 
+    {
+        helper('form');
+        $productos = new ProductoModel();
+        $categorias = new Categoriaproducto();
+        $marcas = new Marcaproducto();
+        
+        $producto = $productos->where('estadoproducto', 1)->find($id);
+        $categoria = $categorias->traerPorId($producto['idcategoria']);
+        $marca = $marcas->traerPorId($producto['idmarca']);
+
+        
+        $data['producto'] = $producto;
+        $data['categoria'] = $categoria;
+        $data['marca'] = $marca;
+        echo $this->use_layout('ver_producto', $data);
+    }
+
     public function update($id) {
         $request = \Config\Services::request();
         $model = new ProductoModel();
