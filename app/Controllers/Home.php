@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Controllers\perfil;
+use App\Controllers\Categoriaproducto;
+use App\Controllers\Marcaproducto;
 
 class Home extends BaseController {
 
@@ -19,5 +21,20 @@ class Home extends BaseController {
         echo $this->use_layout('registrar_usuario', $data);
     }
 
+    public function registrarproducto() {
+
+        $categorias = new Categoriaproducto();
+        $categorias = $categorias->index();
+        $data['categorias'] = $categorias;
+        $marcas = new Marcaproducto();
+        $marcas = $marcas->index();
+        $data['marcas'] = $marcas;
+        echo $this->use_layout('registrar_producto', $data);
+    }
+
+    public function registrarmarca()
+    {
+        echo $this->use_layout('registrar_marca');
+    }
     //--------------------------------------------------------------------
 }
