@@ -13,4 +13,21 @@ class VisualizarCategoria extends BaseController
 			$datos ['categoria'] = $model -> where( 'estadocategoria', 1 ) -> findAll();
 			 echo $this->use_layout('visualizar_categoria', $datos);
 		}
+
+		public function show( $id )
+		{
+			if (is_numeric($id))
+			{
+				$model = new CategoriaModel();
+				$datos ['categoria'] = $model -> where( 'estadocategoria', 1 ) -> find( $id );
+				if(empty($datos))
+				{
+					
+				}
+			}
+			else
+			{
+				echo "Error";
+			}
+		}
 }
