@@ -33,27 +33,30 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php /*
+                                        <?php 
                                         foreach ($Resultado as $key => $value):
-                                            if ($value["estadoperfil"] == 1 && $value["estadousuario"] == 1) {
                                                 ?>
                                                 <tr>  
-                                                    <td> <?= $value["idusuario"] ?>  </td>
-                                                    <td> <?= $value["nombre"] ?> </td>
-                                                    <td> <?= $value["nombreusuario"] ?> </td>
-                                                    <td> <?= $value["telefono"] ?> </td>
-                                                    <td> <?= $value["nombreperfil"] ?> </td>
-                                                    <td> <?= $value["dni"] ?> </td>
+                                                    <td> <?= $value["idproducto"] ?>  </td>
+                                                    <td> <?= $value["producto"] ?> </td>
+                                                    <td> <?= $value["categoria"] ?> </td>
+                                                    <td> <?= $value["descripcionproducto"] ?> </td>
+                                                    <td> <?= $value["stock"] ?> </td>
+                                                    <td> <?= $value["preciounidad"] ?> </td>
                                                     <td>
-                                                        <div class="col-12 mx-auto px-0"> 
-                                                            <div class="col-12 mx-auto text-align px-0">
-                                                                <a href="<?= base_url() . "/visualizarusuario/getupdate/" . $value["idusuario"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
-                                                            <div class="col-12 mx-auto text-align px-0" >
-                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarusuario/delete/" . $value['idusuario']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
-                                                            </div>
-                                                        </div></td> 
+                                                      <div class="col-12 mx-auto px-0"> 
+                                                        <div class="col-12 mx-auto text-align px-0">
+                                                          <a href="<?= base_url() . "/visualizarusuario/getupdate/" . $value["idproducto"]; ?>" class="btn btn-secondary  btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Ver</a>
+                                                        </div>
+                                                        <div class="col-12 mx-auto text-align px-0">
+                                                          <a href="<?= base_url() . "/visualizarProducto/getupdate/" . $value["idproducto"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>
+                                                        </div>
+                                                        <div class="col-12 mx-auto text-align px-0" >
+                                                          <a onclick="return alerta();" href="<?= base_url() . "/VisualizarProducto/delete/" . $value['idproducto']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
+                                                        </div>
+                                                    </div></td> 
                                                 </tr>  
-    <?php } endforeach;*/ ?>
+						<?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
