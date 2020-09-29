@@ -15,7 +15,7 @@ class VisualizarIngreso extends BaseController
 	}
 	public function show( $id )
 	{
-
+		
 	}
 
 	public function getupdate( $id )
