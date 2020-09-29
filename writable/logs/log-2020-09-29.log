@@ -1,0 +1,20 @@
+CRITICAL - 2020-09-29 08:18:19 --> syntax error, unexpected '*', expecting end of file
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('visualizar_cate...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('visualizar_cate...', Array, Array)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(14): App\Controllers\BaseController->use_layout('visualizar_cate...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-29 08:19:22 --> Undefined index: idusuario
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\visualizar_categoria.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('visualizar_cate...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('visualizar_cate...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(14): App\Controllers\BaseController->use_layout('visualizar_cate...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}

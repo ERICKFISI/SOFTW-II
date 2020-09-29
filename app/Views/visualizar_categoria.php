@@ -25,31 +25,27 @@
                                         <tr class="text-center">
                                             <th>Id</th>
                                             <th>Categoría</th>
-                                            <th>Acciones</th>
+                                            <th colspan="2">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php /*
-                                        foreach ($Resultado as $key => $value):
-                                            if ($value["estadoperfil"] == 1 && $value["estadousuario"] == 1) {
+                                        <?php
+                                        foreach ($categoria as $key => $value):
                                                 ?>
                                                 <tr>  
-                                                    <td> <?= $value["idusuario"] ?>  </td>
-                                                    <td> <?= $value["nombre"] ?> </td>
-                                                    <td> <?= $value["nombreusuario"] ?> </td>
-                                                    <td> <?= $value["telefono"] ?> </td>
-                                                    <td> <?= $value["nombreperfil"] ?> </td>
-                                                    <td> <?= $value["dni"] ?> </td>
-                                                    <td>
-                                                        <div class="col-12 mx-auto px-0"> 
-                                                            <div class="col-12 mx-auto text-align px-0">
-                                                                <a href="<?= base_url() . "/visualizarusuario/getupdate/" . $value["idusuario"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
-                                                            <div class="col-12 mx-auto text-align px-0" >
-                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarusuario/delete/" . $value['idusuario']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
+                                                    <td class="text-center"> <?= $value["idcategoria"] ?>  </td>
+                                                    <td class="text-center"> <?= $value["categoria"] ?> </td>
+                                                    <td class="mx-auto">
+                                                            <div class="col-8 col-lg-6 offset-lg-3 px-0">
+                                                                <a href="<?= base_url() . "/visualizarcategoria/getupdate/" . $value["idcategoria"]; ?>" class="btn btn-info btn-sm col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
+                                                                </td>
+                                                                <td>
+                                                            <div class="col-lg-6 offset-lg-3 col-8  px-0" >
+                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarcategoria/delete/" . $value['idcategoria']; ?>"   class="btn btn-danger btn-sm col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                                                             </div>
-                                                        </div></td> 
+                                                        </td> 
                                                 </tr>  
-    <?php } endforeach;*/ ?>
+                                        <?php  endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
