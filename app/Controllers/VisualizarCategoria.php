@@ -14,15 +14,15 @@ class VisualizarCategoria extends BaseController
 			 echo $this->use_layout('visualizar_categoria', $datos);
 		}
 
-		public function show( $id )
+		public function getupdate( $id )
 		{
-			if (is_numeric($id))
+			if (is_numeric( $id ))
 			{
 				$model = new CategoriaModel();
-				$datos ['categoria'] = $model -> where( 'estadocategoria', 1 ) -> find( $id );
-				if(empty($datos))
+				$datos [ 'categoria' ] = $model -> where( 'estadocategoria', 1 ) -> find( $id );
+				if( !empty( $datos ) )
 				{
-					
+					echo $this -> use_layout( 'modificar_categoria', $datos );
 				}
 			}
 			else
@@ -30,4 +30,65 @@ class VisualizarCategoria extends BaseController
 				echo "Error";
 			}
 		}
+
+		public function update( $id )
+		{
+			if (!empty( $id ))
+			{
+				$model = new CategoriaModel();
+				$datos = $model -> where( 'estadocategoria', 1 ) -> find( $id );
+				if( !empty( $datos ) )
+				{
+					$data = array(
+						'categoria' => $_POST[ 'categoria' ]
+					);
+					$model -> update( $id, $data );
+				}
+			}
+			else
+			{
+				echo "Error";
+			}
+			return redirect()->to(base_url() . '/index.php/visualizarcategoria');
+		}
+
+		public function show()
+		{
+			$datos['menu'] = 0;
+			echo $this -> use_layout( 'registrar_categoria', $datos);
+		}
+
+		public function create()
+		{
+			
+				$model = new CategoriaModel();
+				$data = array(
+						'categoria' => $_POST[ 'categoria' ]
+					);
+				$model -> insert( $data );
+				
+				return redirect()->to(base_url() . '/index.php/visualizarcategoria');
+		}
+
+		public function delete( $id )
+		{
+			if (!empty( $id ))
+			{
+				$model = new CategoriaModel();
+				$datos = $model -> where( 'estadocategoria', 1 ) -> find( $id );
+				if( !empty( $datos ) )
+				{
+					$data = array(
+						'estadocategoria' => 0 
+					);
+					$model -> update( $id, $data );
+				}
+			}
+			else
+			{
+				echo "Error";
+			}
+			return redirect()->to(base_url() . '/index.php/visualizarcategoria');
+		}
+
 }

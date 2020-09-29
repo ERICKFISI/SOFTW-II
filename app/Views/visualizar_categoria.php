@@ -11,7 +11,7 @@
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel ">
                 <div class="x_title">
-                    <a href="<?= base_url() . "/home/registrarcategoria"; ?>" class="btn btn-success">Registrar Categoría</a>
+                    <a href="<?= base_url() . "/visualizarcategoria/show"; ?>" class="btn btn-success">Registrar Categoría</a>
                     <a href="<?= base_url() . "/visualizarproducto"; ?>" class="btn btn-info">Visualizar Producto</a>
                     <div class="clearfix"></div>
                 </div>
