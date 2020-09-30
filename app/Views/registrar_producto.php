@@ -40,7 +40,7 @@
 
 
                     <div class="form-group row">
-                        <label class="control-label col-md-3 col-sm-3 ">Marca o linea</label>
+                        <label class="control-label col-md-3 col-sm-3 ">Marca</label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" name="idmarca" id="idmarca" required>
 
@@ -56,6 +56,26 @@
                             </select>
                         </div>
                     </div>
+
+
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 ">Linea</label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <select class="form-control" name="idmarca" id="idmarca" required>
+
+                                <?php
+                                foreach ($lineas as $linea) {
+                                    $nombrelinea = $linea['linea'];
+                                    $idlinea = $linea['idlinea'];
+                                    ?>
+
+                                    <option value="<?php echo $idlinea ?>"> <?php echo $nombrelinea ?> 
+                                    </option> <?php } ?>
+
+                            </select>
+                        </div>
+                    </div>
+
 
 
 		    <div class="form-group row">
@@ -84,7 +104,7 @@
                     <div class="form-group row">
                       <label class="control-label col-md-3 col-sm-3 ">Elija una foto</label>
 		      <div class="col-md-9 col-sm-9">
-			<input type="file" class="form-control-file" name="rutafoto" id="rutafoto">			
+			<input type="file" class="form-control-file" accept="image/png, image/jpg, image/jpeg" name="rutafoto" id="rutafoto">			
 		      </div>
                     </div>
 

@@ -28,7 +28,11 @@ class Home extends BaseController {
         $data['categorias'] = $categorias;
         $marcas = new Marcaproducto();
         $marcas = $marcas->index();
+        $lineas = new Lineaproducto();
+        $lineas = $lineas->index();
+
         $data['marcas'] = $marcas;
+        $data['lineas'] = $lineas;
         echo $this->use_layout('registrar_producto', $data);
     }
 
