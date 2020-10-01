@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2020-09-29 03:47:44 --> Trying to access array offset on value of type null
 #0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 12, Array)
 #1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
@@ -84,3 +85,1609 @@ CRITICAL - 2020-09-29 04:00:51 --> Invalid file: {0}
 #6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+=======
+<<<<<<< HEAD
+CRITICAL - 2020-09-29 00:10:49 --> syntax error, unexpected '$model' (T_VARIABLE)
+#0 /var/www/html/motorepuestosjc/system/Router/Router.php(195): CodeIgniter\Router\Router->autoRoute()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(795): CodeIgniter\Router\Router->handle()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 00:11:41 --> syntax error, unexpected '$model' (T_VARIABLE)
+#0 /var/www/html/motorepuestosjc/system/Router/Router.php(195): CodeIgniter\Router\Router->autoRoute()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(795): CodeIgniter\Router\Router->handle()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 00:11:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoriaINNER JO' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:13:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoriaINNER JO' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:13:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoriaINNER JO' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:14:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoriaINNER JO' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:14:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoriaINNER JO' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:14:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoriaINNER JO' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:15:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoria INNER J' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(14): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:15:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoria INNER J' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(14): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:15:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoria INNER J' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(14): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:16:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoria INNER J' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:16:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoria INNER J' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:16:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'producto AS p INNER JOIN categoria AS c ON p.idcategoria = c.idcategoria INNER J' at line 1
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 00:17:15 --> Undefined index: estadoperfil
+#0 /var/www/html/motorepuestosjc/app/Views/visualizar_producto.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(17): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:17:16 --> Undefined index: estadoperfil
+#0 /var/www/html/motorepuestosjc/app/Views/visualizar_producto.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(17): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:17:16 --> Undefined index: estadoperfil
+#0 /var/www/html/motorepuestosjc/app/Views/visualizar_producto.php(38): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(17): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:20:57 --> Undefined index: descripcion
+#0 /var/www/html/motorepuestosjc/app/Views/visualizar_producto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(17): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:21:04 --> Undefined index: idusuario
+#0 /var/www/html/motorepuestosjc/app/Views/visualizar_producto.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(17): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:08 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:08 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:15 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:15 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:15 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:51:15 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:52:29 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:52:29 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:52:29 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:52:29 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 00:57:00 --> Class 'App\Controllers\ProductoModel' not found
+#0 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-09-29 00:57:53 --> Class 'App\Controllers\ProductoModel' not found
+#0 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-09-29 00:58:16 --> Unknown column 'estado' in 'where clause'
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/system/Database/BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/Model.php(398): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(28): CodeIgniter\Model->find()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-09-29 00:58:58 --> Invalid file: modificar_producto.php
+#0 /var/www/html/motorepuestosjc/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 01:00:06 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:00:06 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:00:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:00:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:01:18 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:01:18 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:01:18 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:01:18 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/Visualizarusuario.php(26): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:24:19 --> syntax error, unexpected '=', expecting ']'
+#0 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#1 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#2 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#6 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-29 01:24:45 --> Undefined variable: producto
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(64): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:25:46 --> Undefined variable: productos
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:40 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:40 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:41 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:41 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:26:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(31): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:39 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:39 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:35:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:36:58 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:36:58 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:36:58 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:36:58 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:37:16 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:37:16 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:37:16 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:37:16 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:11 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:29 --> Cannot add or update a child row: a foreign key constraint fails (`motorepuestosjc`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`idcategoria`) REFERENCES `categoria` (`idcategoria`))
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/system/Database/BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#5 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(47): CodeIgniter\Model->update()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->update()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-09-29 01:40:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:40:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:41:04 --> Cannot add or update a child row: a foreign key constraint fails (`motorepuestosjc`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`idcategoria`) REFERENCES `categoria` (`idcategoria`))
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/system/Database/BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#5 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(47): CodeIgniter\Model->update()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->update()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-09-29 01:45:11 --> Cannot add or update a child row: a foreign key constraint fails (`motorepuestosjc`.`producto`, CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`idcategoria`) REFERENCES `categoria` (`idcategoria`))
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/system/Database/BaseBuilder.php(2456): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/Model.php(889): CodeIgniter\Database\BaseBuilder->update()
+#5 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(47): CodeIgniter\Model->update()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->update()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#8 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#9 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-09-29 01:45:14 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:14 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:14 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:14 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:25 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:25 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:25 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:25 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:45:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:46:23 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:46:23 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:46:23 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:46:23 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 01:52:43 --> Unknown column 'estado' in 'where clause'
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(53): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->delete()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 01:53:02 --> Unknown column 'estado' in 'field list'
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(53): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->delete()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 01:53:08 --> Unknown column 'estado' in 'field list'
+#0 /var/www/html/motorepuestosjc/system/Database/MySQLi/Connection.php(331): mysqli->query()
+#1 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(741): CodeIgniter\Database\MySQLi\Connection->execute()
+#2 /var/www/html/motorepuestosjc/system/Database/BaseConnection.php(669): CodeIgniter\Database\BaseConnection->simpleQuery()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(53): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->delete()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 07:33:06 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:33:06 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:33:06 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:33:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:33:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:33:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:33:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:38:08 --> Invalid file: ver_producto.php
+#0 /var/www/html/motorepuestosjc/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(47): App\Controllers\BaseController->use_layout()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 07:39:48 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:39:48 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:39:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 07:39:49 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Views/modificar_producto.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/View/View.php(246): include('/var/www/html/m...')
+#2 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#4 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(32): App\Controllers\BaseController->use_layout()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdate()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#7 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#8 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 08:06:10 --> syntax error, unexpected 'public' (T_PUBLIC), expecting end of file
+#0 /var/www/html/motorepuestosjc/system/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile()
+#1 /var/www/html/motorepuestosjc/system/Autoloader/Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(39): spl_autoload_call()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 08:07:39 --> Call to undefined method App\Controllers\Marcaproducto::traerPorId()
+#0 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-09-29 08:08:56 --> Cannot use object of type App\Models\ProductoModel as array
+#0 /var/www/html/motorepuestosjc/system/View/View.php(246): include()
+#1 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(50): App\Controllers\BaseController->use_layout()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 08:10:16 --> Cannot use object of type App\Models\ProductoModel as array
+#0 /var/www/html/motorepuestosjc/system/View/View.php(246): include()
+#1 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(50): App\Controllers\BaseController->use_layout()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 08:11:17 --> Cannot use object of type App\Controllers\Marcaproducto as array
+#0 /var/www/html/motorepuestosjc/system/View/View.php(246): include()
+#1 /var/www/html/motorepuestosjc/system/Common.php(1119): CodeIgniter\View\View->render()
+#2 /var/www/html/motorepuestosjc/app/Controllers/BaseController.php(120): view()
+#3 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(50): App\Controllers\BaseController->use_layout()
+#4 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#5 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 08:11:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:11:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:11:38 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:11:39 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:14:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:14:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:14:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:14:53 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:40 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:40 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:41 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:41 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:44 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:44 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:44 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:15:44 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:00 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:00 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:00 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:00 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 08:22:07 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:02:42 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:02:42 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:02:43 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:02:43 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:05:08 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:05:08 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:05:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 09:05:09 --> Trying to access array offset on value of type null
+#0 /var/www/html/motorepuestosjc/app/Controllers/VisualizarProducto.php(43): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever()
+#2 /var/www/html/motorepuestosjc/system/CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/motorepuestosjc/system/CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/motorepuestosjc/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+=======
+CRITICAL - 2020-09-29 08:18:19 --> syntax error, unexpected '*', expecting end of file
+#0 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('visualizar_cate...', Array, true)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('visualizar_cate...', Array, Array)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(14): App\Controllers\BaseController->use_layout('visualizar_cate...', Array)
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-09-29 08:19:22 --> Undefined index: idusuario
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\visualizar_categoria.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('visualizar_cate...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('visualizar_cate...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(14): App\Controllers\BaseController->use_layout('visualizar_cate...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+<<<<<<< HEAD
+CRITICAL - 2020-09-29 10:11:16 --> Cannot use a scalar value as an array
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a sc...', 'C:\\xampp\\htdocs...', 118, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(57): App\Controllers\BaseController->use_layout('registrar_categ...', true)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->show()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-29 10:11:48 --> Cannot use a scalar value as an array
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(118): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Cannot use a sc...', 'C:\\xampp\\htdocs...', 118, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(58): App\Controllers\BaseController->use_layout('registrar_categ...', 0)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->show()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-29 10:12:19 --> Undefined variable: id
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->create()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 10:12:34 --> Undefined variable: id
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarCategoria.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 68, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->create()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-09-29 10:14:19 --> syntax error, unexpected ']', expecting ')'
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('visualizarcateg...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('visualizarcateg...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+=======
+>>>>>>> a86da8a0ec4d88599b1afc430d206535e5591551
+>>>>>>> 8b0551d6e0f53616ef808f4d9e134ff73329681d
+>>>>>>> 469060edd933b44c98231c4a342df444c8b3112e

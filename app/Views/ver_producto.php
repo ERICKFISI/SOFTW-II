@@ -1,21 +1,21 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Registrar Producto</h3>
+            <h3> Ver  Producto</h3>
         </div>
     </div>
     <div class="col-md-3-6 ">
         <div class="x_panel">
 
             <div class="x_content">
-                <br />
-                <form class="form-horizontal form-label-left h6" action="../producto/create" method="POST">
-
+              <br />
+                <?= form_open('VisualizarProducto/', 'class="form-horizontal form-label-left h6" '); ?>	      
+	      <fieldset disabled>
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Nombre del producto
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" name="producto" required>
+                          <?= form_input(["type"=>"text", "class"=>"form-control", "value" => $producto["producto"], "name"=>"producto", "required"]); ?>
                         </div>
                     </div>
 
@@ -25,14 +25,8 @@
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" name="idcategoria" id="idcategoria" required>
 
-                                <?php
-                                foreach ($categorias as $categoria) {
-                                    $nombrecategoria = $categoria['categoria'];
-                                    $idcategoria = $categoria['idcategoria'];
-                                    ?>
-
-                                    <option value="<?php echo $idcategoria ?>"> <?php echo $nombrecategoria ?> 
-                                    </option> <?php } ?>
+                                    <option value="<?php echo $categoria['idcategoria'] ?>"> <?php echo $categoria['categoria'] ?> 
+                                    </option>
 
                             </select>
                         </div>
@@ -40,18 +34,25 @@
 
 
                     <div class="form-group row">
-                        <label class="control-label col-md-3 col-sm-3 ">Marca o linea</label>
+                        <label class="control-label col-md-3 col-sm-3 ">Marca</label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" name="idmarca" id="idmarca" required>
 
-                                <?php
-                                foreach ($marcas as $marca) {
-                                    $nombremarca = $marca['marca'];
-                                    $idmarca = $marca['idmarca'];
-                                    ?>
+                                    <option value="<?php echo $marca['idmarca'] ?>"> <?php echo $marca['marca'] ?> 
+                                    </option>
 
-                                    <option value="<?php echo $idmarca ?>"> <?php echo $nombremarca ?> 
-                                    </option> <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 ">Linea</label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <select class="form-control" name="idlinea" id="idlinea" required>
+
+                                    <option value="<?php echo $linea['idlinea'] ?>"> <?php echo $linea['linea'] ?> 
+                                    </option>
 
                             </select>
                         </div>
@@ -61,7 +62,7 @@
 		    <div class="form-group row">
 		      <label class="control-label col-md-3 col-sm-3 ">Descripci&oacute;n del producto</label>
 		      <div class="col-md-9 col-sm-9">
-			<textarea class="form-control" name="descripcionproducto" id="descripcionproducto" rows="3"></textarea>			
+			<?= form_input(["class "=> "form-control","value" => $producto["descripcionproducto"], "name" => "descripcionproducto", "id" => "descripcionproducto", "rows" =>"3"]); ?>			
 		      </div>
 		    </div>
 
@@ -70,24 +71,24 @@
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Stock </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="number" class="form-control" name="stock" id="stock" required>
+                            <?= form_input(["type"=>"number", "class"=>"form-control", "value"=>$producto["stock"], "name"=>"stock", "id"=>"stock", "required"]); ?>
                         </div>
                     </div>
 
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Precio unidad </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="number" class="form-control" name="preciounidad" id="preciounidad" >
+                            <?= form_input(["type"=>"number", "class"=>"form-control", "value"=>$producto["preciounidad"], "name"=>"preciounidad", "id"=>"preciounidad"]); ?>
                         </div>
                     </div>
 
                     <div class="form-group row">
                       <label class="control-label col-md-3 col-sm-3 ">Elija una foto</label>
 		      <div class="col-md-9 col-sm-9">
-			<input type="file" class="form-control-file" name="rutafoto" id="rutafoto">			
+			<?= form_input(["type"=>"file", "class"=>"form-control-file", "value"=>$producto["rutafoto"], "name"=>"rutafoto", "id"=>"rutafoto"]); ?>			
 		      </div>
                     </div>
-
+		    </fieldset>
                     <br>
                     <div class="ln_solid"></div>
                     <div class="form-group">

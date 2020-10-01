@@ -19,6 +19,19 @@ class Categoriaproducto extends BaseController{
 			return $data;
 		}
 
+    public function traerPorId($id)
+    {
+        $categoria_model = new CategoriaModel();
+		$categoria = $categoria_model->where('estadocategoria', 1)->find($id);
+		$data;
+		if(!is_null($categoria)){
+			$data = $categoria;
+			}
+			else{
+				$data = array('No se encontro la categoria');
+			}
+			return $data;
+    }
 		public function validarCategoria($id_categoria){
 			$categoria_model = new CategoriaModel();
 			$categoria = $categoria_model->where('estadocategoria',1)->find($id_categoria);

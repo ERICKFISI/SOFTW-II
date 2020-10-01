@@ -29,11 +29,22 @@ class Producto extends Controller{
 			$data = array('producto' => $_POST['producto'], 
                           'idcategoria' => $_POST['idcategoria'],
                           'idmarca' => $_POST['idmarca'],
+                          'idlinea' => $_POST['idlinea'],
                           'descripcionproducto' => $_POST['descripcionproducto'],
                           'stock' => $_POST['stock'],
                           'preciounidad' => $_POST['preciounidad'],
                           'rutafoto' => $_POST['rutafoto']);
-				
+
+            // Modicamos la ruta foto -- Las fotos de los productos iran en public/productos
+            // TODO: No reconoce el id "rutafoto" el cual asi esta en el name del input
+            /*
+            $ruta = "public/productos/".$_FILES["rutafoto"]["name"];
+            $ruta2 = "../../public/productos/".$_FILES["rutafoto"]["name"];
+            move_upload_file($_FILES["rutafoto"]["tmp_name"], $ruta2);
+
+            $data["rutafoto"] = $ruta;
+            */
+            
 			$mensaje;
 
 			if($existe_categoria == 0){        #categoria no encontrado
