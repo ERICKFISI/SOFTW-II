@@ -68,7 +68,7 @@
 <script type="text/javascript">
     function alerta()
     {
-        var m = confirm("¿Está seguro que desea eliminar esta categoría?");
+        var m = confirm("¿Está seguro que desea eliminar esta marca?");
         if (m)
         {
             return true;

@@ -1602,3 +1602,261 @@ CRITICAL - 2020-09-29 10:14:19 --> syntax error, unexpected ']', expecting ')'
 =======
 >>>>>>> a86da8a0ec4d88599b1afc430d206535e5591551
 >>>>>>> 8b0551d6e0f53616ef808f4d9e134ff73329681d
+CRITICAL - 2020-09-29 10:17:12 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarperfil.php(13): CodeIgniter\Database\BaseConnection->query('SELECT perf.idp...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->index()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-29 10:17:14 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query('SELECT p.idprod...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-29 10:17:17 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\motorepuestosjc\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarcategoria.php(13): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 10:17:19 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\motorepuestosjc\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarcategoria.php(13): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 10:17:22 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(55): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): App\Controllers\BaseController->data_menus('1')
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(118): App\Controllers\BaseController->Menu()
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarcategoria.php(58): App\Controllers\BaseController->use_layout('registrar_categ...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->show()
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 10:17:27 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\motorepuestosjc\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarcategoria.php(13): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 10:17:30 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(55): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(45): App\Controllers\BaseController->data_menus('1')
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(118): App\Controllers\BaseController->Menu()
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarcategoria.php(58): App\Controllers\BaseController->use_layout('registrar_categ...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->show()
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 10:17:31 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\motorepuestosjc\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarcategoria.php(13): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 10:17:37 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\motorepuestosjc\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarcategoria.php(13): CodeIgniter\Model->findAll()
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarCategoria->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarCategoria))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 10:17:38 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(15): CodeIgniter\Database\BaseConnection->query('SELECT p.idprod...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->index()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-29 10:17:50 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Login.php(19): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...', Array)
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Login->validar()
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-09-29 10:18:44 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 10:18:44 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:26:13 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:26:13 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:26:25 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:26:26 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:27:17 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:27:18 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:27:30 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:27:31 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:54:24 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:54:25 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:54:40 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 15:54:40 --> Undefined index: idcategoria
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\ver_producto.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 28, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('ver_producto', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('ver_producto', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarProducto.php(50): App\Controllers\BaseController->use_layout('ver_producto', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarProducto->getupdatever('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarProducto))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
