@@ -13,6 +13,7 @@
                 <div class="x_title">
                     <a href="<?= base_url() . "/home/registrarproducto"; ?>" class="btn btn-success">Registrar Producto</a>
                     <a href="<?= base_url() . "/visualizarcategoria"; ?>" class="btn btn-info">Visualizar Categoría</a>
+                    <a href="<?= base_url() . "/visualizarMarca"; ?>" class="btn btn-secondary">Visualizar Marca</a>                                                                                                                  
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
