@@ -34,11 +34,24 @@
 
 
                     <div class="form-group row">
-                        <label class="control-label col-md-3 col-sm-3 ">Marca o linea</label>
+                        <label class="control-label col-md-3 col-sm-3 ">Marca</label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" name="idmarca" id="idmarca" required>
 
                                     <option value="<?php echo $marca['idmarca'] ?>"> <?php echo $marca['marca'] ?> 
+                                    </option>
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 ">Linea</label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <select class="form-control" name="idlinea" id="idlinea" required>
+
+                                    <option value="<?php echo $linea['idlinea'] ?>"> <?php echo $linea['linea'] ?> 
                                     </option>
 
                             </select>

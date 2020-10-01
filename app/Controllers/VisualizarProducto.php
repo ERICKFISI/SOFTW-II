@@ -24,11 +24,14 @@ class VisualizarProducto extends BaseController
         $categorias = $categorias->index();
         $marcas = new Marcaproducto();
         $marcas = $marcas->index();
+        $lineas = new Lineaproducto();
+        $lineas = $lineas->index();
         $productos = new ProductoModel();
         
         $data['producto'] = $productos->where('estadoproducto', 1)->find($id);
         $data['categorias'] = $categorias;
         $data['marcas'] = $marcas;
+        $data['lineas'] = $lineas;        
         echo $this->use_layout('modificar_producto', $data);
     }
 
@@ -38,15 +41,17 @@ class VisualizarProducto extends BaseController
         $productos = new ProductoModel();
         $categorias = new Categoriaproducto();
         $marcas = new Marcaproducto();
+        $lineas = new Lineaproducto();
         
         $producto = $productos->where('estadoproducto', 1)->find($id);
         $categoria = $categorias->traerPorId($producto['idcategoria']);
         $marca = $marcas->traerPorId($producto['idmarca']);
+        $linea = $lineas->traerPorId($producto['idlinea']);
 
-        
         $data['producto'] = $producto;
         $data['categoria'] = $categoria;
         $data['marca'] = $marca;
+        $data['linea'] = $linea;
         echo $this->use_layout('ver_producto', $data);
     }
 
@@ -59,6 +64,7 @@ class VisualizarProducto extends BaseController
             'idmarca' => $request->getPost('idmarca'),
             'descripcionproducto' => $request->getPost('descripcionproducto'),
             'stock' => $request->getPost('stock'),
+            'idlinea' => $request->getPost('idlinea'),
             'preciounidad' => $request->getPost('preciounidad'),
             'rutafoto' => $request->getPost('rutafoto'),
         ];

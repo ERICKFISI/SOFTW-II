@@ -9,6 +9,6 @@ class ProductoModel extends Model{
 	protected $primaryKey = 'idproducto';
 	protected $returnType = 'array';
 	protected $allowedFields = ['idcategoria','producto','idmarca', 'stock', 'preciounidad',
-							   'descripcionproducto','rutafoto','estadoproducto'];
+                                'descripcionproducto','rutafoto','estadoproducto', 'idlinea'];
 
 }
