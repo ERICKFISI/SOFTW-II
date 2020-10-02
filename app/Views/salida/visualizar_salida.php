@@ -57,6 +57,7 @@
     </div>
 </div>
 <script type="text/javascript">
+      
     function alerta()
     {
         var m = confirm("¿Está seguro que desea eliminar esta salida?");

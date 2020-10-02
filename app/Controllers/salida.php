@@ -20,11 +20,37 @@ class Salida extends BaseController {
         $datos = array();
         $tipoSalidaModel = new \App\Models\TipoSalidalModel();
         $datos['tiposalida'] = $tipoSalidaModel->where('estadotiposalida', 1)->findAll();
+        $productoModel = new \App\Models\ProductoModel();
+        $datos['producto'] = $productoModel->where('estadoproducto', 1)->findAll();
 //       echo "<pre>"; print_r($datos['tiposalida']);exit;
         echo $this->use_layout('salida/new', $datos);
     }
-    public function create() {
-        
+
+    function getPrecioThisProducto() {
+        $idProducto = new \App\Models\ProductoModel();
+        $dtProducto = $idProducto->find($_REQUEST['idproducto']);
+        echo json_encode(array('resp' => 1, 'msg' => $dtProducto));
+    }
+
+    public function setProductoAlCarrito() {
+//        print_r($_SESSION['add_carro']);Exit;
+        $idproducto = $_REQUEST['idproducto'];
+        $cantidad = $_REQUEST['cantidad'];
+        $preciounidad = $_REQUEST['preciounidad'];
+        $subtotal = $_REQUEST['subtotal'];
+        $descripcion_producto = $_REQUEST['descripcion_producto'];
+
+        if(isset($_SESSION['add_carro'][$idproducto])){
+           
+           $_SESSION['add_carro'][$idproducto]['cantidad'] = $_SESSION['add_carro'][$idproducto]['cantidad']+$cantidad;
+           $_SESSION['add_carro'][$idproducto]['preciounidad'] = $preciounidad;
+           $_SESSION['add_carro'][$idproducto]['subtotal'] = $_SESSION['add_carro'][$idproducto]['subtotal']+$subtotal;
+           $_SESSION['add_carro'][$idproducto]['descripcion_producto'] =$descripcion_producto;
+        }else{
+            
+          $_SESSION['add_carro'][$idproducto] =  $_REQUEST;
+        }
+        echo json_encode($_SESSION['add_carro']);
     }
 
 }
