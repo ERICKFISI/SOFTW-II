@@ -17,12 +17,12 @@ class Salida extends BaseController {
     }
 
     public function new_() {
+//       echo "<pre>"; print_r($_SESSION);Exit;
         $datos = array();
         $tipoSalidaModel = new \App\Models\TipoSalidalModel();
         $datos['tiposalida'] = $tipoSalidaModel->where('estadotiposalida', 1)->findAll();
         $productoModel = new \App\Models\ProductoModel();
         $datos['producto'] = $productoModel->where('estadoproducto', 1)->findAll();
-//       echo "<pre>"; print_r($datos['tiposalida']);exit;
         echo $this->use_layout('salida/new', $datos);
     }
 
@@ -40,17 +40,38 @@ class Salida extends BaseController {
         $subtotal = $_REQUEST['subtotal'];
         $descripcion_producto = $_REQUEST['descripcion_producto'];
 
-        if(isset($_SESSION['add_carro'][$idproducto])){
-           
-           $_SESSION['add_carro'][$idproducto]['cantidad'] = $_SESSION['add_carro'][$idproducto]['cantidad']+$cantidad;
-           $_SESSION['add_carro'][$idproducto]['preciounidad'] = $preciounidad;
-           $_SESSION['add_carro'][$idproducto]['subtotal'] = $_SESSION['add_carro'][$idproducto]['subtotal']+$subtotal;
-           $_SESSION['add_carro'][$idproducto]['descripcion_producto'] =$descripcion_producto;
-        }else{
-            
-          $_SESSION['add_carro'][$idproducto] =  $_REQUEST;
+        if (isset($_SESSION['add_carro'][$idproducto])) {
+
+            $_SESSION['add_carro'][$idproducto]['cantidad'] = $_SESSION['add_carro'][$idproducto]['cantidad'] + $cantidad;
+            $_SESSION['add_carro'][$idproducto]['preciounidad'] = $preciounidad;
+            $_SESSION['add_carro'][$idproducto]['subtotal'] = $_SESSION['add_carro'][$idproducto]['subtotal'] + $subtotal;
+            $_SESSION['add_carro'][$idproducto]['descripcion_producto'] = $descripcion_producto;
+        } else {
+
+            $_SESSION['add_carro'][$idproducto] = $_REQUEST;
         }
-        echo json_encode($_SESSION['add_carro']);
+        echo json_encode(array('resp' => 1, 'msg' => $_SESSION['add_carro'], 'total' => $this->getTotal()));
+    }
+
+    public function getTotal() {
+        $total = 0;
+        foreach ($_SESSION['add_carro'] as $key => $value) {
+            $total += $value['subtotal'];
+        }
+        return $total;
+    }
+
+    public function eliminarProductoAlCarrito() {
+        unset($_SESSION['add_carro'][$_REQUEST['idproducto']]);
+        echo json_encode(array('resp' => 1, 'msg' => $_SESSION['add_carro'], 'total' => $this->getTotal(),'total'=>$this->getTotal()));
+    }
+
+    public function verificarProductoEnCarrito() {
+        if (isset($_SESSION['add_carro'][$_REQUEST['idproducto']])) {
+            echo json_encode(array("resp" => 1, 'msg' => 'ya existe El Producto en el carrito, desea Añadir a la cantidad del Producto?'));
+        } else {
+            echo json_encode(array("resp" => 0, 'msg' => 'no existe El Producto en el carrito'));
+        }
     }
 
 }
