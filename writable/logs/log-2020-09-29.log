@@ -1,4 +1,92 @@
 <<<<<<< HEAD
+CRITICAL - 2020-09-29 03:47:44 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_usuar...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('modificar_usuar...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarusuario.php(26): App\Controllers\BaseController->use_layout('modificar_usuar...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarUsuario))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 03:47:44 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_usuario.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_usuar...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('modificar_usuar...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarusuario.php(26): App\Controllers\BaseController->use_layout('modificar_usuar...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarUsuario->getupdate('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarUsuario))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 03:47:50 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('modificar_perfi...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarperfil.php(28): App\Controllers\BaseController->use_layout('modificar_perfi...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 03:47:50 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('modificar_perfi...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarperfil.php(28): App\Controllers\BaseController->use_layout('modificar_perfi...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 03:47:50 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('modificar_perfi...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarperfil.php(28): App\Controllers\BaseController->use_layout('modificar_perfi...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'multifield.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 03:47:50 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\modificar_perfil.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('modificar_perfi...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('modificar_perfi...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarperfil.php(28): App\Controllers\BaseController->use_layout('modificar_perfi...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarPerfil->getupdate('public', 'vendors', 'validator', 'validator.js')
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarPerfil))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-09-29 03:49:33 --> Invalid file: {0}
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('visualizar_vent...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('visualizar_vent...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('visualizar_vent...', Array, Array)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarVenta.php(14): App\Controllers\BaseController->use_layout('visualizar_vent...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarVenta->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarVenta))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-09-29 04:00:51 --> Invalid file: {0}
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('visualizar_vent...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('visualizar_vent...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('visualizar_vent...', Array, Array)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarVenta.php(14): App\Controllers\BaseController->use_layout('visualizar_vent...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarVenta->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarVenta))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+=======
+<<<<<<< HEAD
 CRITICAL - 2020-09-29 00:10:49 --> syntax error, unexpected '$model' (T_VARIABLE)
 #0 /var/www/html/motorepuestosjc/system/Router/Router.php(195): CodeIgniter\Router\Router->autoRoute()
 #1 /var/www/html/motorepuestosjc/system/CodeIgniter.php(795): CodeIgniter\Router\Router->handle()
@@ -1602,6 +1690,7 @@ CRITICAL - 2020-09-29 10:14:19 --> syntax error, unexpected ']', expecting ')'
 =======
 >>>>>>> a86da8a0ec4d88599b1afc430d206535e5591551
 >>>>>>> 8b0551d6e0f53616ef808f4d9e134ff73329681d
+<<<<<<< HEAD
 CRITICAL - 2020-09-29 10:17:12 --> Unable to connect to the database.
 #0 C:\xampp\htdocs\motorepuestosjc\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
 #1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\Visualizarperfil.php(13): CodeIgniter\Database\BaseConnection->query('SELECT perf.idp...')
@@ -1860,3 +1949,6 @@ CRITICAL - 2020-09-29 15:54:40 --> Undefined index: idcategoria
 #7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
 #9 {main}
+=======
+>>>>>>> 469060edd933b44c98231c4a342df444c8b3112e
+>>>>>>> 4361519ee8b76eac83e00345e32ef60333d6fd58

@@ -1,0 +1,80 @@
+CRITICAL - 2020-10-01 03:20:23 --> Undefined index: icon
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(96): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 96, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(47): App\Controllers\BaseController->menu_start(Array)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(118): App\Controllers\BaseController->Menu()
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarSalida.php(14): App\Controllers\BaseController->use_layout('visualizar_sali...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarSalida->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarSalida))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-01 03:22:05 --> Call to undefined method App\Controllers\Salida::use_layout()
+#0 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Salida->index()
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Salida))
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-01 03:34:24 --> Undefined variable: salida
+#0 C:\xampp\htdocs\motorepuestosjc\app\Controllers\salida.php(13): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 13, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Salida->index()
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Salida))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-01 03:51:36 --> Invalid file: {0}
+#0 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('visualizar_vent...')
+#1 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('visualizar_vent...', Array, true)
+#2 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('visualizar_vent...', Array, Array)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\VisualizarVenta.php(14): App\Controllers\BaseController->use_layout('visualizar_vent...', Array)
+#4 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\VisualizarVenta->index()
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\VisualizarVenta))
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-01 03:56:38 --> Undefined index: idusuario
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\salida\visualizar_salida.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 40, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('salida/visualiz...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('salida/visualiz...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\salida.php(16): App\Controllers\BaseController->use_layout('salida/visualiz...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Salida->index()
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Salida))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-01 04:09:01 --> Undefined index: idusuario
+#0 C:\xampp\htdocs\motorepuestosjc\app\Views\salida\visualizar_salida.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 42, Array)
+#1 C:\xampp\htdocs\motorepuestosjc\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\motorepuestosjc\system\Common.php(1119): CodeIgniter\View\View->render('salida/visualiz...', Array, true)
+#3 C:\xampp\htdocs\motorepuestosjc\app\Controllers\BaseController.php(120): view('salida/visualiz...', Array, Array)
+#4 C:\xampp\htdocs\motorepuestosjc\app\Controllers\salida.php(16): App\Controllers\BaseController->use_layout('salida/visualiz...', Array)
+#5 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Salida->index()
+#6 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Salida))
+#7 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-01 04:23:38 --> syntax error, unexpected 'echo' (T_ECHO)
+#0 C:\xampp\htdocs\motorepuestosjc\system\Router\Router.php(195): CodeIgniter\Router\Router->autoRoute('salida/new_')
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(795): CodeIgniter\Router\Router->handle('salida/new_')
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-01 04:24:53 --> Class 'App\Models\TipoSalidaModel' not found
+#0 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Salida->new_()
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Salida))
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-01 04:26:52 --> Class 'App\Models\TipoSalidaModel' not found
+#0 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Salida->new_()
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Salida))
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-01 04:27:05 --> Class 'App\Models\tipoSalidaModel' not found
+#0 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(920): App\Controllers\Salida->new_()
+#1 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Salida))
+#2 C:\xampp\htdocs\motorepuestosjc\system\CodeIgniter.php(314): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\motorepuestosjc\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
