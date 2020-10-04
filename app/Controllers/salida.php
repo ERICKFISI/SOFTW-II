@@ -63,7 +63,7 @@ class Salida extends BaseController {
 
     public function eliminarProductoAlCarrito() {
         unset($_SESSION['add_carro'][$_REQUEST['idproducto']]);
-        echo json_encode(array('resp' => 1, 'msg' => $_SESSION['add_carro'], 'total' => $this->getTotal(),'total'=>$this->getTotal()));
+        echo json_encode(array('resp' => 1, 'msg' => $_SESSION['add_carro'], 'total' => $this->getTotal(), 'total' => $this->getTotal()));
     }
 
     public function verificarProductoEnCarrito() {
@@ -72,6 +72,32 @@ class Salida extends BaseController {
         } else {
             echo json_encode(array("resp" => 0, 'msg' => 'no existe El Producto en el carrito'));
         }
+    }
+
+    public function create() {
+        $salidaModel = new \App\Models\SalidaModel();
+        $DetalleSalidaProductoModel = new \App\Models\DetalleSalidaProductoModel();
+        $data = [
+            'idtiposalida' => $_REQUEST['idtiposalida'],
+            'fechasalida' => $_REQUEST['fechasalida'],
+            'descripcionsalida' => $_REQUEST['descripcionsalida'],
+            'totalsalida' => $this->getTotal(),
+            'estadosalida' => 1
+        ];
+        $idSalida = $salidaModel->insert($data);
+//       echo "<pre>"; print_r($salida);Exit;
+        foreach ($_SESSION['add_carro'] as $idproducto => $value) {
+            $data = [
+                'idsalida' => $idSalida,
+                'idproducto' => $idproducto,
+                'cantidadsalida' => $value['cantidad'],
+                'preciounidad' => $value['preciounidad'],
+                'subtotal' => $value['subtotal'],
+                'estadodetsalpro' => 1
+            ];
+            $DetalleSalidaProductoModel->insert($data);
+        }
+        echo "<script>alert('Se guardó correctamente la información');window.location.href = '".base_url()."/salida';</script>";
     }
 
 }

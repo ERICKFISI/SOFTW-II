@@ -95,12 +95,12 @@ if (isset($_SESSION['add_carro'])) {
         <div class="x_panel">
             <div class="x_content">
                 <br />
-                <form class="form-horizontal form-label-left h6" action="salida/create" method="POST">
+                <form class="form-horizontal form-label-left h6" action="../salida/create" method="POST">
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Tipo Salida
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idtiposalida" name="idtiposalida">
+                            <select class="form-control" id="idtiposalida" name="idtiposalida" required="">
                                 <option value="">Seleccione ...</option>
                                 <?php
                                 $html = '';
@@ -116,7 +116,7 @@ if (isset($_SESSION['add_carro'])) {
                         <label class="control-label col-md-3 col-sm-3 ">Fecha Salida
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="datetime-local" class="form-control"  name="fechasalida" value="<?php echo date("d-m-Y H:i");?>" required>
+                            <input type="datetime-local" class="form-control"  name="fechasalida" value="<?php echo date("Y-m-d")."T".date("H:i");?>" required>
                         </div>
                     </div>
                     <div class="form-group row ">
