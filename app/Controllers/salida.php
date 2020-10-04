@@ -96,8 +96,18 @@ class Salida extends BaseController {
                 'estadodetsalpro' => 1
             ];
             $DetalleSalidaProductoModel->insert($data);
+            $productoModel = new \App\Models\ProductoModel();
+            $dtthisProducto = $productoModel->find($idproducto);
+            $productoModel->update($idproducto, array('stock' => ($dtthisProducto['stock'] - $value['cantidad'])));
         }
-        echo "<script>alert('Se guardó correctamente la información');window.location.href = '".base_url()."/salida';</script>";
+        unset($_SESSION['add_carro']);
+        echo "<script>alert('Se guardó correctamente la información');window.location.href = '" . base_url() . "/salida';</script>";
+    }
+
+    public function delete($id) {
+        $salidaModel = new \App\Models\SalidaModel();
+        $salidaModel->update($id, array('estadosalida' => 0));
+        echo "<script>alert('Se ha eliminado correctamente');window.location.href = '" . base_url() . "/salida';</script>";
     }
 
 }
