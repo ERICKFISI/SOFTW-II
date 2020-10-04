@@ -54,7 +54,7 @@
                     <div class="form-group">
                         <div class="col-md-9 col-sm-9  offset-md-3">
                             <a href="<?php echo base_url().'/visualizarcategoria'?>" class="btn btn-primary">Cancelar</a>
-                            <button type="submit" class="btn btn-success">Guardar</button>
+                            <button type="submit" class="btn btn-success" onclick="return alerta();">Guardar</button>
                         </div>
                     </div>
 
@@ -66,3 +66,17 @@
 
 
 </div>
+<script type="text/javascript">
+    function alerta()
+    {
+        var m = confirm("¿Está seguro que desea modificar esta marca?");
+        if (m)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+</script>
