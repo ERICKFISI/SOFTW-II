@@ -26,6 +26,23 @@ class Salida extends BaseController {
         echo $this->use_layout('salida/new', $datos);
     }
 
+    public function ver($id)
+    {
+        $m_salida = new \App\Models\SalidaModel();
+        $m_detalle = new \App\Models\DetalleSalidaProductoModel();
+
+        $salida = $m_salida->traerSalidaPorId($id);
+        $detalle = $m_detalle->traerDeSalida($id);
+        /*
+        echo "<br><br>";
+        var_dump($salida);
+        echo "<br><br>";
+        var_dump($detalle);die;
+        */
+        $datos = ["salida" => $salida[0], "detalles" => $detalle];
+        echo $this->use_layout('salida/ver', $datos);
+    }
+
     function getPrecioThisProducto() {
         $idProducto = new \App\Models\ProductoModel();
         $dtProducto = $idProducto->find($_REQUEST['idproducto']);
