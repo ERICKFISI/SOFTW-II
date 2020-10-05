@@ -33,14 +33,26 @@ class Salida extends BaseController {
 
         $salida = $m_salida->traerSalidaPorId($id);
         $detalle = $m_detalle->traerDeSalida($id);
-        /*
-        echo "<br><br>";
-        var_dump($salida);
-        echo "<br><br>";
-        var_dump($detalle);die;
-        */
+
         $datos = ["salida" => $salida[0], "detalles" => $detalle];
         echo $this->use_layout('salida/ver', $datos);
+    }
+
+    public function delete($id)
+    {
+        $m_salida = new \App\Models\SalidaModel();
+        $m_detalle = new \App\Models\DetalleSalidaProductoModel();
+
+        $detalles = $m_detalle->traerDeSalida($id);
+        $data = ["estadodetsalpro" => 0];
+        foreach ($detalles as $detalle)
+        {
+            $m_detalle->update($detalle["iddetsalpro"], $data);
+        }
+
+        $data = ["estadosalida" => 0];
+        $m_salida->update($id, $data);
+        echo "<script>alert('Se eliminó correctamente la salida');window.location.href = '".base_url()."/salida';</script>";
     }
 
     function getPrecioThisProducto() {
