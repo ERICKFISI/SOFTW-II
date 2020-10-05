@@ -38,7 +38,15 @@
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control" value="<?= $salida["descripcionsalida"]; ?>"  id="descripcionsalida" name="descripcionsalida" readonly>
                         </div>
+                    </div>
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha de la salida
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <input type="text" class="form-control" value="<?= $salida["fechasalida"]; ?>"  id="descripcionsalida" name="descripcionsalida" readonly>
+                        </div>
                     </div>           
+		    
                     <div class="ln_solid bg-red"></div>
                     <div class="ln_solid bg-red"></div>
                     <table class="table table-bordered" id="tabla_carrito" style="text-align: center;">
@@ -52,20 +60,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($detalles as $detalle): ?>
+                            <?php $total = 0; foreach ($detalles as $detalle): ?>
 				<td> <?= $detalle["cantidadsalida"]; ?> </td>
 				<td> <?= $detalle["producto"]; ?> </td>
 				<td> <?= $detalle["preciounidad"]; ?> </td>
 				<td> <?= $detalle["subtotal"]; ?> </td>
 				<td><button class="btn btn-round btn-warning" type ="button" disabled>Eliminar</button></td>
-				<?php endforeach; ?>
+				<?php $total += $detalle["subtotal"]; endforeach; ?>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td colspan="3" style="text-align: right;"><strong>Total : </strong></td>
                                 <td id="total">
                                     <strong>
-
+					<?= number_format($total, 2); ?>
                                     </strong>
                                 </td>
 				<tr>
