@@ -61,11 +61,13 @@
                         </thead>
                         <tbody>
                             <?php $total = 0; foreach ($detalles as $detalle): ?>
+				<tr>
 				<td> <?= $detalle["cantidadsalida"]; ?> </td>
 				<td> <?= $detalle["producto"]; ?> </td>
 				<td> <?= $detalle["preciounidad"]; ?> </td>
 				<td> <?= $detalle["subtotal"]; ?> </td>
 				<td><button class="btn btn-round btn-warning" type ="button" disabled>Eliminar</button></td>
+				</tr>
 				<?php $total += $detalle["subtotal"]; endforeach; ?>
                         </tbody>
                         <tfoot>

@@ -55,6 +55,22 @@ class Salida extends BaseController {
         echo "<script>alert('Se eliminó correctamente la salida');window.location.href = '".base_url()."/salida';</script>";
     }
 
+    public function edit($id)
+    {
+        $m_salida = new \App\Models\SalidaModel();
+        $m_detalle = new \App\Models\DetalleSalidaProductoModel();
+
+        $salida = $m_salida->traerSalidaPorId($id);
+        $detalle = $m_detalle->traerDeSalida($id);
+
+        $datos = ["salida" => $salida[0], "detalles" => $detalle];
+        $tipoSalidaModel = new \App\Models\TipoSalidalModel();
+        $datos['tiposalida'] = $tipoSalidaModel->where('estadotiposalida', 1)->findAll();
+        $productoModel = new \App\Models\ProductoModel();
+        $datos['producto'] = $productoModel->where('estadoproducto', 1)->findAll();
+        echo $this->use_layout('salida/edit', $datos);
+    }
+
     function getPrecioThisProducto() {
         $idProducto = new \App\Models\ProductoModel();
         $dtProducto = $idProducto->find($_REQUEST['idproducto']);
