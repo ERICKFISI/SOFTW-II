@@ -61,7 +61,7 @@
                     <div class="form-group row">
                         <label class="control-label col-md-3 col-sm-3 ">Linea</label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" name="idmarca" id="idmarca" required>
+                            <select class="form-control" name="idlinea" id="idlinea" required>
 
                                 <?php
                                 foreach ($lineas as $linea) {
@@ -112,8 +112,8 @@
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-9 col-sm-9  offset-md-3">
+                             <button type="submit" class="btn btn-success">Guardar</button>
                             <a href= "<?= base_url() . "/VisualizarProducto" ?>" class="btn btn-primary">Cancelar</a>
-                            <button type="submit" class="btn btn-success">Guardar</button>
                         </div>
                     </div>
 

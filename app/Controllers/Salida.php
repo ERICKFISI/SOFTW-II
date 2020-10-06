@@ -52,7 +52,7 @@ class Salida extends BaseController {
 
         $data = ["estadosalida" => 0];
         $m_salida->update($id, $data);
-        echo "<script>alert('Se eliminó correctamente la salida');window.location.href = '".base_url()."/salida';</script>";
+        echo "<script>window.location.href = '".base_url()."/salida';</script>";
     }
 
     function getPrecioThisProducto() {
