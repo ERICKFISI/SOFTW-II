@@ -88,8 +88,8 @@
                 <div class="ln_solid"></div>
                 <div class="form-group">
                     <div class="col-md-9 col-sm-9  offset-md-3">
-                        <a href="<?= base_url() . "/visualizarusuario"; ?>" class="btn btn-primary">Cancelar</a>
                         <button type="submit" class="btn btn-success" onclick=" return alerta();">Guardar</button>
+                        <a href="<?= base_url() . "/visualizarusuario"; ?>" class="btn btn-primary">Cancelar</a>
                     </div>
                 </div>
 
