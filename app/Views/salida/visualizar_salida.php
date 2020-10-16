@@ -25,7 +25,7 @@
                                             <th>Tipo de Salida</th>
                                             <th>Fecha</th>
                                             <th>Descripción</th>
-                                            <th>Acciones</th>
+                                            <th colspan="3">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -39,7 +39,11 @@
                                             $html .= "<td>" . $value['descripcionsalida'] . "</td>";
                                             $html .= '<td> ';
                                             $html .= '<a href="' . base_url() . '/salida/ver/' . $value["idsalida"] . '" class="btn btn-secondary btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Ver</a>';
+                                            $html .= '</td> ';
+                                            $html .= '<td> ';					    
                                             $html .= '<a href="' . base_url() . '/salida/edit/' . $value["idsalida"] . '" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>';
+                                            $html .= '</td> ';
+                                            $html .= '<td> ';					    
                                             $html .= '<a onclick="return alerta();" href="'.base_url() . '/salida/delete/' . $value['idsalida'].'"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>';
                                             $html .= "</td>";
                                             $html .= "</tr>";

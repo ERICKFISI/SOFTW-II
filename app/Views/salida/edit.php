@@ -84,6 +84,8 @@ if (isset($_SESSION['add_carro'])) {
         $total += $value['subtotal'];
     }
 }
+
+
 ?>
 <div class="">
     <div class="page-title">
@@ -172,6 +174,21 @@ if (isset($_SESSION['add_carro'])) {
                         </div>
                     </div>
                     <div class="ln_solid bg-red"></div>
+		    <?php   /* Elimina esto...*/
+		    $html = '';
+		    /* Cargamos los datos del detalle de salida */
+		    foreach ($detalles as $key => $value)
+		    {
+			$html .= '<tr>';
+			$html .= '<td>' . $value['cantidadsalida'] . ' Unid</td>';
+			$html .= '<td>' . $value['descripcionproducto'] . '</td>';
+			$html .= '<td>' . number_format($value['preciounidad'],2) . '</td>';
+			$html .= '<td>' . number_format($value['subtotal'],2) . '</td>';
+			$html .= '<td><button class="btn btn-round btn-warning" type ="button" onclick="eliminar(' . $key . ')">Eliminar</button></td>';
+			$html .='</tr>';
+
+		    }
+		    ?>
                     <table class="table table-bordered" id="tabla_carrito" style="text-align: center;">
                         <thead class="table-danger">
                             <tr>
@@ -183,8 +200,7 @@ if (isset($_SESSION['add_carro'])) {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            $html = '';
+                            <?php /* var_dump($detalles);die; */
                             if (isset($_SESSION['add_carro'])) {
                                 foreach ($_SESSION['add_carro'] as $key => $value) {
                                     $html .= '<tr>';
