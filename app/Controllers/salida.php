@@ -26,6 +26,31 @@ class Salida extends BaseController {
         echo $this->use_layout('salida/new', $datos);
     }
 
+    public function edit($id) {
+        $datos = array();
+        $tipoSalidaModel = new \App\Models\TipoSalidalModel();
+        $datos['tiposalida'] = $tipoSalidaModel->where('estadotiposalida', 1)->findAll();
+        $productoModel = new \App\Models\ProductoModel();
+        $datos['producto'] = $productoModel->where('estadoproducto', 1)->findAll();
+
+
+        $salidaModel = new \App\Models\SalidaModel();
+        $DetalleSalidaProductoModel = new \App\Models\DetalleSalidaProductoModel();
+
+        $datos['salida'] = $salidaModel->find($id);
+        $detalle_salida = $DetalleSalidaProductoModel->where('idsalida', $id)->findAll();
+        unset($_SESSION['add_carro']);
+        foreach ($detalle_salida as $key => $value) {
+            $_SESSION['add_carro'][$value['idproducto']]['cantidad'] = $value['cantidadsalida'];
+            $_SESSION['add_carro'][$value['idproducto']]['preciounidad'] = $value['preciounidad'];
+            $_SESSION['add_carro'][$value['idproducto']]['subtotal'] = $value['subtotal'];
+            $_SESSION['add_carro'][$value['idproducto']]['descripcion_producto'] = $productoModel->find($value['idproducto'])['producto'];
+        }
+//        print_r($datos['salida']);
+//        exit;
+        echo $this->use_layout('salida/edit', $datos);
+    }
+
     function getPrecioThisProducto() {
         $idProducto = new \App\Models\ProductoModel();
         $dtProducto = $idProducto->find($_REQUEST['idproducto']);
@@ -102,6 +127,42 @@ class Salida extends BaseController {
         }
         unset($_SESSION['add_carro']);
         echo "<script>alert('Se guardó correctamente la información');window.location.href = '" . base_url() . "/salida';</script>";
+    }
+
+    public function update($id) {
+        $salidaModel = new \App\Models\SalidaModel();
+        $DetalleSalidaProductoModel = new \App\Models\DetalleSalidaProductoModel();
+        $data = [
+            'idtiposalida' => $_REQUEST['idtiposalida'],
+            'fechasalida' => $_REQUEST['fechasalida'],
+            'descripcionsalida' => $_REQUEST['descripcionsalida'],
+            'totalsalida' => $this->getTotal(),
+        ];
+        $salidaModel->update($id, $data);
+        //Devolvemos Stock de Producto
+         $productoModel = new \App\Models\ProductoModel();
+        foreach ($DetalleSalidaProductoModel->where('idsalida', $id)->findAll() as $key => $value) {
+            $dtthisProducto = $productoModel->find($value['idproducto']);
+            $productoModel->update($value['idproducto'], array('stock' => ($dtthisProducto['stock'] + $value['cantidadsalida'])));
+        }
+
+        $DetalleSalidaProductoModel->where('idsalida', $id)->delete();
+        foreach ($_SESSION['add_carro'] as $idproducto => $value) {
+            $data = [
+                'idsalida' => $id,
+                'idproducto' => $idproducto,
+                'cantidadsalida' => $value['cantidad'],
+                'preciounidad' => $value['preciounidad'],
+                'subtotal' => $value['subtotal'],
+                'estadodetsalpro' => 1
+            ];
+            $DetalleSalidaProductoModel->insert($data);
+            //actualizamos Stock de producto
+            $dtthisProducto = $productoModel->find($idproducto);
+            $productoModel->update($idproducto, array('stock' => ($dtthisProducto['stock'] - $value['cantidad'])));
+        }
+        unset($_SESSION['add_carro']);
+        echo "<script>alert('Se Actualizó correctamente la información');window.location.href = '" . base_url() . "/salida';</script>";
     }
 
     public function delete($id) {
