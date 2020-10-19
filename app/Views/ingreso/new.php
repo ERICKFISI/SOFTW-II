@@ -2,19 +2,14 @@
     $(document).ready(function () {
         $('#idproducto').select2();
         $('#idproducto').change(function () {
-            $.post('<?= base_url(); ?>/salida/getPrecioThisProducto', 'idproducto=' + $(this).val(), function (data) {
+            $.post('../ingreso/getPrecioThisProducto', 'idproducto=' + $(this).val(), function (data) {
                 if (data.resp == 1) {
                     $("#preciounidad").val(data.msg.preciounidad);
-                    if ($("#cantidad").val() != "") {
-                        cantidad = eval($("#cantidad").val());
-                        $("#subtotal").val(cantidad * eval($("#preciounidad").val()));
-                    }
-
                 }
             }, 'json');
             return false;
         });
-        $("#cantidad").change(function () {
+        $("#cantidad, #idproducto").change(function () {
             if ($("#cantidad").val() != "") {
                 $("#subtotal").val(eval($(this).val()) * eval($("#preciounidad").val()));
             }
@@ -40,7 +35,7 @@
 
             $("#tabla_carrito tbody").html(html);
             $("#total").html(data.total.toFixed(2));
-            $("#totalsalida").val(data.total.toFixed(2));
+            $("#totalingreso").val(data.total.toFixed(2));
         };
         agregarProductoCarrito = function () {
             idproducto = $("#idproducto").val();
@@ -48,7 +43,7 @@
                 alert("asigne una cantidad para agregar al Carrito");
                 return false;
             }
-            $.post('<?= base_url(); ?>/salida/verificarProductoEnCarrito', 'idproducto=' + idproducto, function (dt) {
+            $.post('../ingreso/verificarProductoEnCarrito', 'idproducto=' + idproducto, function (dt) {
                 if (dt.resp == 1) {
                     var r = confirm(dt.msg);
                     if (r == true) {
@@ -66,13 +61,13 @@
             cantidad = $("#cantidad").val();
             preciounidad = $("#preciounidad").val();
             subtotal = $("#subtotal").val();
-            $.post('<?= base_url(); ?>/salida/setProductoAlCarrito', 'idproducto=' + idproducto + '&cantidad=' + cantidad
+            $.post('../ingreso/setProductoAlCarrito', 'idproducto=' + idproducto + '&cantidad=' + cantidad
                     + '&preciounidad=' + preciounidad + '&subtotal=' + subtotal + '&descripcion_producto=' + descripcion_producto, function (data) {
                         formar_tabla(data);
                     }, 'json');
         };
         eliminar = function (id) {
-            $.post('<?= base_url(); ?>/salida/eliminarProductoAlCarrito', 'idproducto=' + id, function (data) {
+            $.post('../ingreso/eliminarProductoAlCarrito', 'idproducto=' + id, function (data) {
                 if (data.resp == 1) {
                     formar_tabla(data);
                 }
@@ -83,9 +78,9 @@
 </script>
 <?php
 $total = 0;
-if (isset($_SESSION['add_carro'])) {
+if (isset($_SESSION['add_carro2'])) {
 
-    foreach ($_SESSION['add_carro'] as $key => $value) {
+    foreach ($_SESSION['add_carro2'] as $key => $value) {
         $total += $value['subtotal'];
     }
 }
@@ -93,29 +88,24 @@ if (isset($_SESSION['add_carro'])) {
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Editar Salida de Almacén</h3>
+            <h3>Registrar Ingreso de Almacén</h3>
         </div>
     </div>
     <div class="col-md-3-6 ">
         <div class="x_panel">
             <div class="x_content">
                 <br />
-                <form class="form-horizontal form-label-left h6" action="<?= base_url(); ?>/salida/update/<?= $salida['idsalida'] ?>" method="POST">
+                <form class="form-horizontal form-label-left h6" action="../ingreso/create" method="POST">
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Tipo Salida
+                        <label class="control-label col-md-3 col-sm-3 ">Tipo Ingreso
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idtiposalida" name="idtiposalida" required="">
+                            <select class="form-control" id="idtipoingreso" name="idtipoingreso" required="">
                                 <option value="">Seleccione ...</option>
                                 <?php
                                 $html = '';
-                                foreach ($tiposalida as $key => $value) {
-
-                                    if ($value['idtiposalida'] == $salida['idtiposalida']) {
-                                        $html .= '<option value="' . $value['idtiposalida'] . '" selected>' . $value['tiposalida'] . '</option>';
-                                    } else {
-                                        $html .= '<option value="' . $value['idtiposalida'] . '">' . $value['tiposalida'] . '</option>';
-                                    }
+                                foreach ($tipoingreso as $key => $value) {
+                                    $html .= '<option value="' . $value['idtipoingreso'] . '">' . $value['tipoingreso'] . '</option>';
                                 }
                                 echo $html;
                                 ?>
@@ -123,25 +113,25 @@ if (isset($_SESSION['add_carro'])) {
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Fecha Salida
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha Ingreso
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="datetime-local" class="form-control"  name="fechasalida" value="<?php $fs = explode(" ", $salida['fechasalida']);
-                                echo $fs[0] . "T" . $fs[1]; ?>" required>
+                            <input type="datetime-local" class="form-control"  name="fechaingreso" value="<?php echo date("Y-m-d")."T".date("H:i");?>" required>
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Salida S/.
+                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Ingreso S/.
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control"  id="totalsalida" name="totalsalida" value="<?php echo number_format($total, 2); ?>" disabled="disbled">
+                            <input type="text" class="form-control"  id="totalingreso" name="totalingreso" value="<?php echo  number_format($total, 2);?>" disabled="disbled">
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Descripcion Salida
+                        <label class="control-label col-md-3 col-sm-3 ">Descripcion Ingreso
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control"  id="descripcionsalida" name="descripcionsalida" value="<?php echo $salida['descripcionsalida'] ?>" required>
+                            <input type="text" class="form-control"  id="descripcioningreso" name="descripcioningreso" required>
+                        </div>
                     </div>           
                     <div class="ln_solid bg-red"></div>
                     <div class="form-group row ">
@@ -188,13 +178,13 @@ if (isset($_SESSION['add_carro'])) {
                         <tbody>
                             <?php
                             $html = '';
-                            if (isset($_SESSION['add_carro'])) {
-                                foreach ($_SESSION['add_carro'] as $key => $value) {
+                            if (isset($_SESSION['add_carro2'])) {
+                                foreach ($_SESSION['add_carro2'] as $key => $value) {
                                     $html .= '<tr>';
                                     $html .= '<td>' . $value['cantidad'] . ' Unid</td>';
                                     $html .= '<td>' . $value['descripcion_producto'] . '</td>';
-                                    $html .= '<td>' . number_format($value['preciounidad'], 2) . '</td>';
-                                    $html .= '<td>' . number_format($value['subtotal'], 2) . '</td>';
+                                    $html .= '<td>' . number_format($value['preciounidad'],2) . '</td>';
+                                    $html .= '<td>' . number_format($value['subtotal'],2) . '</td>';
                                     $html .= '<td><button class="btn btn-round btn-warning" type ="button" onclick="eliminar(' . $key . ')">Eliminar</button></td>';
                                     $html .='</tr>';
                                 }
@@ -209,7 +199,7 @@ if (isset($_SESSION['add_carro'])) {
                                 <td colspan="3" style="text-align: right;"><strong>Total : </strong></td>
                                 <td id="total">
                                     <strong>
-                                        <?php echo number_format($total, 2); ?>
+                                        <?php echo number_format($total,2); ?>
                                     </strong>
                                 </td>
                             <tr>
@@ -217,8 +207,8 @@ if (isset($_SESSION['add_carro'])) {
                     </table>
                     <div class="form-group row">
                         <center class="col-md-12 col-sm-12  offset-md-12">
-                            <button type="submit" class="btn btn-success">Actualizar</button>
-                            <a href="<?php echo base_url() . '/salida' ?>" class="btn btn-primary">Cancelar</a>
+                            <button type="submit" class="btn btn-success">Guardar</button>
+                            <a href="<?php echo base_url() . '/ingreso' ?>" class="btn btn-primary">Cancelar</a>
                         </center>
                     </div>
 

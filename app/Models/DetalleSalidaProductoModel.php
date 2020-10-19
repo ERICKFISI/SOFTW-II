@@ -11,4 +11,12 @@ class DetalleSalidaProductoModel extends Model {
     protected $returnType = 'array';
     protected $allowedFields = ['idsalida', 'idproducto','cantidadsalida','preciounidad','estadodetsalpro','subtotal'];
 
+    public function traerDeSalida($id)
+    {
+        return $this->db->table("detsalpro d")
+                ->where("estadodetsalpro", 1)
+                ->where("idsalida", $id)
+                ->join("producto p", "d.idproducto = p.idproducto")
+                ->get()->getResultArray();
+    }
 }

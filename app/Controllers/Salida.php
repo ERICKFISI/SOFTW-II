@@ -26,6 +26,32 @@ class Salida extends BaseController {
         echo $this->use_layout('salida/new', $datos);
     }
 
+    public function ver($id) {
+        $m_salida = new \App\Models\SalidaModel();
+        $m_detalle = new \App\Models\DetalleSalidaProductoModel();
+
+        $salida = $m_salida->traerSalidaPorId($id);
+        $detalle = $m_detalle->traerDeSalida($id);
+
+        $datos = ["salida" => $salida[0], "detalles" => $detalle];
+        echo $this->use_layout('salida/ver', $datos);
+    }
+
+    public function delete($id) {
+        $m_salida = new \App\Models\SalidaModel();
+        $m_detalle = new \App\Models\DetalleSalidaProductoModel();
+
+        $detalles = $m_detalle->traerDeSalida($id);
+        $data = ["estadodetsalpro" => 0];
+        foreach ($detalles as $detalle) {
+            $m_detalle->update($detalle["iddetsalpro"], $data);
+        }
+
+        $data = ["estadosalida" => 0];
+        $m_salida->update($id, $data);
+        echo "<script>window.location.href = '" . base_url() . "/salida';</script>";
+    }
+
     public function edit($id) {
         $datos = array();
         $tipoSalidaModel = new \App\Models\TipoSalidalModel();
@@ -46,8 +72,6 @@ class Salida extends BaseController {
             $_SESSION['add_carro'][$value['idproducto']]['subtotal'] = $value['subtotal'];
             $_SESSION['add_carro'][$value['idproducto']]['descripcion_producto'] = $productoModel->find($value['idproducto'])['producto'];
         }
-//        print_r($datos['salida']);
-//        exit;
         echo $this->use_layout('salida/edit', $datos);
     }
 
@@ -140,7 +164,7 @@ class Salida extends BaseController {
         ];
         $salidaModel->update($id, $data);
         //Devolvemos Stock de Producto
-         $productoModel = new \App\Models\ProductoModel();
+        $productoModel = new \App\Models\ProductoModel();
         foreach ($DetalleSalidaProductoModel->where('idsalida', $id)->findAll() as $key => $value) {
             $dtthisProducto = $productoModel->find($value['idproducto']);
             $productoModel->update($value['idproducto'], array('stock' => ($dtthisProducto['stock'] + $value['cantidadsalida'])));
@@ -165,7 +189,7 @@ class Salida extends BaseController {
         echo "<script>alert('Se Actualizó correctamente la información');window.location.href = '" . base_url() . "/salida';</script>";
     }
 
-    public function delete($id) {
+    public function delete2($id) {
         $salidaModel = new \App\Models\SalidaModel();
         $salidaModel->update($id, array('estadosalida' => 0));
         echo "<script>alert('Se ha eliminado correctamente');window.location.href = '" . base_url() . "/salida';</script>";
