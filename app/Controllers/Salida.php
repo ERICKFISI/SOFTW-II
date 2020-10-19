@@ -23,6 +23,7 @@ class Salida extends BaseController {
         $datos['tiposalida'] = $tipoSalidaModel->where('estadotiposalida', 1)->findAll();
         $productoModel = new \App\Models\ProductoModel();
         $datos['producto'] = $productoModel->where('estadoproducto', 1)->findAll();
+        unset($_SESSION['add_carro']);
         echo $this->use_layout('salida/new', $datos);
     }
 
