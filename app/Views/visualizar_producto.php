@@ -30,7 +30,7 @@
                                             <th>Descripción</th>
                                             <th>Stock</th>
                                             <th>Precio por Unidad</th>
-                                            <th>Acciones</th>
+                                            <th colspan="3">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -45,17 +45,20 @@
                                                     <td> <?= $value["stock"] ?> </td>
                                                     <td> <?= $value["preciounidad"] ?> </td>
                                                     <td>
-                                                      <div class="col-12 mx-auto px-0"> 
                                                         <div class="col-12 mx-auto text-align px-0">
                                                           <a href="<?= base_url() . "/visualizarProducto/getupdatever/" . $value["idproducto"]; ?>" class="btn btn-secondary  btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Ver</a>
                                                         </div>
+						    </td>
+						    <td>
                                                         <div class="col-12 mx-auto text-align px-0">
                                                           <a href="<?= base_url() . "/visualizarProducto/getupdate/" . $value["idproducto"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>
                                                         </div>
+						    </td>
+						    <td>
                                                         <div class="col-12 mx-auto text-align px-0" >
                                                           <a onclick="return alerta();" href="<?= base_url() . "/VisualizarProducto/delete/" . $value['idproducto']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                                                         </div>
-                                                    </div></td> 
+						    </td>
                                                 </tr>  
 						<?php endforeach; ?>
                                     </tbody>

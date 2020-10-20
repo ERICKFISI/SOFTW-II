@@ -25,7 +25,7 @@
                                         <tr class="text-center">
                                             <th>Id</th>
                                             <th>Categoría</th>
-                                            <th>Acciones</th>
+                                            <th colspan="2">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -37,11 +37,14 @@
                                                     <td class="text-center"> <?= $value["categoria"] ?> </td>
                                                     <td class="mx-auto">
                                                             <div class="col-8 col-lg-4 offset-lg-4 px-0">
-                                                                <a href="<?= base_url() . "/visualizarcategoria/getupdate/" . $value["idcategoria"]; ?>" class="btn btn-info btn-sm col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
+                                                                <a href="<?= base_url() . "/visualizarcategoria/getupdate/" . $value["idcategoria"]; ?>" class="btn btn-info btn-sm col-12" ><i class="fa fa-pencil"></i>Modificar</a>
+							    </div>
+						    </td>
+						    <td>
                                                             <div class="col-lg-4 offset-lg-4 col-8  px-0" >
                                                                 <a onclick="return alerta();" href="<?= base_url() . "/visualizarcategoria/delete/" . $value['idcategoria']; ?>"   class="btn btn-danger btn-sm col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                                                             </div>
-                                                        </td> 
+                                                    </td> 
                                                 </tr>  
                                         <?php  endforeach; ?>
                                     </tbody>
