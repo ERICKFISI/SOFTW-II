@@ -5,13 +5,18 @@
             $.post('../salida/getPrecioThisProducto', 'idproducto=' + $(this).val(), function (data) {
                 if (data.resp == 1) {
                     $("#preciounidad").val(data.msg.preciounidad);
+                    if ($("#cantidad").val() != "") {
+                        cantidad = eval($("#cantidad").val());
+                        $("#subtotal").val(cantidad * eval($("#preciounidad").val()));
+                    }
                 }
             }, 'json');
             return false;
         });
-        $("#cantidad, #idproducto").change(function () {
+        $("#cantidad").change(function () {
             if ($("#cantidad").val() != "") {
-                $("#subtotal").val(eval($(this).val()) * eval($("#preciounidad").val()));
+                cantidad = eval($("#cantidad").val());
+                $("#subtotal").val(cantidad * eval($("#preciounidad").val()));
             }
 
         });
@@ -116,14 +121,14 @@ if (isset($_SESSION['add_carro'])) {
                         <label class="control-label col-md-3 col-sm-3 ">Fecha Salida
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="datetime-local" class="form-control"  name="fechasalida" value="<?php echo date("Y-m-d")."T".date("H:i");?>" required>
+                            <input type="datetime-local" class="form-control"  name="fechasalida" value="<?php echo date("Y-m-d") . "T" . date("H:i"); ?>" required>
                         </div>
                     </div>
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Total Soles Salida S/.
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control"  id="totalsalida" name="totalsalida" value="<?php echo  number_format($total, 2);?>" disabled="disbled">
+                            <input type="text" class="form-control"  id="totalsalida" name="totalsalida" value="<?php echo number_format($total, 2); ?>" disabled="disbled">
                         </div>
                     </div>
                     <div class="form-group row ">
@@ -183,8 +188,8 @@ if (isset($_SESSION['add_carro'])) {
                                     $html .= '<tr>';
                                     $html .= '<td>' . $value['cantidad'] . ' Unid</td>';
                                     $html .= '<td>' . $value['descripcion_producto'] . '</td>';
-                                    $html .= '<td>' . number_format($value['preciounidad'],2) . '</td>';
-                                    $html .= '<td>' . number_format($value['subtotal'],2) . '</td>';
+                                    $html .= '<td>' . number_format($value['preciounidad'], 2) . '</td>';
+                                    $html .= '<td>' . number_format($value['subtotal'], 2) . '</td>';
                                     $html .= '<td><button class="btn btn-round btn-warning" type ="button" onclick="eliminar(' . $key . ')">Eliminar</button></td>';
                                     $html .='</tr>';
                                 }
@@ -199,7 +204,7 @@ if (isset($_SESSION['add_carro'])) {
                                 <td colspan="3" style="text-align: right;"><strong>Total : </strong></td>
                                 <td id="total">
                                     <strong>
-                                        <?php echo number_format($total,2); ?>
+                                        <?php echo number_format($total, 2); ?>
                                     </strong>
                                 </td>
                             <tr>
