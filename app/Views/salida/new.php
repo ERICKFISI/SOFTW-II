@@ -102,6 +102,7 @@ if (isset($_SESSION['add_carro'])) {
                 <br />
                 <form class="form-horizontal form-label-left h6" action="../salida/create" method="POST">
                     <div class="form-group row ">
+
                         <label class="control-label col-md-3 col-sm-3 ">Tipo Salida
                         </label>
                         <div class="col-md-9 col-sm-9 ">
