@@ -56,6 +56,7 @@
  }
 
  var total = 0;
+ var idcont = 0;
 
 /* Funciones para formar la tabla, para guardar los id's de los productos
  * lo que hare sera crear un checkbox cada vez que se agregue un producto
@@ -82,11 +83,12 @@
 
 	 o_cantidad = document.getElementById("cantidad");
 	 o_subtotal = document.getElementById("subtotal");
+	 o_preciounidad = document.getElementById("preciounidad");
 
 	 tbody += "<tr>";
 	 tbody += "<td>" +  o_cantidad.value + "</td>";	 
 	 tbody += "<td>" +  producto.producto + "</td>";
-	 tbody += "<td>" +  producto.preciounidad + "</td>";
+	 tbody += "<td>" +  o_preciounidad.value + "</td>";
 	 tbody += "<td>" +  o_subtotal.value + "</td>";	 
 	 tbody += "<td> <input class='btn btn-outline-danger' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Quitar'> </td>";
 	 tbody += "</tr>";
@@ -108,15 +110,23 @@
 	 check.style = "opacity:0; position:absolute; left:9999px;"
 	 document.getElementById("productos").appendChild(check); // El div
 
-	 // Otros checkbox para las cantidades de cada producto
+	 // Otro checkbox para las cantidades de cada producto
 	 check = document.createElement("input");
 	 check.type = "checkbox";
 	 check.value = o_cantidad.value;
 	 check.checked = "checked";
 	 check.name = "cantidades[]";
 	 check.style = "opacity:0; position:absolute; left:9999px;"
-	 document.getElementById("productos").appendChild(check); // El div
+	 document.getElementById(producto.idproducto).appendChild(check); // El div
 
+	 // Otro checkbox para las precio de compra por unidad de cada producto
+	 check = document.createElement("input");
+	 check.type = "checkbox";
+	 check.value = o_preciounidad.value;
+	 check.checked = "checked";
+	 check.name = "preciounidades[]";
+	 check.style = "opacity:0; position:absolute; left:9999px;"
+	 document.getElementById(producto.idproducto).appendChild(check); // El div
 	 
      });
  }
@@ -155,15 +165,15 @@
                 <br />
                 <form class="form-horizontal form-label-left h6" action="../compras/crear" method="POST">
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Cliente
+                        <label class="control-label col-md-3 col-sm-3 ">Proveedor
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idcliente" name="idcliente" required="">
+                            <select class="form-control" id="idproveedor" name="idproveedor" required="">
                                 <option value="">Seleccione ...</option>
                                 <?php
                                 $html = '';
-                                foreach ($clientes as $key => $value) {
-                                    $html .= '<option value="' . $value['idcliente'] . '">' . $value['razonsocial'] . '</option>';
+                                foreach ($proveedores as $key => $value) {
+                                    $html .= '<option value="' . $value['idproveedor'] . '">' . $value['razonsocial'] . '</option>';
                                 }
                                 echo $html;
                                 ?>
@@ -172,29 +182,12 @@
                     </div>
 
 			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
+                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n compra
                             </label>
                             <div class="col-md-9 col-sm-9 ">
-				<input type="text" class="form-control"  id="direccioncliente" name="direccioncliente" required>
+				<input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>
                             </div>
 			</div>           
-
-                    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Usuario
-                        </label>
-                        <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idusuario" name="idusuario" required="">
-                                <option value="">Seleccione ...</option>
-                                <?php
-                                $html = '';
-                                foreach ($usuarios as $key => $value) {
-                                    $html .= '<option value="' . $value['idusuario'] . '">' . $value['nombre'] . '</option>';
-                                }
-                                echo $html;
-                                ?>
-                            </select>
-                        </div>
-		    </div>
 
                     <div class="form-group row ">			
                         <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
@@ -245,13 +238,13 @@
                                 ?>
                             </select>
                         </div>
+                        <label class="control-label col-md-1 col-sm-1 ">Precio:</label>
+                        <div class="col-md-1 col-sm-1">
+                            <input type="text"  class="form-control" value="" id="preciounidad" name="preciounidad" >
+                        </div>
                         <label class="control-label col-md-1 col-sm-1 ">Cantidad:</label>
                         <div class="col-md-1 col-sm-1">
                             <input type="text" onchange="ponerSubtotal(this.value)" class="form-control" value="" id="cantidad" name="cantidad" >
-                        </div>
-                        <label class="control-label col-md-1 col-sm-1 ">Precio:</label>
-                        <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control" value="" id="preciounidad" name="preciounidad" >
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">SubTotal:</label>
                         <div class="col-md-1 col-sm-1">

@@ -82,11 +82,12 @@
 
 	 o_cantidad = document.getElementById("cantidad");
 	 o_subtotal = document.getElementById("subtotal");
+	 o_preciounidad = document.getElementById("preciounidad");
 
 	 tbody += "<tr>";
 	 tbody += "<td>" +  o_cantidad.value + "</td>";	 
 	 tbody += "<td>" +  producto.producto + "</td>";
-	 tbody += "<td>" +  producto.preciounidad + "</td>";
+	 tbody += "<td>" +  o_preciounidad.value + "</td>";
 	 tbody += "<td>" +  o_subtotal.value + "</td>";	 
 	 tbody += "<td> <input class='btn btn-outline-danger' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Quitar'> </td>";
 	 tbody += "</tr>";
@@ -108,14 +109,14 @@
 	 check.style = "opacity:0; position:absolute; left:9999px;"
 	 document.getElementById("productos").appendChild(check); // El div
 
-	 // Otros checkbox para las cantidades de cada producto
+	 // Otros checkbox para las cantidades de cada producto sera del de arriba
 	 check = document.createElement("input");
 	 check.type = "checkbox";
 	 check.value = o_cantidad.value;
 	 check.checked = "checked";
 	 check.name = "cantidades[]";
 	 check.style = "opacity:0; position:absolute; left:9999px;"
-	 document.getElementById("productos").appendChild(check); // El div
+	 document.getElementById(producto.idproducto).appendChild(check);
 
 	 
      });

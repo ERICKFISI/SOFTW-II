@@ -2,65 +2,55 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Visualizar venta</h3>
+            <h3>Visualizar compra</h3>
         </div>
     </div>
     <div class="col-md-3-6 ">
         <div class="x_panel">
             <div class="x_content">
                 <br />
-                <form class="form-horizontal form-label-left h6" action="../ventas/crear" method="POST">
+                <form class="form-horizontal form-label-left h6" action="../compras/crear" method="POST">
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Cliente
+                        <label class="control-label col-md-3 col-sm-3 ">Proveedor
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idcliente" name="idcliente" readonly>
-                                <option value=""><?= $venta["razonsocial"]; ?></option>
+                                <option value=""><?= $compra["razonsocial"]; ?></option>
                             </select>
                         </div>
                     </div>
 
 			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
+                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Compra
                             </label>
                             <div class="col-md-9 col-sm-9 ">
-				<input type="text" class="form-control"  value="<?= $venta['direccioncliente']; ?>" id="direccioncliente" name="direccioncliente" readonly>
+				<input type="text" class="form-control"  value="<?= $compra['direccioncompra']; ?>" id="direccioncliente" name="direccioncliente" readonly>
                             </div>
 			</div>           
-
-                    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Usuario
-                        </label>
-                        <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idusuario" name="idusuario" readonly>
-                                <option value=""><?= $venta["nombre"] ?></option>
-                            </select>
-                        </div>
-		    </div>
 
                     <div class="form-group row ">			
                         <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idcomprobante" name="idcomprobante" readonly>
-                                <option value=""><?= $venta["comprobante"]; ?></option>
+                                <option value=""><?= $compra["comprobante"]; ?></option>
                             </select>
                         </div>
 		    </div>
 		    
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Fecha de venta
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha de compra
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="date" class="form-control"  name="fechaventa" value="<?= $venta['fechaventa']; ?>" readonly>
+                            <input type="date" class="form-control"  name="fechacompra" value="<?= $compra['fechacompra']; ?>" readonly>
                         </div>
                     </div>
 
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Venta S/.
+                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Compra S/.
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control"  id="totalventa" name="totalventa" value="<?= $venta['totalventa']; ?>" readonly>
+                            <input type="text" class="form-control"  id="totalcompra" name="totalcompra" value="<?= $compra['totalcompra']; ?>" readonly>
                         </div>
                     </div>
                     <div class="ln_solid bg-red"></div>
@@ -77,10 +67,10 @@
                         <tbody>
 			    <?php foreach ($detalles as $detalle): ?>
 				<tr>
-				    <td> <?= $detalle["cantidadventa"]; ?></td>
+				    <td> <?= $detalle["cantidadcompra"]; ?></td>
 				    <td> <?= $detalle["producto"]; ?></td>
-				    <td> <?= $detalle["preciounidad"]; ?></td>
-				    <td> <?= number_format($detalle["preciounidad"] * $detalle["cantidadventa"], 2); ?></td>
+				    <td> <?= $detalle["preciocompraunidad"]; ?></td>
+				    <td> <?= number_format($detalle["preciocompraunidad"] * $detalle["cantidadcompra"], 2); ?></td>
 				    <td> <input disabled class='btn btn-outline-danger'  type='button' value='Quitar'></td>
 				</tr>
 			    <?php endforeach; ?>
@@ -90,7 +80,7 @@
                                 <td colspan="3" style="text-align: right;"><strong>Total : </strong></td>
 				<td id="total"> <!-- strong -->
 				    <strong>
-					<?= $venta["totalventa"]; ?>
+					<?= $compra["totalcompra"]; ?>
 				    </strong>
                                 </td>
 				<tr>
@@ -103,7 +93,7 @@
 		    
                     <div class="form-group row">
                         <center class="col-md-12 col-sm-12  offset-md-12">
-                            <a href="<?php echo base_url() . '/ventas' ?>" class="btn btn-primary">Volver</a>
+                            <a href="<?php echo base_url() . '/compras' ?>" class="btn btn-primary">Volver</a>
                         </center>
                     </div>
                 </form>
