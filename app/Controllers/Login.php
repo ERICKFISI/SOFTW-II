@@ -29,6 +29,7 @@ class Login extends BaseController {
             $_SESSION['dni'] = $registro->dni;
             $_SESSION['telefono'] = $registro->telefono;
             $_SESSION['idperfil'] = $registro->idperfil;
+            $_SESSION['idusuario'] = $registro->idusuario;            
             $perfilModel = new \App\Models\PerfilModel();
             $perfil = $perfilModel->find($registro->idperfil);
             $_SESSION['perfil'] = $perfil['nombre'];

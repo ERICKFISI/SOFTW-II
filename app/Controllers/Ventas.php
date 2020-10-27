@@ -77,6 +77,11 @@ class Ventas extends BaseController
         $mventas = new ModeloVentas();
         $idventa = $mventas->insert($dataVenta);
 
+        $corr = "A001-".$idventa;
+        $data = ["correlativo" => $corr];
+
+        $mventas->update($idventa, $data);
+
         $mdetalle = new ModeloDetVenPro();
         /* El detalle venta  */
         $indice = 0; // Para recorrer las cantidades
@@ -88,6 +93,14 @@ class Ventas extends BaseController
             $mdetalle->insert($dataDetVenta);
         }
         echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";        
+    }
+
+    public function traerCliente()
+    {
+        $mclientes = new ModeloClientes();
+
+        $cliente = $mclientes->traerClientePorId($_POST["idcliente"]);
+        return json_encode($cliente[0], true);
     }
 
     public function ver($id)
