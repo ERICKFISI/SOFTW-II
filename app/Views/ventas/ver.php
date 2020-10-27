@@ -11,11 +11,11 @@
                 <br />
                 <form class="form-horizontal form-label-left h6" action="../ventas/crear" method="POST">
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Correlativo
+                        <label class="control-label col-md-3 col-sm-3 ">Nro Serie
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idcliente" name="idcliente" readonly>
-                                <option value=""><?= $venta["correlativo"]; ?></option>
+                                <option value=""><?= $venta["serie"]; ?></option>
                             </select>
                         </div>
                     </div>

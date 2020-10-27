@@ -10,7 +10,8 @@ class ComprobanteModel extends Model
 	protected $table = 'comprobante';
 	protected $primaryKey = 'idcomprobante';
 	protected $returnType = 'array';
-	protected $allowedFields = ['idcomprobante','comprobante','estadocomprobante'];
+	protected $allowedFields = ['idcomprobante','comprobante','correlativo',
+                                'estadocomprobante', 'contador'];
 
     public function traerComprobantes()
     {
