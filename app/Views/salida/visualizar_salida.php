@@ -18,14 +18,14 @@
                         <div class="col-sm-12">
                             <div class="card-box table-responsive">
 
-                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                <table id="datatable" class="table table-striped table-bordered text-center" style="width:100%">
                                     <thead class="text-center">
                                         <tr class="text-center">
                                             <th>Id</th>
                                             <th>Tipo de Salida</th>
                                             <th>Fecha</th>
                                             <th>Descripción</th>
-                                            <th colspan="3">Acciones</th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -37,10 +37,10 @@
                                             $html .= "<td>" . $value['tiposalida'] . "</td>";
                                             $html .= "<td>" . $value['fechasalida'] . "</td>";
                                             $html .= "<td>" . $value['descripcionsalida'] . "</td>";
-                                            $html .= '<td> ';
-                                            $html .= '<a href="' . base_url() . '/salida/ver/' . $value["idsalida"] . '" class="btn btn-secondary btn-sm mx-auto col-3" ><i class="fa fa-pencil"></i><br>Ver</a> ';
-                                            $html .= '<a href="' . base_url() . '/salida/edit/' . $value["idsalida"] . '" class="btn btn-info btn-sm mx-auto col-3" ><i class="fa fa-pencil"></i>Modific.</a> ';
-                                            $html .= '<a onclick="return alerta();" href="'.base_url() . '/salida/delete/' . $value['idsalida'].'"   class="btn btn-danger btn-sm mx-auto col-3"><i class="fa fa-trash-o"></i>Eliminar</a>';
+                                            $html .= '<td class="text-center row"> ';
+                                            $html .= '<div class="col-12 col-md-5 col-sm-7 col-lg-4 px-1 mx-auto"> <a href="' . base_url() . '/salida/ver/' . $value["idsalida"] . '" class="btn btn-secondary btn-sm col-12" ><i class="fa fa-pencil tema">Ver</i><br></a></div>';
+                                            $html .= '<div class="col-12 col-md-5 col-sm-7 col-lg-4 px-1 mx-auto"><a href="' . base_url() . '/salida/edit/' . $value["idsalida"] . '" class="btn btn-info btn-sm col-12" ><i class="fa fa-pencil tema">Modificar</i></a></div>';
+                                            $html .= '<div class="col-12 col-md-5 col-sm-7 col-lg-4 px-1 mx-auto"><a onclick="return alerta();" href="'.base_url() . '/salida/delete/' . $value['idsalida'].'"   class="btn btn-danger btn-sm col-12"><i class="fa fa-trash-o tema">Eliminar</i></a></div>';
                                             $html .= "</td>";
                                             $html .= "</tr>";
                                         }
@@ -57,6 +57,12 @@
         </div>
     </div>
 </div>
+<style type="text/css">
+    .tema::before
+    {
+        margin-right: 5px !important;
+    }
+</style>
 <script type="text/javascript">
       
     function alerta()

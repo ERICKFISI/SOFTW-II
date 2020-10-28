@@ -154,3 +154,21 @@
         }
     }
 </script>
+<script type="text/javascript">
+    let telefono = document.getElementById( 'telefono' );
+    telefono.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }  
+        } );
+    let dni = document.getElementById( 'dni' );
+    dni.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }  
+        } );
+</script>
