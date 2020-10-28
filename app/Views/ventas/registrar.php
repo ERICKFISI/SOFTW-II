@@ -82,11 +82,12 @@
 
 	 o_cantidad = document.getElementById("cantidad");
 	 o_subtotal = document.getElementById("subtotal");
+	 o_preciounidad = document.getElementById("preciounidad");
 
 	 tbody += "<tr>";
 	 tbody += "<td>" +  o_cantidad.value + "</td>";	 
 	 tbody += "<td>" +  producto.producto + "</td>";
-	 tbody += "<td>" +  producto.preciounidad + "</td>";
+	 tbody += "<td>" +  o_preciounidad.value + "</td>";
 	 tbody += "<td>" +  o_subtotal.value + "</td>";	 
 	 tbody += "<td> <input class='btn btn-outline-danger' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Quitar'> </td>";
 	 tbody += "</tr>";
@@ -108,14 +109,14 @@
 	 check.style = "opacity:0; position:absolute; left:9999px;"
 	 document.getElementById("productos").appendChild(check); // El div
 
-	 // Otros checkbox para las cantidades de cada producto
+	 // Otros checkbox para las cantidades de cada producto sera del de arriba
 	 check = document.createElement("input");
 	 check.type = "checkbox";
 	 check.value = o_cantidad.value;
 	 check.checked = "checked";
 	 check.name = "cantidades[]";
 	 check.style = "opacity:0; position:absolute; left:9999px;"
-	 document.getElementById("productos").appendChild(check); // El div
+	 document.getElementById(producto.idproducto).appendChild(check);
 
 	 
      });
@@ -140,6 +141,41 @@
 
  }
 
+
+ function traerCliente(idcliente, funcion)
+ {
+     // Utilizamos AJAX para conseguir las secciones de un grado
+     // en tiempo real
+     var respuesta;
+     var xhttp = new XMLHttpRequest();
+     
+     xhttp.onreadystatechange = function()
+     {
+	 if (xhttp.readyState == 4 && xhttp.status == 200)
+	 {
+	     respuesta = this.responseText;
+	     if (funcion)
+		 funcion(respuesta);
+	 }
+
+     };
+     // Aqui enviamos los datos al servidor
+     xhttp.open("POST", "../ventas/traerCliente", true);
+     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xhttp.send("idcliente=" + idcliente);
+ }
+
+
+ // Funcion para traer el documento de un cliente
+ function traerDocumento()
+ {
+     var idcliente = document.forms[0].idcliente.value;
+     traerCliente(idcliente, function(respuesta) {
+	 var cliente = JSON.parse(respuesta);
+	 document.getElementById("documento").value = cliente.documento;
+     });
+ }
+ 
 </script>
 
 
@@ -158,7 +194,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Cliente
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idcliente" name="idcliente" required="">
+                            <select class="form-control" onchange="traerDocumento()" id="idcliente" name="idcliente" required="">
                                 <option value="">Seleccione ...</option>
                                 <?php
                                 $html = '';
@@ -171,28 +207,29 @@
                         </div>
                     </div>
 
-			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
-                            </label>
-                            <div class="col-md-9 col-sm-9 ">
-				<input type="text" class="form-control"  id="direccioncliente" name="direccioncliente" required>
-                            </div>
-			</div>           
 
-                    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Usuario
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Documento
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idusuario" name="idusuario" required="">
-                                <option value="">Seleccione ...</option>
-                                <?php
-                                $html = '';
-                                foreach ($usuarios as $key => $value) {
-                                    $html .= '<option value="' . $value['idusuario'] . '">' . $value['nombre'] . '</option>';
-                                }
-                                echo $html;
-                                ?>
-                            </select>
+			    <input type="text" class="form-control" value="" id="documento" name="documento" readonly>
+                        </div>
+		    </div>           
+
+
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="text" class="form-control"  id="direccioncliente" name="direccioncliente" required>
+                        </div>
+		    </div>           
+
+
+
+                    <div class="form-group row ">
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="hidden" class="form-control"  id="idusuario" name="idusuario" value="<?= $_SESSION["idusuario"];?>">			    
                         </div>
 		    </div>
 
@@ -200,7 +237,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idcomprobante" name="idcomprobante" required="">
+                            <select class="form-control" onchange="comprobante()" id="idcomprobante" name="idcomprobante" required="">
                                 <option value="">Seleccione ...</option>
                                 <?php
                                 $html = '';

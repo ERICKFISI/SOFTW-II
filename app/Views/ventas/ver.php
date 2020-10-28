@@ -11,6 +11,16 @@
                 <br />
                 <form class="form-horizontal form-label-left h6" action="../ventas/crear" method="POST">
                     <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Nro Serie
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <select class="form-control" id="idcliente" name="idcliente" readonly>
+                                <option value=""><?= $venta["serie"]; ?></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Cliente
                         </label>
                         <div class="col-md-9 col-sm-9 ">
@@ -20,13 +30,21 @@
                         </div>
                     </div>
 
-			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
-                            </label>
-                            <div class="col-md-9 col-sm-9 ">
-				<input type="text" class="form-control"  value="<?= $venta['direccioncliente']; ?>" id="direccioncliente" name="direccioncliente" readonly>
-                            </div>
-			</div>           
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Documento
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="text" class="form-control"  value="<?= $venta['documento']; ?>" id="direccioncliente" name="direccioncliente" readonly>
+                        </div>
+		    </div>           
+
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="text" class="form-control"  value="<?= $venta['direccioncliente']; ?>" id="direccioncliente" name="direccioncliente" readonly>
+                        </div>
+		    </div>           
 
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Usuario
@@ -90,7 +108,7 @@
                                 <td colspan="3" style="text-align: right;"><strong>Total : </strong></td>
 				<td id="total"> <!-- strong -->
 				    <strong>
-					<?$venta["totalventa"]; ?>
+					<?= $venta["totalventa"]; ?>
 				    </strong>
                                 </td>
 				<tr>

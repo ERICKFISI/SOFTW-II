@@ -7,6 +7,7 @@ use App\Models\ModeloCompras;
 use App\Models\ProductoModel;
 use App\Models\ComprobanteModel;
 use App\Models\ModeloDetCompro;
+use App\Models\ModeloProveedor;
 
 class Compras extends BaseController
 {
@@ -23,16 +24,15 @@ class Compras extends BaseController
     /* Vista de registrar una compra */
     public function registrar()
     {
-        $musuarios = new UsuarioModel();
         $mcomprobantes = new ComprobanteModel();
         $mproductos = new ProductoModel();
+        $mproveedores = new ModeloProveedor();
 
-        $usuarios = $musuarios->traerUsuarios();
         $comprobantes = $mcomprobantes->traerComprobantes();
         $productos = $mproductos->traerProductos();
+        $proveedores = $mproveedores->traerProveedores();
 
-        $data = ["clientes"     => $clientes,
-                 "usuarios"     => $usuarios,
+        $data = ["proveedores"  => $proveedores,
                  "comprobantes" => $comprobantes,
                  "productos"    => $productos];
         
@@ -64,23 +64,23 @@ class Compras extends BaseController
         if ($existeProducto == false)
             echo "<script>alert('Ingrese al menos un producto');window.location.href='".base_url()."/compras/registrar';</script>";
 
-        $dataCompra = ["idcliente"        => $_POST["idcliente"],
-                      "direccioncliente" => $_POST["direccioncliente"],
-                      "idusuario"        => $_POST["idusuario"],
-                      "idcomprobante"    => $_POST["idcomprobante"],
-                      "fechacompra"       => $_POST["fechacompra"],
-                      "totalcompra"       => $_POST["totalcompra"]];
+        $dataCompra = ["idproveedor"      => $_POST["idproveedor"],
+                       "direccioncompra"  => $_POST["direccioncompra"],
+                       "idcomprobante"    => $_POST["idcomprobante"],
+                       "fechacompra"      => $_POST["fechacompra"],
+                       "totalcompra"      => $_POST["totalcompra"]];
         $mcompras = new ModeloCompras();
         $idcompra = $mcompras->insert($dataCompra);
 
-        $mdetalle = new ModeloDetVenPro();
+        $mdetalle = new ModeloDetCompro();
         /* El detalle compra  */
         $indice = 0; // Para recorrer las cantidades
         foreach ($_POST["productos"] as $idproducto)
         {
-            $dataDetCompra = ["idcompra"       => $idcompra,
-                             "idproducto"    => $idproducto,
-                             "cantidadcompra" => $_POST["cantidades"][$indice++]];
+            $dataDetCompra = ["idcompra"      => $idcompra,
+                              "idproducto"     => $idproducto,
+                              "cantidadcompra" => $_POST["cantidades"][$indice],
+                              "preciocompraunidad" => $_POST["preciounidades"][$indice++]];
             $mdetalle->insert($dataDetCompra);
         }
         echo "<script>alert('Compra guardada');window.location.href='".base_url()."/compras';</script>";        
@@ -89,7 +89,6 @@ class Compras extends BaseController
     public function ver($id)
     {
         $mcompras = new ModeloCompras();
-        //$mdetalle = new ModeloDetVenPro();
 
         $compra = $mcompras->traerCompraPorId($id);
         $detalle = $mcompras->traerDetDeCompra($id);
