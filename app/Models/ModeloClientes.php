@@ -9,7 +9,7 @@ class ModeloClientes extends Model
     protected $table = "cliente";
     protected $primaryKey = 'idcliente';
     protected $returnType = 'array';
-    protected $allowedFields = ['documento', 'razonsocial', 'idcomprobante', 'nombrecomercial',
+    protected $allowedFields = ['documento', 'razonsocial', 'idcomprobante',
                                 'direccion', 'email', 'telefono_cel', 'idtipodocumento', 'estadocliente'];
 
     public function traerClientes()
@@ -17,7 +17,7 @@ class ModeloClientes extends Model
         return $this->db->table("cliente c")
                 ->where("c.estadocliente", 1)
                 ->join("tipodocumento t", "c.idtipodocumento = t.idtipodocumento")
-                ->get()->getResultArray();
+                -> get() -> getResultArray();
     }
 
     public function traerClientePorId($id)
@@ -27,5 +27,12 @@ class ModeloClientes extends Model
                 ->where("c.idcliente", $id)                
                 ->join("tipodocumento t", "c.idtipodocumento = t.idtipodocumento")
                 ->get()->getResultArray();
+    }
+
+    public function traerTipoDocumentos()
+    {
+        return $this -> db -> table( 'tipodocumento' )
+        -> where( 'estadotipodocumento', 1 )
+        -> get() -> getResultArray();
     }
 }
