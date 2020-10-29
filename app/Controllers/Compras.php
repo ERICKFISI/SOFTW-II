@@ -48,6 +48,14 @@ class Compras extends BaseController
         return json_encode($producto[0], true);
     }
 
+    public function traerProveedor()
+    {
+        $mproveedores = new ModeloProveedor();
+
+        $proveedor = $mproveedores->traerProveedorPorId($_POST["idproveedor"]);
+        return json_encode($proveedor[0], true);
+    }
+
     public function crear()
     {
         $existeProducto = false;
@@ -70,6 +78,24 @@ class Compras extends BaseController
                        "fechacompra"      => $_POST["fechacompra"],
                        "totalcompra"      => $_POST["totalcompra"]];
         $mcompras = new ModeloCompras();
+
+        $mcomprobantes = new ComprobanteModel();
+        $com = $mcomprobantes->traerComprobantePorId($dataCompra["idcomprobante"]);
+        $com = $com[0];
+        
+        /* Formamos el numero de serie de la compra */
+
+        $contador = $com["contador"]; // El contador esta almacena en la tabla de comprobantes
+        if ($contador >= 9999)
+        {
+            echo "<script>alert('No se puede registrar compras, actualize el correlativo de su comprobante');window.location.href='".base_url()."/compras';</script>";
+        }
+        $serie = $com["correlativo"]."-".$contador; // Se forma la seria
+        $contador += 1;
+        $mcomprobantes->update($dataVenta["idcomprobante"], ["contador" => $contador]);
+        
+        $dataCompra["serie"] = $serie;
+
         $idcompra = $mcompras->insert($dataCompra);
 
         $mdetalle = new ModeloDetCompro();

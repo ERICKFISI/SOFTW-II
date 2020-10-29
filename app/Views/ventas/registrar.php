@@ -89,7 +89,7 @@
 	 tbody += "<td>" +  producto.producto + "</td>";
 	 tbody += "<td>" +  o_preciounidad.value + "</td>";
 	 tbody += "<td>" +  o_subtotal.value + "</td>";	 
-	 tbody += "<td> <input class='btn btn-outline-danger' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Quitar'> </td>";
+	 tbody += "<td> <input class='btn btn-warning' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Eliminar'> </td>";
 	 tbody += "</tr>";
 	 nuevaFila.innerHTML = tbody;
 

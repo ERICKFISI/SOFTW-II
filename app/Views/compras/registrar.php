@@ -90,7 +90,7 @@
 	 tbody += "<td>" +  producto.producto + "</td>";
 	 tbody += "<td>" +  o_preciounidad.value + "</td>";
 	 tbody += "<td>" +  o_subtotal.value + "</td>";	 
-	 tbody += "<td> <input class='btn btn-outline-danger' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Quitar'> </td>";
+	 tbody += "<td> <input class='btn btn-warning' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Eliminar'> </td>";
 	 tbody += "</tr>";
 	 nuevaFila.innerHTML = tbody;
 
@@ -150,6 +150,40 @@
 
  }
 
+ function traerProveedor(idproveedor, funcion)
+ {
+     // Utilizamos AJAX para conseguir las secciones de un grado
+     // en tiempo real
+     var respuesta;
+     var xhttp = new XMLHttpRequest();
+     
+     xhttp.onreadystatechange = function()
+     {
+	 if (xhttp.readyState == 4 && xhttp.status == 200)
+	 {
+	     respuesta = this.responseText;
+	     if (funcion)
+		 funcion(respuesta);
+	 }
+
+     };
+     // Aqui enviamos los datos al servidor
+     xhttp.open("POST", "../compras/traerProveedor", true);
+     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xhttp.send("idproveedor=" + idproveedor);
+ }
+
+
+ // Funcion para traer el documento de un proveedor
+ function traerDocumento()
+ {
+     var idproveedor = document.forms[0].idproveedor.value;
+     traerProveedor(idproveedor, function(respuesta) {
+	 var proveedor = JSON.parse(respuesta);
+	 document.getElementById("documento").value = proveedor.documento;
+     });
+ }
+
 </script>
 
 
@@ -168,7 +202,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Proveedor
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idproveedor" name="idproveedor" required="">
+                            <select class="form-control" onchange="traerDocumento()" id="idproveedor" name="idproveedor" required="">
                                 <option value="">Seleccione ...</option>
                                 <?php
                                 $html = '';
@@ -181,13 +215,21 @@
                         </div>
                     </div>
 
-			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n compra
-                            </label>
-                            <div class="col-md-9 col-sm-9 ">
-				<input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>
-                            </div>
-			</div>           
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Documento
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="text" class="form-control" value="" id="documento" name="documento" readonly>
+                        </div>
+		    </div>           
+
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n compra
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>
+                        </div>
+		    </div>           
 
                     <div class="form-group row ">			
                         <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
