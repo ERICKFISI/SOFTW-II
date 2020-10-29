@@ -10,7 +10,7 @@ class ModeloVentas extends Model
     protected $primaryKey = 'idventa';
     protected $returnType = 'array';
     protected $allowedFields = ['idcliente', 'idusuario', 'idcomprobante', 'fechaventa',
-                                'direccioncliente', 'totalventa', 'serie', 'estadoventa'];
+                                'direccioncliente', 'totalventa', 'estadoventa'];
 
     public function traerVentas()
     {

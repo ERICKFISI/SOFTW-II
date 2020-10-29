@@ -20,13 +20,13 @@
                     <div class="col-sm-12">
                         <div class="card-box table-responsive">
 
-			    <table id="datatable" class="table table-striped table-bordered text-center" style="width:100%">
+			    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
 				<thead>
 				    <tr>
 					<th>Id</th>
 					<th>Perfil</th>
 					<th>Permisos</th>
-					<th>Acciones</th>
+					<th colspan="2">Acciones</th>
 				    </tr>
 				</thead>
 				<tbody>
@@ -39,14 +39,16 @@
 					    <td> <?php foreach ($Resultado2 as $key2 => $value2 ) 
 						 { 
 						     if ( $value2["idperfil2"] == $value["idperfil"] ) {?> 
-						<li class=" list-unstyled col-6 offset-3 py-1 my-0"> <?= $value2["nombremodulo"];?> </li> <?php }} ?>
+						<li> <?= $value2["nombremodulo"];?> </li> <?php }} ?>
 					    </td>
-					    <td class="text-center row">
-						<div class="col-lg-4 col-md-5 mx-auto px-0">
-						    <a href="<?= base_url()."/visualizarperfil/getupdate/".$value["idperfil"];?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil tema">Modificar</i></a>
+					    <td>
+						<div class="col-12 mx-auto text-align px-0">
+						    <a href="<?= base_url()."/visualizarperfil/getupdate/".$value["idperfil"];?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>
 						</div>
-						<div class="col-lg-4 col-md-5 mx-auto px-0" >
-						    <a href="<?= base_url()."/visualizarperfil/delete/".$value['idperfil'];?>"  onclick="return alerta();" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o tema">Eliminar</i></a>
+					    </td>
+					    <td>
+						<div class="col-12 mx-auto text-align px-0" >
+						    <a href="<?= base_url()."/visualizarperfil/delete/".$value['idperfil'];?>"  onclick="return alerta();" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
 						</div>
 					    </td> 
 					</tr>  
@@ -60,12 +62,7 @@
         </div>
     </div>
 
-    <style type="text/css">
-    .tema::before
-    {
-        margin-right: 5px !important;
-    }
-</style>
+
     <!-- /page content -->
     <script type="text/javascript">
      function alerta()

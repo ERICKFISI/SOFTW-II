@@ -122,7 +122,7 @@ if (isset($_SESSION['add_carro'])) {
                         <label class="control-label col-md-3 col-sm-3 ">Fecha Salida
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="datetime-local" class="form-control" disabled name="fechasalida" value="<?php echo date("Y-m-d") . "T" . date("H:i"); ?>" required>
+                            <input type="datetime-local" class="form-control"  name="fechasalida" value="<?php echo date("Y-m-d") . "T" . date("H:i"); ?>" required>
                         </div>
                     </div>
                     <div class="form-group row ">
@@ -164,7 +164,7 @@ if (isset($_SESSION['add_carro'])) {
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">SubTotal:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control" disabled=""  id="subtotal" name="subtotal" >
+                            <input type="text" class="form-control"  id="subtotal" name="subtotal" >
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <button type="button" class="btn btn-round btn-primary" onclick="agregarProductoCarrito();"><i class="fa fa-level-down"> Agregar</i></button>
@@ -224,57 +224,3 @@ if (isset($_SESSION['add_carro'])) {
     </div> 
 </div> 
 </div>
-<script type="text/javascript">
-    let cantidad = document.getElementById( 'cantidad' );
-    cantidad.value = 0;
-    cantidad.addEventListener( 'input', function()
-    {
-        if( this.value == null )
-        {
-            this.value = 0;
-        }
-        else if( isNaN( this.value ) )
-        {
-            this.value = 0;
-        }
-        else if( this.value < 0 )
-        {
-            this.value = 0;
-        }
-        else if( this.value.length > '4' )
-        {
-            this.value = 9999;
-        }
-            } );
-    let preciounidad = document.getElementById( 'preciounidad' );
-    preciounidad.value = 0;
-    preciounidad.addEventListener( 'input', function()
-    {
-        if( this.value == null )
-        {
-            this.value = 0;
-        }
-        else if( isNaN( this.value ) )
-        {
-            this.value = 0;
-        }
-        else if( this.value < 0 )
-        {
-            this.value = 0;
-        }
-        else if( this.value.length > '4' )
-        {
-            this.value = 9999;
-        }
-    } );
-    let subtotal = document.getElementById( 'subtotal' );
-    subtotal.value = 0;
-    cantidad.addEventListener( 'change', function()
-        {
-            subtotal.value = parseInt(preciounidad.value)*parseInt(cantidad.value);
-        } );
-    preciounidad.addEventListener( 'change', function()
-        {
-            subtotal.value = parseInt(preciounidad.value)*parseInt(cantidad.value);
-        } );
-</script>

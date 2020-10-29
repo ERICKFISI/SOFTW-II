@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\perfil;
 use App\Controllers\Categoriaproducto;
 use App\Controllers\Marcaproducto;
+use App\Controllers\TipoDocumento;
 
 class Home extends BaseController {
 
@@ -39,6 +40,16 @@ class Home extends BaseController {
     public function registrarmarca()
     {
         echo $this->use_layout('registrar_marca');
+    }
+
+
+    public function registrarproveedor() {
+
+        $tipodocumento = new TipoDocumento();
+        $tipodocumento = $tipodocumento->index();
+        $data['tipodocumento'] = $tipodocumento;
+
+        echo $this->use_layout('registrar_proveedor', $data);
     }
     //--------------------------------------------------------------------
 }

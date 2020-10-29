@@ -22,7 +22,6 @@
                                         <tr class="text-center">
                                             <th>Id</th>
                                             <th>Proveedor</th>
-					    <th>Nro Serie</th>
 					    <th>Direcci&oacute;n</th>
                                             <th>Comprobante</th>
                                             <th>Fecha</th>
@@ -36,7 +35,6 @@
 					    <tr>
 						<td> <?= $valor["idcompra"]; ?></td>
 						<td> <?= $valor["razonsocial"]; ?></td>
-						<td> <?= $valor["serie"]; ?></td>
 						<td> <?= $valor["direccioncompra"]; ?></td>
 						<td> <?= $valor["comprobante"]; ?></td>
 						<td> <?= $valor["fechacompra"]; ?></td>

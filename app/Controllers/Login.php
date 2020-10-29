@@ -29,13 +29,12 @@ class Login extends BaseController {
             $_SESSION['dni'] = $registro->dni;
             $_SESSION['telefono'] = $registro->telefono;
             $_SESSION['idperfil'] = $registro->idperfil;
-            $_SESSION['idusuario'] = $registro->idusuario;            
             $perfilModel = new \App\Models\PerfilModel();
             $perfil = $perfilModel->find($registro->idperfil);
             $_SESSION['perfil'] = $perfil['nombre'];
             $_SESSION['perfil'] = die("<script>window.location='" . base_url() . "/sistema';</script>");
         } else {
-            die("<script>window.location='" . base_url() . "';</script>");
+            die("<script>window.location='" . base_url() . "';</script>"); 
         }
         // Si inicia sesion ¿a donde se le redigira y como?
         return redirect()->to( base_url().'/index.php/VisualizarUsuario');
