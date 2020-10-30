@@ -98,6 +98,7 @@ class Compras extends BaseController
 
         $idcompra = $mcompras->insert($dataCompra);
 
+        $mproductos = new ProductoModel();
         $mdetalle = new ModeloDetCompro();
         /* El detalle compra  */
         $indice = 0; // Para recorrer las cantidades
@@ -106,8 +107,13 @@ class Compras extends BaseController
             $dataDetCompra = ["idcompra"      => $idcompra,
                               "idproducto"     => $idproducto,
                               "cantidadcompra" => $_POST["cantidades"][$indice],
-                              "preciocompraunidad" => $_POST["preciounidades"][$indice++]];
-            $mdetalle->insert($dataDetCompra);
+                              "preciocompraunidad" => $_POST["preciounidades"][$indice]];
+            $mdetalle->insert($dataDetCompra); // Se inserta el detalle de compra
+            $productoActual = $mproductos->traerProductoPorId($idproducto); // Se trae el producto
+            $productoActual = $productoActual[0];
+            $nuevoStock = $productoActual["stock"] + $_POST["cantidades"][$indice]; // Se calcula el nuevo stock
+            $mproductos->update($idproducto, ["stock" => $nuevoStock]); // Se actualiza el stock
+            $indice++;
         }
         echo "<script>alert('Compra guardada');window.location.href='".base_url()."/compras';</script>";        
     }
