@@ -74,6 +74,28 @@ class Ventas extends BaseController
                       "idcomprobante"    => $_POST["idcomprobante"],
                       "fechaventa"       => $_POST["fechaventa"],
                       "totalventa"       => $_POST["totalventa"]];
+
+        // Antes que nada verifiquemos que tenemos la cantidad que se desea
+        $correcto = true;
+        
+        $mproductos = new ProductoModel();
+        /* El detalle venta  */
+        $indice = 0; // Para recorrer las cantidades
+        foreach ($_POST["productos"] as $idproducto)
+        {
+            $productoActual = $mproductos->traerProductoPorId($idproducto);
+            $productoActual = $productoActual[0];
+            if ($productoActual["stock"] < $_POST["cantidades"][$indice])
+            {
+                $correcto = false;
+                break;
+            }
+            $indice++;
+        }
+        if ($correcto == false)
+            echo "<script>alert('No hay esas cantidades para vender');window.location.href='".base_url()."/ventas/registrar';</script>";
+        
+
         $mventas = new ModeloVentas();
         $idventa = $mventas->insert($dataVenta);
 
@@ -84,8 +106,13 @@ class Ventas extends BaseController
         {
             $dataDetVenta = ["idventa"       => $idventa,
                              "idproducto"    => $idproducto,
-                             "cantidadventa" => $_POST["cantidades"][$indice++]];
+                             "cantidadventa" => $_POST["cantidades"][$indice]];
             $mdetalle->insert($dataDetVenta);
+            $productoActual = $mproductos->traerProductoPorId($idproducto); // Se trae el producto
+            $productoActual = $productoActual[0];
+            $nuevoStock = $productoActual["stock"] - $_POST["cantidades"][$indice]; // Se calcula el nuevo stock
+            $mproductos->update($idproducto, ["stock" => $nuevoStock]); // Se actualiza el stock
+            $indice++;
         }
         echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";        
     }
