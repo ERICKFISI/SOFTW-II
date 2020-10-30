@@ -1,7 +1,7 @@
 <div class="">
     <div class="title">
         <div class="col-12">
-            <h3>Visualizar Producto</small></h3>
+            <h3>Visualizar Proveedor</small></h3>
         </div>
     </div>
 
@@ -11,9 +11,7 @@
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel ">
                 <div class="x_title">
-                    <a href="<?= base_url() . "/home/registrarproducto"; ?>" class="btn btn-success">Registrar Producto</a>
-                    <a href="<?= base_url() . "/visualizarcategoria"; ?>" class="btn btn-info">Visualizar Categoría</a>
-                    <a href="<?= base_url() . "/visualizarMarca"; ?>" class="btn btn-secondary">Visualizar Marca</a>                                                                                                                  
+                    <a href="<?= base_url() . "/home/registrarproveedor"; ?>" class="btn btn-success">Registrar</a>                                                                                                                
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -25,11 +23,9 @@
                                     <thead class="text-center">
                                         <tr class="text-center">
                                             <th>Id</th>
-                                            <th>Producto</th>
-                                            <th>Categoría</th>
-                                            <th>Descripción</th>
-                                            <th>Stock</th>
-                                            <th>Precio por Unidad</th>
+                                            <th>Proveedor</th>
+                                            <th>Direccion</th>
+                                            <th>Num. Documento</th>
                                             <th colspan="3">Acciones</th>
                                         </tr>
                                     </thead>
@@ -38,25 +34,23 @@
                                         foreach ($Resultado as $key => $value):
                                                 ?>
                                                 <tr>  
-                                                    <td> <?= $value["idproducto"] ?>  </td>
-                                                    <td> <?= $value["producto"] ?> </td>
-                                                    <td> <?= $value["categoria"] ?> </td>
-                                                    <td> <?= $value["descripcionproducto"] ?> </td>
-                                                    <td> <?= $value["stock"] ?> </td>
-                                                    <td> <?= $value["preciounidad"] ?> </td>
+                                                    <td> <?= $value["idproveedor"] ?>  </td>
+                                                    <td> <?= $value["razonsocial"].' '.$value["nombrecomercial"] ?> </td>
+                                                    <td> <?= $value["direccion"] ?> </td>
+                                                    <td> <?= $value["documento"] ?> </td>
                                                     <td>
                                                         <div class="col-12 mx-auto text-align px-0">
-                                                          <a href="<?= base_url() . "/visualizarProducto/getupdatever/" . $value["idproducto"]; ?>" class="btn btn-secondary  btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Ver</a>
+                                                          <a href="<?= base_url() . "/visualizarProveedor/getupdatever/" . $value["idproveedor"]; ?>" class="btn btn-secondary  btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Ver</a>
                                                         </div>
 						    </td>
 						    <td>
                                                         <div class="col-12 mx-auto text-align px-0">
-                                                          <a href="<?= base_url() . "/visualizarProducto/getupdate/" . $value["idproducto"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>
+                                                          <a href="<?= base_url() . "/VisualizarProveedor/getupdate/" . $value["idproveedor"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>
                                                         </div>
 						    </td>
 						    <td>
                                                         <div class="col-12 mx-auto text-align px-0" >
-                                                          <a onclick="return alerta();" href="<?= base_url() . "/VisualizarProducto/delete/" . $value['idproducto']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
+                                                          <a onclick="return alerta();" href="<?= base_url() . "/VisualizarProveedor/delete/" . $value['idproveedor']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                                                         </div>
 						    </td>
                                                 </tr>  

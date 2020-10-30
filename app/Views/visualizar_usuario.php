@@ -20,7 +20,7 @@
                         <div class="col-sm-12">
                             <div class="card-box table-responsive">
 
-                                <table id="datatable" class="table table-striped table-bordered text-center" style="width:100%">
+                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>Id</th>
@@ -29,7 +29,7 @@
                                             <th>Teléfono/Celular</th>
                                             <th>Perfil</th>
                                             <th>DNI</th>
-                                            <th>Acciones</th>
+                                            <th colspan="2">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -46,10 +46,12 @@
                                                     <td> <?= $value["dni"] ?> </td>
                                                     <td>
                                                             <div class="col-12 mx-auto text-align px-0">
-                                                                <a href="<?= base_url() . "/visualizarusuario/getupdate/" . $value["idusuario"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil tema">Modificar</i></a>
-							                                 </div>
+                                                                <a href="<?= base_url() . "/visualizarusuario/getupdate/" . $value["idusuario"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>
+							    </div>
+						    </td>
+						    <td>
                                                             <div class="col-12 mx-auto text-align px-0" >
-                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarusuario/delete/" . $value['idusuario']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o tema">Eliminar</i></a>
+                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarusuario/delete/" . $value['idusuario']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
                                                             </div>
 						    </td>
                                                 </tr>  
@@ -75,12 +77,6 @@
         <!-- /footer content -->
     </div>
 </div>
-<style type="text/css">
-    .tema::before
-    {
-        margin-right: 5px !important;
-    }
-</style>
 <script type="text/javascript">
     function alerta()
     {

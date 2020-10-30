@@ -21,7 +21,6 @@
                                     <thead class="text-center">
                                         <tr class="text-center">
                                             <th>Id</th>
-					    <th>Nro Serie</th>
                                             <th>Cliente</th>
 					    <th>Direccion</th>
                                             <th>Usuario</th>
@@ -36,7 +35,6 @@
                                         <?php foreach ($ventas as $llave => $valor): ?>
 					    <tr>
 						<td> <?= $valor["idventa"]; ?></td>
-						<td> <?= $valor["serie"]; ?></td>
 						<td> <?= $valor["razonsocial"]; ?></td>
 						<td> <?= $valor["direccioncliente"]; ?></td>
 						<td> <?= $valor["nombre"]; ?></td>

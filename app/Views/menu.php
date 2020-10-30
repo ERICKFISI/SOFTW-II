@@ -16,7 +16,7 @@
                         <div class="profile_info">
                             <span>Bienvenido,</span>
                             <h2>Pelayo Cayao Navarro</h2>
-                        </div>
+                        </div> 
                     </div>
                     <!-- /menu profile quick info -->
 
@@ -37,7 +37,7 @@
                                               </li>
                                               
                                             </ul>-->
-                            <?php echo $menu; ?>
+                            <?php echo $menu; ?> 
                         </div>
                         <div class="menu_section">
                             <h3></h3>

@@ -97,26 +97,7 @@ class Ventas extends BaseController
         
 
         $mventas = new ModeloVentas();
-        //$idventa = $mventas->insert($dataVenta);
-        
-        $mcomprobantes = new ComprobanteModel();
-        $com = $mcomprobantes->traerComprobantePorId($dataVenta["idcomprobante"]);
-        $com = $com[0];
-        
-        /* Formamos el numero de serie de la venta */
-
-        $contador = $com["contador"]; // El contador esta almacena en la tabla de comprobantes
-        if ($contador >= 9999)
-        {
-            echo "<script>alert('No se puede registrar ventas, actualize el correlativo de su comprobante');window.location.href='".base_url()."/ventas';</script>";
-        }
-        $serie = $com["correlativo"]."-".$contador; // Se forma la seria
-        $contador += 1;
-        $mcomprobantes->update($dataVenta["idcomprobante"], ["contador" => $contador]);
-        
-        $dataVenta["serie"] = $serie;
-        $idventa = $mventas->insert($dataVenta); // Se inserta la venta
-        //$mventas->update($idventa, $data);
+        $idventa = $mventas->insert($dataVenta);
 
         $mdetalle = new ModeloDetVenPro();
         /* El detalle venta  */
@@ -134,14 +115,6 @@ class Ventas extends BaseController
             $indice++;
         }
         echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";        
-    }
-
-    public function traerCliente()
-    {
-        $mclientes = new ModeloClientes();
-
-        $cliente = $mclientes->traerClientePorId($_POST["idcliente"]);
-        return json_encode($cliente[0], true);
     }
 
     public function ver($id)
