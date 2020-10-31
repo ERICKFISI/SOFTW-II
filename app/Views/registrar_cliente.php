@@ -57,7 +57,7 @@
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 " for="telefono_cel">Teléfono</label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="tel" class="form-control" name="telefono_cel" id="telefono_cel" minlength="9" required >
+                            <input type="tel" class="form-control" name="telefono_cel" id="telefono_cel" minlength="9" maxlength="9" required >
                         </div>
                     </div>
                     <br>
@@ -129,18 +129,26 @@ dniruc2.addEventListener( 'input', function()
     telefono_cel.addEventListener( 'input', function()
         {
             
-            if( isNaN( this.value ) )
+            if( this.value < 0 )
             {
                 this.value = null;
             }
-            else if( this.value.length > 9 )
+            else if( !Number.isInteger( this.value ) )
             {
-                this.value = this.value.substring( 0, 9 );
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
             }
-            else if( this.value < 0 )
+            else if( isNaN( this.value ) )
             {
-                this.value = null;
+                this.value = "";
             }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
         } );
     let tpdocumento = document.getElementById( 'idtipodocumento' );
     tpdocumento.addEventListener('change', function()
@@ -185,5 +193,31 @@ dniruc2.addEventListener( 'input', function()
                         documento.value = null;
                     }
                 }
+
+                if( documento.value < 0 )
+                {
+                    documento.value = null;
+                }
+                else if( !Number.isInteger( documento.value ) )
+                {
+                    documento.value = parseInt(documento.value);
+                    if( documento.value == "NaN" )
+                    {
+                        documento.value = "";
+                    }
+                }
+                else if( isNaN( documento.value ) )
+                {
+                    documento.value = "";
+                }
+                else if( documento.value == "NaN" )
+                {
+                    documento.value = "";
+                } 
                 } );
+    let razonsocial = document.getElementById( 'razonsocial' );
+    razonsocial.addEventListener( 'input', function()
+    {
+        this.value = this.value.toUpperCase();
+    } );
 </script>

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\ModeloPermiso;
 
 class Sistema extends BaseController {
 

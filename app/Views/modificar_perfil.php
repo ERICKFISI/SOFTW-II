@@ -19,9 +19,13 @@
                 </div>
                 <br>
 
-                <?php foreach ($modulos as $modulo => $key){
-                        if ( !empty($permisos [$modulo]['idmodulo']) ) {
-                            if ( $key['idmodulo'] == $permisos[$modulo]['idmodulo'] && $permisos[$modulo]['idperfil'] == $perfiles['idperfil'] ) { ?>
+                <?php 
+                $c = 0;
+                foreach ($modulos as $modulo => $key){
+                    if( !$key[ 'idmodulopadre' ] == "0" ){
+                        if ( !empty($permisos [$c]['idmodulo']) ) {
+                            if ( $permisos[$c]['idperfil'] == $perfiles['idperfil'] && $key['idmodulo'] == $permisos[$c]['idmodulo'] ) { 
+                                $c = $c+1;?>
                                <div class="checkbox">
                                 <label>
                                  <?= form_input(['type' => 'checkbox', 'checked' => 'checked' ,'value' => $key['idmodulo'], 'name' => 'checks[]', 'required']); ?> <?= $key['nombre']; ?>
@@ -44,7 +48,7 @@
                                     </label>
                                 </div>
                         <?php }
-                }?>
+                }}?>
                                         <br>
 
 
@@ -60,24 +64,6 @@
                                 </div>
                             </div> 
                         </div> 
-
-
-                        
-                </div>
-            </div>
-<!-- /page content -->
-
-<!-- footer content -->
-<footer>
-    <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-    </div>
-    <div class="clearfix"></div>
-</footer>
-<!-- /footer content -->
-</div>
-</div>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src= "<?= base_url() . "/public/vendors/validator/multifield.js" ?>"></script>
@@ -101,15 +87,6 @@
             <!-- /page content -->
 
             <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
-        </div>
-    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

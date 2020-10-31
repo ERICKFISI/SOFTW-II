@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\TipoDocumentoModel;
+use App\Models\ModeloPermiso;
 
 class TipoDocumento extends BaseController{
 

@@ -4,91 +4,230 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Controllers\perfil;
 use App\Models\CategoriaModel;
+use App\Models\ModeloPermiso;
 
 class VisualizarCategoria extends BaseController
 {
 		public function index()
 		{	
-			$model = new CategoriaModel();
-			$datos ['categoria'] = $model -> where( 'estadocategoria', 1 ) -> findAll();
-			 echo $this->use_layout('visualizar_categoria', $datos);
+			try
+			{
+				if( empty( $_SESSION[ 'nombre' ] ) )
+				{
+					return redirect()->to( base_url() . '/Login' );
+				}
+				else
+				{
+					$model = new ModeloPermiso();
+					$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 15 );
+					if( !empty( $perfil ) )
+					{
+						$model = new CategoriaModel();
+						$datos ['categoria'] = $model -> where( 'estadocategoria', 1 ) -> findAll();
+						 echo $this->use_layout('visualizar_categoria', $datos);
+					}
+					else
+					{
+						return redirect()->to( base_url() . '/Sistema' );
+					}
+				}
+			}
+			catch( exception $e )
+			{
+				echo $e -> getMessage();
+			}
 		}
 
 		public function getupdate( $id )
 		{
-			if (is_numeric( $id ))
+			try
 			{
-				$model = new CategoriaModel();
-				$datos [ 'categoria' ] = $model -> where( 'estadocategoria', 1 ) -> find( $id );
-				if( !empty( $datos ) )
+				if( empty( $_SESSION[ 'nombre' ] ) )
 				{
-					echo $this -> use_layout( 'modificar_categoria', $datos );
+					return redirect()->to( base_url() . '/Login' );
+				}
+				else
+				{
+					$model = new ModeloPermiso();
+					$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 15 );
+					if( !empty( $perfil ) )
+					{
+						if (is_numeric( $id ))
+						{
+							$model = new CategoriaModel();
+							$datos [ 'categoria' ] = $model -> where( 'estadocategoria', 1 ) -> find( $id );
+							if( !empty( $datos ) )
+							{
+								echo $this -> use_layout( 'modificar_categoria', $datos );
+							}
+						}
+						else
+						{
+							echo "Error";
+						}
+					}
+					else
+					{
+						return redirect()->to( base_url() . '/Sistema' );
+					}
 				}
 			}
-			else
+			catch( exception $e )
 			{
-				echo "Error";
+				echo $e -> getMessage();
 			}
 		}
 
 		public function update( $id )
 		{
-			if (!empty( $id ))
+			try
 			{
-				$model = new CategoriaModel();
-				$datos = $model -> where( 'estadocategoria', 1 ) -> find( $id );
-				if( !empty( $datos ) )
+				if( empty( $_SESSION[ 'nombre' ] ) )
 				{
-					$data = array(
-						'categoria' => $_POST[ 'categoria' ]
-					);
-					$model -> update( $id, $data );
+					return redirect()->to( base_url() . '/Login' );
+				}
+				else
+				{
+					$model = new ModeloPermiso();
+					$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 15 );
+					if( !empty( $perfil ) )
+					{
+						if (!empty( $id ))
+						{
+							$model = new CategoriaModel();
+							$datos = $model -> where( 'estadocategoria', 1 ) -> find( $id );
+							if( !empty( $datos ) )
+							{
+								$data = array(
+									'categoria' => $_POST[ 'categoria' ]
+								);
+								$model -> update( $id, $data );
+							}
+						}
+						else
+						{
+							echo "Error";
+						}
+						return redirect()->to(base_url() . '/index.php/visualizarcategoria');
+					}
+					else
+					{
+						return redirect()->to( base_url() . '/Sistema' );
+					}
 				}
 			}
-			else
+			catch( exception $e )
 			{
-				echo "Error";
+				echo $e -> getMessage();
 			}
-			return redirect()->to(base_url() . '/index.php/visualizarcategoria');
 		}
 
 		public function show()
 		{
-			$datos['menu'] = 0;
-			echo $this -> use_layout( 'registrar_categoria', $datos);
+			try
+		{
+			if( empty( $_SESSION[ 'nombre' ] ) )
+			{
+				return redirect()->to( base_url() . '/Login' );
+			}
+			else
+			{
+				$model = new ModeloPermiso();
+				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 15 );
+				if( !empty( $perfil ) )
+				{
+					$datos['menu'] = 0;
+					echo $this -> use_layout( 'registrar_categoria', $datos);
+				}
+				else
+				{
+					return redirect()->to( base_url() . '/Sistema' );
+				}
+			}
 		}
+		catch( exception $e )
+		{
+			echo $e -> getMessage();
+		}
+	}
 
 		public function create()
 		{
 			
-				$model = new CategoriaModel();
-				$data = array(
-						'categoria' => $_POST[ 'categoria' ]
-					);
-				$model -> insert( $data );
-				
-				return redirect()->to(base_url() . '/index.php/visualizarcategoria');
+				try
+				{
+					if( empty( $_SESSION[ 'nombre' ] ) )
+					{
+						return redirect()->to( base_url() . '/Login' );
+					}
+					else
+					{
+						$model = new ModeloPermiso();
+						$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 15 );
+						if( !empty( $perfil ) )
+						{
+							$model = new CategoriaModel();
+							$data = array(
+									'categoria' => $_POST[ 'categoria' ]
+								);
+							$model -> insert( $data );
+							
+							return redirect()->to(base_url() . '/index.php/visualizarcategoria');
+						}
+						else
+						{
+							return redirect()->to( base_url() . '/Sistema' );
+						}
+					}
+				}
+				catch( exception $e )
+				{
+					echo $e -> getMessage();
+				}
 		}
 
 		public function delete( $id )
 		{
-			if (!empty( $id ))
+			try
+		{
+			if( empty( $_SESSION[ 'nombre' ] ) )
 			{
-				$model = new CategoriaModel();
-				$datos = $model -> where( 'estadocategoria', 1 ) -> find( $id );
-				if( !empty( $datos ) )
-				{
-					$data = array(
-						'estadocategoria' => 0 
-					);
-					$model -> update( $id, $data );
-				}
+				return redirect()->to( base_url() . '/Login' );
 			}
 			else
 			{
-				echo "Error";
+				$model = new ModeloPermiso();
+				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 15 );
+				if( !empty( $perfil ) )
+				{
+					if (!empty( $id ))
+					{
+						$model = new CategoriaModel();
+						$datos = $model -> where( 'estadocategoria', 1 ) -> find( $id );
+						if( !empty( $datos ) )
+						{
+							$data = array(
+								'estadocategoria' => 0 
+							);
+							$model -> update( $id, $data );
+						}
+					}
+					else
+					{
+						echo "Error";
+					}
+					return redirect()->to(base_url() . '/index.php/visualizarcategoria');
+				}
+				else
+				{
+					return redirect()->to( base_url() . '/Sistema' );
+				}
 			}
-			return redirect()->to(base_url() . '/index.php/visualizarcategoria');
 		}
+		catch( exception $e )
+		{
+			echo $e -> getMessage();
+		}
+	}
 
 }

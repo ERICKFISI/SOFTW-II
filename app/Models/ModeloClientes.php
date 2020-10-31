@@ -28,4 +28,10 @@ class ModeloClientes extends Model
                 ->join("tipodocumento t", "c.idtipodocumento = t.idtipodocumento")
                 ->get()->getResultArray();
     }
+    public function traerTipoDocumentos()
+    {
+        return $this -> db -> table( 'tipodocumento' )
+        -> where( 'estadotipodocumento', 1 )
+        -> get() -> getResultArray();
+    }
 }

@@ -35,14 +35,14 @@
                 <div class="form-group row ">
                     <label class="control-label col-md-3 col-sm-3 ">DNI </label>
                     <div class="col-md-9 col-sm-9 ">
-                        <?= form_input(['type' => 'text', 'class' => 'form-control', 'value' => $usuarios['dni'], 'name' => 'dni', 'id' => 'dni', 'required']); ?>
+                        <?= form_input(['type' => 'text', 'class' => 'form-control', 'value' => $usuarios['dni'], 'name' => 'dni', 'id' => 'dni', 'minlength' => '8', 'maxlength' => '8', 'required']); ?>
                     </div>
                 </div>
 
                 <div class="form-group row ">
                     <label class="control-label col-md-3 col-sm-3 ">Telefono</label>
                     <div class="col-md-9 col-sm-9 ">
-                        <?= form_input(['type' => 'number', 'class' => 'form-control', 'value' => $usuarios['telefono'], 'name' => 'telefono', 'id' => 'telefono', 'required']); ?>
+                        <?= form_input(['type' => 'text', 'class' => 'form-control', 'value' => $usuarios['telefono'], 'name' => 'telefono', 'minlength' => '9', 'maxlength' => '9', 'id' => 'telefono', 'required']); ?>
                     </div>
                 </div>
 
@@ -51,34 +51,24 @@
                 <div class="form-group row">
                     <label class="control-label col-md-3 col-sm-3 ">Perfil</label>
                     <div class="col-md-9 col-sm-9 ">
-                        <?php
-                        $datos1 = [
-                            'name' => 'idperfil',
-                            'class' => 'form-control',
-                            'id' => 'idperfil',
-                            'required'
-                        ];
-                        $c = 1;
-                        foreach ($perfiles as $perfil) {
-                            if ($c == 1) {
-                                $datos2['x'] = [ $perfil['idperfil'] => $perfil['nombre']];
-                                ++$c;
-                            } else {
-                                $a = [ $perfil['idperfil'] => $perfil['nombre']];
-                                $datos2['x'] = array_merge($datos2['x'], $a);
-                            }
-                        }
-                        echo form_dropdown($datos1, $datos2['x'], $usuarios['idperfil']);
-                        ?>
+                            <select class="form-control" name="idperfil" id="idperfil" required>
 
-                        <?php /* foreach ($perfiles as $perfil){   
-                          $nombreperfil = $perfil['nombre'];
-                          $idperfil = $perfil['idperfil']; ?>
+                                <?php
+                                foreach ($perfiles as $perfil) {
+                                    $nombreperfil = $perfil['nombre'];
+                                    $idperfil = $perfil['idperfil'];
+                                    if( $idperfil == $usuarios[ 'idperfil' ] )
+                                    { ?>
+                                    <option selected="selected" value="<?php echo $idperfil ?>"> <?php echo $nombreperfil ?> 
+                                    </option>
+                            <?php   }
+                                    else
+                                    { ?>
+                                    <option value="<?php echo $idperfil ?>"> <?php echo $nombreperfil ?> 
+                                    </option>
+                            <?php   }} ?>
 
-                          <option value="<?php echo $idperfil?>"> <?php echo $nombreperfil ?>
-                          </option> <?php } */ ?>
-
-                        </select>
+                            </select>
                     </div>
                 </div>
 
@@ -139,6 +129,56 @@
                                 }
 
                             }
+</script>
+<script type="text/javascript">
+    let telefono = document.getElementById( 'telefono' );
+    telefono.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+    let dni = document.getElementById( 'dni' );
+    dni.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            } 
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
 </script>
 <script type="text/javascript">
     function alerta()

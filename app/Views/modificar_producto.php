@@ -91,14 +91,14 @@
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Stock </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <?= form_input(["type"=>"number", "class"=>"form-control", "value"=>$producto["stock"], "name"=>"stock", "id"=>"stock", "required"]); ?>
+                            <?= form_input(["type"=>"text", "class"=>"form-control", "value"=>$producto["stock"], "name"=>"stock", "id"=>"stock",'maxlength' => '4', "required"]); ?>
                         </div>
                     </div>
 
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Precio unidad </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <?= form_input(["type"=>"number", "class"=>"form-control", "value"=>$producto["preciounidad"], "name"=>"preciounidad", "id"=>"preciounidad"]); ?>
+                            <?= form_input(["type"=>"text", "class"=>"form-control", "value"=>$producto["preciounidad"], "name"=>"preciounidad", 'maxlength' => '5',"id"=>"preciounidad"]); ?>
                         </div>
                     </div>
 
@@ -126,7 +126,7 @@
 <script type="text/javascript">
     function alerta()
     {
-        var m = confirm("¿Está seguro que desea modificar esta producto?");
+        var m = confirm("¿Está seguro que desea modificar este producto?");
         if (m)
         {
             return true;
@@ -136,4 +136,54 @@
             return false;
         }
     }
+</script>
+<script type="text/javascript">
+    let stock = document.getElementById( 'stock' );
+    stock.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+    let preciounidad = document.getElementById( 'preciounidad' );
+    preciounidad.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            } 
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
 </script>

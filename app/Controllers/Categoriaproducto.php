@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\CategoriaModel;
+use App\Models\ModeloPermiso;
 
 class Categoriaproducto extends BaseController{
 

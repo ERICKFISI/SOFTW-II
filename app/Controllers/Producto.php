@@ -5,6 +5,7 @@ use CodeIgniter\Controller;
 use App\Models\ProductoModel;
 use App\Models\CategoriaModel;
 use App\Models\MarcaModel;
+use App\Models\ModeloPermiso;
 
 
 class Producto extends Controller{

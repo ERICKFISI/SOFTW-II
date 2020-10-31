@@ -126,8 +126,7 @@ if (isset($_SESSION['add_carro'])) {
                         <label class="control-label col-md-3 col-sm-3 ">Fecha Salida
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="datetime-local" class="form-control"  name="fechasalida" value="<?php $fs = explode(" ", $salida['fechasalida']);
-                                echo $fs[0] . "T" . $fs[1]; ?>" required>
+                            <input type="date" class="form-control"  name="fechasalida" value="<?= $salida["fechasalida"]; ?>"required>
                         </div>
                     </div>
                     <div class="form-group row ">

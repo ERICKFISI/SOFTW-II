@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\TipoIngresoModel;
+use App\Models\ModeloPermiso;
 
 
 class TipoIngreso extends Controller{

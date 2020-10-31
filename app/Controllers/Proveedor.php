@@ -4,6 +4,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\ProductoModel;
 use App\Models\TipoDocumentoModel;
+use App\Models\ModeloPermiso;
 
 
 class Proveedor extends Controller{

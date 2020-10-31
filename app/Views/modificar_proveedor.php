@@ -35,7 +35,7 @@
                                     $idtipodocumento = $td['idtipodocumento'];
                                     ?>
 
-                                    <option <?= $selec ?> value="<?php echo $idtipodocumento ?>"> <?php echo $nombretipodocumento ?> 
+                                    <option selected="selected" value="<?php echo $idtipodocumento ?>"> <?php echo $nombretipodocumento ?> 
                                     </option> <?php } ?>
 
                             </select>
