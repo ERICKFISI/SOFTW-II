@@ -155,11 +155,11 @@ if (isset($_SESSION['add_carro'])) {
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">Cantidad:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control"  id="cantidad" name="cantidad" >
+                            <input type="number"  min="0" class="form-control"  id="cantidad" name="cantidad" >
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">Precio:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control"  id="preciounidad" name="preciounidad" >
+                            <input type="number" class="form-control"  id="preciounidad" name="preciounidad" >
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">SubTotal:</label>
                         <div class="col-md-1 col-sm-1">
