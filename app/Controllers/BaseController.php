@@ -92,10 +92,7 @@ class BaseController extends Controller {
             if ($tam_submenus == 0) {
                 //sin menu hijos
                 $m = $m . '<li>';
-                $m = $m . '<a>';
-                $m = $m . '<i class="menu-icon ' . $value['icon'] . '"></i>';
-                $m = $m . ' <span class="menu-text">' . $value['texto'] . '</span>';
-                $m = $m . '</a>';
+                $m = $m . '<a><i class="fa fa-home"></i>' . $value['texto'] . '<span class="fa fa-chevron-down"></span></a>';
                 $m = $m . '</li>';
             } else {
                 $m = $m . '<li>';
