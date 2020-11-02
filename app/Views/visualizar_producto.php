@@ -21,7 +21,7 @@
                         <div class="col-sm-12">
                             <div class="card-box table-responsive">
 
-                                <table id="datatable" class="table table-striped table-bordered" style="width:100%">
+                                <table id="datatable" class="table table-striped table-bordered text-center" style="width:100%">
                                     <thead class="text-center">
                                         <tr class="text-center">
                                             <th>Id</th>
@@ -44,20 +44,19 @@
                                                     <td> <?= $value["descripcionproducto"] ?> </td>
                                                     <td> <?= $value["stock"] ?> </td>
                                                     <td> <?= $value["preciounidad"] ?> </td>
-                                                    <td>
-                                                      <div class="col-12 mx-auto px-0"> 
-                                                        <div class="col-12 mx-auto text-align px-0">
-                                                          <a href="<?= base_url() . "/visualizarProducto/getupdatever/" . $value["idproducto"]; ?>" class="btn btn-secondary  btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Ver</a>
+                                                    <td class="text-center row">
+                                                        <div class="col-12 col-md-6 col-sm-10 col-lg-4 px-1 mx-auto">
+                                                          <a href="<?= base_url() . "/visualizarProducto/getupdatever/" . $value["idproducto"]; ?>" class="btn btn-secondary  btn-sm col-12" ><i class="fa fa-pencil tema">Ver</i></a>
                                                         </div>
-                                                        <div class="col-12 mx-auto text-align px-0">
-                                                          <a href="<?= base_url() . "/visualizarProducto/getupdate/" . $value["idproducto"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a>
+                                                        <div class="col-12 col-md-6 col-sm-10 col-lg-4 px-1 mx-auto">
+                                                          <a href="<?= base_url() . "/visualizarProducto/getupdate/" . $value["idproducto"]; ?>" class="btn btn-info btn-sm col-12 mr-5 " ><i class="fa fa-pencil tema pr-3">Modificar</i></a>
                                                         </div>
-                                                        <div class="col-12 mx-auto text-align px-0" >
-                                                          <a onclick="return alerta();" href="<?= base_url() . "/VisualizarProducto/delete/" . $value['idproducto']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
+                                                        <div class="col-12 col-md-6 col-sm-10 col-lg-4 px-1  mx-auto">
+                                                          <a onclick="return alerta();" href="<?= base_url() . "/VisualizarProducto/delete/" . $value['idproducto']; ?>"   class="btn btn-danger btn-sm col-12"><i class="fa fa-trash-o tema">Eliminar</i></a>
                                                         </div>
-                                                    </div></td> 
+                            </td>
                                                 </tr>  
-						<?php endforeach; ?>
+                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -79,6 +78,12 @@
         <!-- /footer content -->
     </div>
 </div>
+<style type="text/css">
+    .tema::before
+    {
+        margin-right: 5px !important;
+    }
+</style>
 <script type="text/javascript">
     function alerta()
     {

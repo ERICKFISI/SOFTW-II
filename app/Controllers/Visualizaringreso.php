@@ -7,6 +7,7 @@ use App\Controllers\DetIngProModel;
 use App\Controllers\IngresoModel;
 use App\Controllers\ProductoModel;
 use App\Controllers\TipoIngresoModel;
+use App\Models\ModeloPermiso;
 
 
 class VisualizarIngreso extends BaseController

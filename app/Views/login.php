@@ -5,7 +5,7 @@
 
       <div class="login_wrapper">
         <div class="animate form login_form">
-          <section class="login_content">
+          <section class="login_content"> 
             <form method="post" action="login/validar">
               <h1>Formulario de Login</h1>
               <div>

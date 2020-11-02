@@ -38,8 +38,8 @@
                                             $html .= "<td>" . $value['fechasalida'] . "</td>";
                                             $html .= "<td>" . $value['descripcionsalida'] . "</td>";
                                             $html .= '<td> ';
-                                             $html .= '<a href="' . base_url() . '/salida/ver/' . $value["idsalida"] . '" class="btn btn-secondary btn-sm mx-auto col-3" ><i class="fa fa-pencil"></i><br>Ver</a> ';
-                                            $html .= '<a href="' . base_url() . '/salida/edit/' . $value["idsalida"] . '" class="btn btn-info btn-sm mx-auto col-3" ><i class="fa fa-pencil"></i>Modific.</a> ';					    
+                                            $html .= '<a href="' . base_url() . '/salida/ver/' . $value["idsalida"] . '" class="btn btn-secondary btn-sm mx-auto col-3" ><i class="fa fa-pencil"></i><br>Ver</a> ';
+                                            $html .= '<a href="' . base_url() . '/salida/edit/' . $value["idsalida"] . '" class="btn btn-info btn-sm mx-auto col-3" ><i class="fa fa-pencil"></i>Modific.</a> ';
                                             $html .= '<a onclick="return alerta();" href="'.base_url() . '/salida/delete/' . $value['idsalida'].'"   class="btn btn-danger btn-sm mx-auto col-3"><i class="fa fa-trash-o"></i>Eliminar</a>';
                                             $html .= "</td>";
                                             $html .= "</tr>";

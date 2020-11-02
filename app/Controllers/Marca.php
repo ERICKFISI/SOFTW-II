@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\MarcaModel;
+use App\Models\ModeloPermiso;
 
 
 class Marca extends Controller{

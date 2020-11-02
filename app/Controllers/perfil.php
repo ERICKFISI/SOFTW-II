@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\PerfilModel;
+use App\Models\ModeloPermiso;
 
 class Perfil extends BaseController{
 

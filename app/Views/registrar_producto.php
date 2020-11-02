@@ -90,14 +90,14 @@
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Stock </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="number" class="form-control" name="stock" id="stock" required>
+                            <input type="text" class="form-control" id="stock" name="stock" minlength="1" maxlength="4" id="stock" required>
                         </div>
                     </div>
 
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Precio unidad </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="number" class="form-control" name="preciounidad" id="preciounidad" >
+                            <input type="text" class="form-control" id="preciounidad" name="preciounidad" minlength="1" maxlength="5" id="preciounidad" >
                         </div>
                     </div>
 
@@ -112,7 +112,7 @@
                     <div class="ln_solid"></div>
                     <div class="form-group">
                         <div class="col-md-9 col-sm-9  offset-md-3">
-                             <button type="submit" class="btn btn-success">Guardar</button>
+                             <button type="submit" onclick="return alerta();" class="btn btn-success">Guardar</button>
                             <a href= "<?= base_url() . "/VisualizarProducto" ?>" class="btn btn-primary">Cancelar</a>
                         </div>
                     </div>
@@ -122,3 +122,67 @@
         </div> 
     </div> 
 </div>
+<script type="text/javascript">
+    function alerta()
+    {
+        var m = confirm("¿Está seguro que desea registrar este producto?");
+        if (m)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+</script>
+<script type="text/javascript">
+    let stock = document.getElementById( 'stock' );
+    stock.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+    let preciounidad = document.getElementById( 'preciounidad' );
+    preciounidad.addEventListener( 'input', function()
+        {
+            if( this.value < 0 )
+            {
+                this.value = null;
+            } 
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+</script>

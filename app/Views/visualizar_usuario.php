@@ -45,13 +45,13 @@
                                                     <td> <?= $value["nombreperfil"] ?> </td>
                                                     <td> <?= $value["dni"] ?> </td>
                                                     <td>
-                                                        <div class="col-12 mx-auto px-0"> 
                                                             <div class="col-12 mx-auto text-align px-0">
-                                                                <a href="<?= base_url() . "/visualizarusuario/getupdate/" . $value["idusuario"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil"></i>Modificar</a></div>
+                                                                <a href="<?= base_url() . "/visualizarusuario/getupdate/" . $value["idusuario"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil tema">Modificar</i></a>
+                                                             </div>
                                                             <div class="col-12 mx-auto text-align px-0" >
-                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarusuario/delete/" . $value['idusuario']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o"></i>Eliminar</a>
+                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarusuario/delete/" . $value['idusuario']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o tema">Eliminar</i></a>
                                                             </div>
-                                                        </div></td> 
+                            </td>
                                                 </tr>  
     <?php } endforeach; ?>
                                     </tbody>
@@ -75,6 +75,12 @@
         <!-- /footer content -->
     </div>
 </div>
+<style type="text/css">
+    .tema::before
+    {
+        margin-right: 5px !important;
+    }
+</style>
 <script type="text/javascript">
     function alerta()
     {

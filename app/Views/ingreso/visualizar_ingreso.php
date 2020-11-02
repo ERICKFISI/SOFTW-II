@@ -25,7 +25,7 @@
                                             <th>Tipo de Ingreso</th>
                                             <th>Fecha</th>
                                             <th>Descripción</th>
-                                            <th colspan="3">Acciones</th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
