@@ -308,5 +308,65 @@ class Ingreso extends BaseController {
             echo $e -> getMessage();
         }
     }
+    
+    
+        public function update($id) {
+        try
+        {
+            if( empty( $_SESSION[ 'nombre' ] ) )
+            {
+                return redirect()->to( base_url() . '/Login' );
+            }
+            else
+            {
+                $model = new ModeloPermiso();
+                $perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 13 );
+                if( !empty( $perfil ) )
+                {
+                    $ingresoModel = new \App\Models\IngresoModel();
+                    $DetalleIngresoProductoModel = new \App\Models\DetalleIngresoProductoModel();
+                    $data = [
+                        'idtipoingreso' => $_REQUEST['idtipoingreso'],
+                        'fechaingreso' => $_REQUEST['fechaingreso'],
+                        'descripcioningreso' => $_REQUEST['descripcioningreso'],
+                        'totalingreso' => $this->getTotal(),
+                    ];
+                    $ingresoModel->update($id, $data);
+                    //Devolvemos Stock de Producto
+                    $productoModel = new \App\Models\ProductoModel();
+                    foreach ($DetalleIngresoProductoModel->where('idingreso', $id)->findAll() as $key => $value) {
+                        $dtthisProducto = $productoModel->find($value['idproducto']);
+                        $productoModel->update($value['idproducto'], array('stock' => ($dtthisProducto['stock'] - $value['cantidadingreso'])));
+                    }
+
+                    $DetalleIngresoProductoModel->where('idingreso', $id)->delete();
+                    foreach ($_SESSION['add_carro2'] as $idproducto => $value) {
+                        $data = [
+                            'idingreso' => $id,
+                            'idproducto' => $idproducto,
+                            'cantidadingreso' => $value['cantidad'],
+                            'preciounidad' => $value['preciounidad'],
+                            'subtotal' => $value['subtotal'],
+                            'estadodetsalpro' => 1
+                        ];
+                        $DetalleIngresoProductoModel->insert($data);
+                        //actualizamos Stock de producto
+                        $dtthisProducto = $productoModel->find($idproducto);
+                        $productoModel->update($idproducto, array('stock' => ($dtthisProducto['stock'] + $value['cantidad'])));
+                    }
+                    unset($_SESSION['add_carro2']);
+                    echo "<script>alert('Se Actualizó correctamente la información');window.location.href = '" . base_url() . "/ingreso';</script>";
+                }
+                else
+                {
+                    return redirect()->to( base_url() . '/Sistema' );
+                }
+            }
+        }
+        catch( exception $e )
+        {
+            echo $e -> getMessage();
+        }
+    }
 
 }

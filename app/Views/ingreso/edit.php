@@ -83,9 +83,9 @@
 </script>
 <?php
 $total = 0;
-if (isset($_SESSION['add_carro'])) {
+if (isset($_SESSION['add_carro2'])) {
 
-    foreach ($_SESSION['add_carro'] as $key => $value) {
+    foreach ($_SESSION['add_carro2'] as $key => $value) {
         $total += $value['subtotal'];
     }
 }
