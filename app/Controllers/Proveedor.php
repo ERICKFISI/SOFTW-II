@@ -5,6 +5,7 @@ use CodeIgniter\Controller;
 use App\Models\ProductoModel;
 use App\Models\TipoDocumentoModel;
 use App\Models\ModeloPermiso;
+use App\Models\ProveedorModel;
 
 
 class Proveedor extends Controller{

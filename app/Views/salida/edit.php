@@ -102,7 +102,7 @@ if (isset($_SESSION['add_carro'])) {
                 <br />
                 <form class="form-horizontal form-label-left h6" action="<?= base_url(); ?>/salida/update/<?= $salida['idsalida'] ?>" method="POST">
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Tipo Salida
+                        <label class="control-label col-md-3 col-sm-3 ">Tipo de Salida
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idtiposalida" name="idtiposalida" required="">
@@ -123,21 +123,21 @@ if (isset($_SESSION['add_carro'])) {
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Fecha Salida
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="date" class="form-control"  name="fechasalida" value="<?= $salida["fechasalida"]; ?>"required>
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Salida S/.
+                        <label class="control-label col-md-3 col-sm-3 ">Total de Salida en Soles (S/.)
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control"  id="totalsalida" name="totalsalida" value="<?php echo number_format($total, 2); ?>" disabled="disbled">
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Descripcion Salida
+                        <label class="control-label col-md-3 col-sm-3 ">Descripción
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control"  id="descripcionsalida" name="descripcionsalida" value="<?php echo $salida['descripcionsalida'] ?>" required>
@@ -159,15 +159,15 @@ if (isset($_SESSION['add_carro'])) {
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">Cantidad:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control"  id="cantidad" name="cantidad" >
+                            <input type="text" class="form-control" minlength="1" maxlength="3"  id="cantidad" name="cantidad" >
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">Precio:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control"  id="preciounidad" name="preciounidad" >
+                            <input type="text" class="form-control"  id="preciounidad" name="preciounidad" disabled value="0">
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">SubTotal:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control"  id="subtotal" name="subtotal" >
+                            <input type="text" class="form-control"  id="subtotal" name="subtotal" disabled value="0">
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <button type="button" class="btn btn-round btn-primary" onclick="agregarProductoCarrito();"><i class="fa fa-level-down"> Agregar</i></button>
@@ -214,7 +214,7 @@ if (isset($_SESSION['add_carro'])) {
                             <tr>
                         </tfoot>
                     </table>
-                    <div class="form-group row">
+                    <div class="form-group row col-12">
                         <center class="col-md-12 col-sm-12  offset-md-12">
                             <button type="submit" class="btn btn-success">Actualizar</button>
                             <a href="<?php echo base_url() . '/salida' ?>" class="btn btn-primary">Cancelar</a>
@@ -227,3 +227,47 @@ if (isset($_SESSION['add_carro'])) {
     </div> 
 </div> 
 </div>
+<script type="text/javascript">
+    let cantid = document.getElementById( 'cantidad' );
+    cantid.addEventListener( 'input', function()
+        {
+            
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+
+</script>
+<script type="text/javascript">
+      
+    function alerta()
+    {
+        var m = confirm("¿Está seguro que desea registrar esta salida?");
+        if (m)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+</script>
+

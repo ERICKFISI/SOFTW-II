@@ -11,21 +11,8 @@
               <br />
                 <?= form_open('VisualizarProducto/', 'class="form-horizontal form-label-left h6" '); ?>	      
 	      <fieldset disabled>
-                    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Proveedor
-                        </label>
-                        <div class="col-md-9 col-sm-9 ">
-
-                            <?php if($proveedor['idtipodocumento']==1){
-                                 $razon=$proveedor['nombrecomercial'];
-                            }else{ $razon=$proveedor['razonsocial']; } ?>
-                          <?= form_input(["type"=>"text", "class"=>"form-control", "value" => $razon, "name"=>"producto", "required"]); ?>
-                        </div>
-                    </div>
-
-
                     <div class="form-group row">
-                      <label class="control-label col-md-3 col-sm-3 ">Documento</label>
+                      <label class="control-label col-md-3 col-sm-3 ">Tipo de Documento</label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" name="idtipodocumento" id="idtipodocumento" required>
 
@@ -45,7 +32,7 @@
 
 
                     <div class="form-group row">
-                        <label class="control-label col-md-3 col-sm-3 ">Num. Documento</label>
+                        <label class="control-label col-md-3 col-sm-3 ">Documento</label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" name="documento" id="documento" required>
 
@@ -55,7 +42,17 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Proveedor
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
 
+                            <?php if($proveedor['idtipodocumento']==1){
+                                 $razon=$proveedor['nombrecomercial'];
+                            }else{ $razon=$proveedor['razonsocial']; } ?>
+                          <?= form_input(["type"=>"text", "class"=>"form-control", "value" => $razon, "name"=>"producto", "required"]); ?>
+                        </div>
+                    </div>
 
                     <div class="form-group row">
                         <label class="control-label col-md-3 col-sm-3 ">Direccion</label>

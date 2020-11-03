@@ -164,6 +164,29 @@
             <div class="x_content">
                 <br />
                 <form class="form-horizontal form-label-left h6" action="../compras/crear" method="POST">
+                    <div class="form-group row ">           
+                        <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <select class="form-control" id="idcomprobante" name="idcomprobante" required="">
+                                <option value="">Seleccione ...</option>
+                                <?php
+                                $html = '';
+                                foreach ($comprobantes as $key => $value) {
+                                    $html .= '<option value="' . $value['idcomprobante'] . '">' . $value['comprobante'] . '</option>';
+                                }
+                                echo $html;
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row ">
+                            <label class="control-label col-md-3 col-sm-3 ">Comprobante
+                            </label>
+                            <div class="col-md-9 col-sm-9 ">
+                <input type="text" class="form-control"  id="comprobantecompra" name="comprobantecompra" minlength="8" maxlength="10" required>
+                            </div>
+            </div> 
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Proveedor
                         </label>
@@ -182,29 +205,12 @@
                     </div>
 
 			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n compra
+                            <label class="control-label col-md-3 col-sm-3 ">Dirección
                             </label>
                             <div class="col-md-9 col-sm-9 ">
 				<input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>
                             </div>
 			</div>           
-
-                    <div class="form-group row ">			
-                        <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
-                        </label>
-                        <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idcomprobante" name="idcomprobante" required="">
-                                <option value="">Seleccione ...</option>
-                                <?php
-                                $html = '';
-                                foreach ($comprobantes as $key => $value) {
-                                    $html .= '<option value="' . $value['idcomprobante'] . '">' . $value['comprobante'] . '</option>';
-                                }
-                                echo $html;
-                                ?>
-                            </select>
-                        </div>
-		    </div>
 		    
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Fecha de compra

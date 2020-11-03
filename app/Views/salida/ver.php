@@ -19,27 +19,26 @@
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Salida S/.
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <input type="text" class="form-control" value="<?= $salida["fechasalida"]; ?>"  id="descripcionsalida" name="descripcionsalida" readonly>
+                        </div>
+                    </div>
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Total de Salida en Soles (S/.)
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control"  id="totalsalida" name="totalsalida" value="<?= $salida["totalsalida"]; ?>" readonly>
                         </div>
                     </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Descripcion Salida
+                        <label class="control-label col-md-3 col-sm-3 ">Descripción
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control" value="<?= $salida["descripcionsalida"]; ?>"  id="descripcionsalida" name="descripcionsalida" readonly>
                         </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Fecha de la salida
-                        </label>
-                        <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" value="<?= $salida["fechasalida"]; ?>"  id="descripcionsalida" name="descripcionsalida" readonly>
-                        </div>
-                    </div>           
-		    
+                    </div>          
                     <div class="ln_solid bg-red"></div>
                     <div class="ln_solid bg-red"></div>
                     <table class="table table-bordered" id="tabla_carrito" style="text-align: center;">
