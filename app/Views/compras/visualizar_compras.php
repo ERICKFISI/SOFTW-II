@@ -21,6 +21,7 @@
                                     <thead class="text-center">
                                         <tr class="text-center">
                                             <th>Id</th>
+					    <th>Serie</th>
                                             <th>Proveedor</th>
 					    <th>Dirección</th>
                                             <th>Comprobante</th>
@@ -34,6 +35,7 @@
                                         <?php foreach ($compras as $llave => $valor): ?>
 					    <tr>
 						<td> <?= $valor["idcompra"]; ?></td>
+						<td> <?= $valor["serie"]; ?></td>
 						<td> <?= $valor["razonsocial"]; ?></td>
 						<td> <?= $valor["direccioncompra"]; ?></td>
 						<td> <?= $valor["comprobante"]; ?></td>

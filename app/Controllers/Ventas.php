@@ -120,6 +120,13 @@ class Ventas extends BaseController
         }
     }
 
+    public function traerCliente()
+    {
+        $mclientes = new ModeloClientes();
+        $cliente = $mclientes->traerClientePorId($_POST["idcliente"]);
+        return json_encode($cliente[0]);
+    }
+
     public function crear()
     {
         try
@@ -173,11 +180,27 @@ class Ventas extends BaseController
                         $indice++;
                     }
                     if ($correcto == false)
+                    {
                         echo "<script>alert('No hay esas cantidades para vender');window.location.href='".base_url()."/ventas/registrar';</script>";
+                        return;
+                    }
                     
-
                     $mventas = new ModeloVentas();
                     $idventa = $mventas->insert($dataVenta);
+
+                    // Realizamos el numero de serie
+                    $mcompro = new ComprobanteModel();
+                    $compro = $mcompro->traerComprobantePorId($_POST["idcomprobante"]);
+                    $correlativo = $compro[0]["correlativo"];
+                    $contador = $compro[0]["contador"];
+                    $serie = $correlativo."-".$contador;
+
+                    $mventas->update($idventa, ["serie" => $serie]); // Insertamos el numero de serie
+
+                    // Actualizamos el contador del numero de serie
+                    $contador += 1;
+                    $mcompro->update($_POST["idcomprobante"], ["contador" => $contador]);
+
 
                     $mdetalle = new ModeloDetVenPro();
                     /* El detalle venta  */

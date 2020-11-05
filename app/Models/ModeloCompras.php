@@ -9,7 +9,7 @@ class ModeloCompras extends Model
     protected $table = "compra";
     protected $primaryKey = 'idcompra';
     protected $returnType = 'array';
-    protected $allowedFields = ['idproveedor', 'idcomprobante', 'fechacompra',
+    protected $allowedFields = ['idproveedor', 'idcomprobante', 'fechacompra', "serie",
                                 'direccioncompra', 'totalcompra', 'estadocompra'];
 
     public function traerCompras()

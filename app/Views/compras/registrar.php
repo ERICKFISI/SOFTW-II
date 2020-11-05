@@ -90,7 +90,7 @@
 	 tbody += "<td>" +  producto.producto + "</td>";
 	 tbody += "<td>" +  o_preciounidad.value + "</td>";
 	 tbody += "<td>" +  o_subtotal.value + "</td>";	 
-	 tbody += "<td> <input class='btn btn-outline-danger' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Quitar'> </td>";
+	 tbody += "<td> <input class='btn btn-warning' onclick='eliminar(" + producto.idproducto + ","+ o_subtotal.value + ", this)' type='button' value='Eliminar'> </td>";
 	 tbody += "</tr>";
 	 nuevaFila.innerHTML = tbody;
 
@@ -150,6 +150,38 @@
 
  }
 
+ function traerProveedor(idproveedor, funcion)
+ {
+     var respuesta;
+     var xhttp = new XMLHttpRequest();
+     
+     xhttp.onreadystatechange = function()
+     {
+	 if (xhttp.readyState == 4 && xhttp.status == 200)
+	 {
+	     respuesta = this.responseText;
+	     if (funcion)
+		 funcion(respuesta);
+	 }
+
+     };
+     // Aqui enviamos los datos al servidor
+     xhttp.open("POST", "../compras/traerProveedor", true);
+     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+     xhttp.send("idproveedor=" + idproveedor);
+     
+ }
+
+ function ponerDocumento()
+ {
+     id_proveedor = document.forms[0].idproveedor.value;     
+     traerProveedor(id_proveedor, function(respuesta) {
+	 //alert(respuesta);
+	 var proveedor = JSON.parse(respuesta);
+	 document.getElementById("documento").value = proveedor.documento;
+     });
+ }
+
 </script>
 
 
@@ -164,6 +196,41 @@
             <div class="x_content">
                 <br />
                 <form class="form-horizontal form-label-left h6" action="../compras/crear" method="POST">
+
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Proveedor
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <select onchange="ponerDocumento()" class="form-control" id="idproveedor" name="idproveedor" required="">
+                                <option value="">Seleccione ...</option>
+                                <?php
+                                $html = '';
+                                foreach ($proveedores as $key => $value) {
+                                    $html .= '<option value="' . $value['idproveedor'] . '">' . $value['razonsocial'] . '</option>';
+                                }
+                                echo $html;
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Documento
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="text" class="form-control" value="" id="documento" name="comprobantecompra" readonly>
+                        </div>
+		    </div> 
+
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Dirección de compra
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+			    <input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>
+                        </div>
+		    </div>           
+		    
+
                     <div class="form-group row ">           
                         <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
                         </label>
@@ -180,38 +247,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Comprobante
-                            </label>
-                            <div class="col-md-9 col-sm-9 ">
-                <input type="text" class="form-control"  id="comprobantecompra" name="comprobantecompra" minlength="8" maxlength="10" required>
-                            </div>
-            </div> 
-                    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Proveedor
-                        </label>
-                        <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idproveedor" name="idproveedor" required="">
-                                <option value="">Seleccione ...</option>
-                                <?php
-                                $html = '';
-                                foreach ($proveedores as $key => $value) {
-                                    $html .= '<option value="' . $value['idproveedor'] . '">' . $value['razonsocial'] . '</option>';
-                                }
-                                echo $html;
-                                ?>
-                            </select>
-                        </div>
-                    </div>
 
-			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Dirección
-                            </label>
-                            <div class="col-md-9 col-sm-9 ">
-				<input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>
-                            </div>
-			</div>           
-		    
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Fecha de compra
                         </label>

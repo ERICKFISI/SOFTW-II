@@ -96,24 +96,22 @@ class Compras extends BaseController
             }
             else
             {
-                $model = new ModeloPermiso();
-                $perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 9 );
-                if( !empty( $perfil ) )
-                {
-                    $mproductos = new ProductoModel();
-                    $producto = $mproductos->traerProductoPorId($_POST["idproducto"]);
-                    return json_encode($producto[0], true);
-                }
-                else
-                {
-                    return redirect()->to( base_url() . '/Sistema' );
-                }
+                $mproductos = new ProductoModel();
+                $producto = $mproductos->traerProductoPorId($_POST["idproducto"]);
+                return json_encode($producto[0], true);
             }
         }
         catch( exception $e )
         {
             echo $e -> getMessage();
         }
+    }
+
+    public function traerProveedor()
+    {
+        $mproveedores = new ModeloProveedor();
+        $proveedor = $mproveedores->traerProveedorPorId($_POST["idproveedor"]);
+        return json_encode($proveedor[0]);
     }
 
     public function crear()
@@ -126,54 +124,59 @@ class Compras extends BaseController
             }
             else
             {
-                $model = new ModeloPermiso();
-                $perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 9 );
-                if( !empty( $perfil ) )
+                $existeProducto = false;
+                /* Agrego algun producto?... Esto deberia validarse en la vista */
+                foreach ($_POST as $clave => $valor)
                 {
-                    $existeProducto = false;
-                    /* Agrego algun producto?... Esto deberia validarse en la vista */
-                    foreach ($_POST as $clave => $valor)
+                    if ($clave == "productos")
                     {
-                        if ($clave == "productos")
-                        {
-                            $existeProducto = true;
-                            break;
-                        }
+                        $existeProducto = true;
+                        break;
                     }
-                    if ($existeProducto == false)
-                        echo "<script>alert('Ingrese al menos un producto');window.location.href='".base_url()."/compras/registrar';</script>";
-
-                    $dataCompra = ["idproveedor"      => $_POST["idproveedor"],
-                                   "direccioncompra"  => $_POST["direccioncompra"],
-                                   "idcomprobante"    => $_POST["idcomprobante"],
-                                   "fechacompra"      => $_POST["fechacompra"],
-                                   "totalcompra"      => $_POST["totalcompra"]];
-                    $mcompras = new ModeloCompras();
-                    $idcompra = $mcompras->insert($dataCompra);
-
-                    $mproductos = new ProductoModel();
-                    $mdetalle = new ModeloDetCompro();
-                    /* El detalle compra  */
-                    $indice = 0; // Para recorrer las cantidades
-                    foreach ($_POST["productos"] as $idproducto)
-                    {
-                        $dataDetCompra = ["idcompra"      => $idcompra,
-                                          "idproducto"     => $idproducto,
-                                          "cantidadcompra" => $_POST["cantidades"][$indice],
-                                          "preciocompraunidad" => $_POST["preciounidades"][$indice]];
-                        $mdetalle->insert($dataDetCompra); // Se inserta el detalle de compra
-                        $productoActual = $mproductos->traerProductoPorId($idproducto); // Se trae el producto
-                        $productoActual = $productoActual[0];
-                        $nuevoStock = $productoActual["stock"] + $_POST["cantidades"][$indice]; // Se calcula el nuevo stock
-                        $mproductos->update($idproducto, ["stock" => $nuevoStock]); // Se actualiza el stock
-                        $indice++;
-                    }
-                    echo "<script>alert('Compra guardada');window.location.href='".base_url()."/compras';</script>";
                 }
-                else
+                if ($existeProducto == false)
+                    echo "<script>alert('Ingrese al menos un producto');window.location.href='".base_url()."/compras/registrar';</script>";
+
+                $dataCompra = ["idproveedor"      => $_POST["idproveedor"],
+                               "direccioncompra"  => $_POST["direccioncompra"],
+                               "idcomprobante"    => $_POST["idcomprobante"],
+                               "fechacompra"      => $_POST["fechacompra"],
+                               "totalcompra"      => $_POST["totalcompra"]];
+                $mcompras = new ModeloCompras();
+                $idcompra = $mcompras->insert($dataCompra);
+
+                // Realizamos el numero de serie
+                $mcompro = new ComprobanteModel();
+                $compro = $mcompro->traerComprobantePorId($_POST["idcomprobante"]);
+                $correlativo = $compro[0]["correlativo"];
+                $contador = $compro[0]["contador"];
+                $serie = $correlativo."-".$contador;
+
+                $mcompras->update($idcompra, ["serie" => $serie]); // Insertamos el numero de serie
+
+                // Actualizamos el contador del numero de serie
+                $contador += 1;
+                $mcompro->update($_POST["idcomprobante"], ["contador" => $contador]);
+
+
+                $mproductos = new ProductoModel();
+                $mdetalle = new ModeloDetCompro();
+                /* El detalle compra  */
+                $indice = 0; // Para recorrer las cantidades
+                foreach ($_POST["productos"] as $idproducto)
                 {
-                    return redirect()->to( base_url() . '/Sistema' );
+                    $dataDetCompra = ["idcompra"      => $idcompra,
+                                      "idproducto"     => $idproducto,
+                                      "cantidadcompra" => $_POST["cantidades"][$indice],
+                                      "preciocompraunidad" => $_POST["preciounidades"][$indice]];
+                    $mdetalle->insert($dataDetCompra); // Se inserta el detalle de compra
+                    $productoActual = $mproductos->traerProductoPorId($idproducto); // Se trae el producto
+                    $productoActual = $productoActual[0];
+                    $nuevoStock = $productoActual["stock"] + $_POST["cantidades"][$indice]; // Se calcula el nuevo stock
+                    $mproductos->update($idproducto, ["stock" => $nuevoStock]); // Se actualiza el stock
+                    $indice++;
                 }
+                echo "<script>alert('Compra guardada');window.location.href='".base_url()."/compras';</script>";
             }
         }
         catch( exception $e )

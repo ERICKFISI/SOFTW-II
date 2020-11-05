@@ -24,6 +24,7 @@ class Login extends BaseController {
             // Deberiamos mostrar de nuevo la pagina de "login" (al menos que sea otra pagina)
             // el problema es que no se como llamar, desde aqui desde esta funcion, a la misma pagina
             // de login
+            $_SESSION["idusuario"] = $registro->idusuario;
             $_SESSION['nombreusuario'] = $registro->nombreusuario;
             $_SESSION['nombre'] = $registro->nombre;
             $_SESSION['dni'] = $registro->dni;
