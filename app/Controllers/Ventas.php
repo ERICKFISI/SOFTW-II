@@ -282,6 +282,18 @@ class Ventas extends BaseController
                 if( !empty( $perfil ) )
                 {
                     $mventas = new ModeloVentas();
+                    $mproductos = new ProductoModel();
+                    
+                    // Traer el detalle de venta
+                    $detVenta = $mventas->traerDetDeVenta($id);
+                    foreach ($detVenta as $detalle)
+                    {
+                        $producto = $mproductos->traerProductoPorId($detalle["idproducto"]);
+                        $stockActual = $producto[0]["stock"];
+                        $stock = $stockActual + $detalle["cantidadventa"];
+                        $mproductos->update($detalle["idproducto"], ["stock" => $stock]);
+                    }
+
                     $data = ["estadoventa" => 0];
                     $mventas->update($id, $data);
                     echo "<script>alert('Venta anulada');window.location.href='".base_url()."/ventas';</script>";

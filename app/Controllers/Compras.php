@@ -234,6 +234,20 @@ class Compras extends BaseController
                 if( !empty( $perfil ) )
                 {
                     $mcompras = new ModeloCompras();
+                    $mproductos = new ProductoModel();
+                    
+                    // Traer el detalle de venta
+                    $detCompra = $mcompras->traerDetDeCompra($id);
+                    foreach ($detCompra as $detalle)
+                    {
+                        $producto = $mproductos->traerProductoPorId($detalle["idproducto"]);
+                        $stockActual = $producto[0]["stock"];
+                        $stock = $stockActual - $detalle["cantidadcompra"];
+                        if ($stock < 0)
+                            continue;
+                        $mproductos->update($detalle["idproducto"], ["stock" => $stock]);
+                    }
+
                     $data = ["estadocompra" => 0];
                     $mcompras->update($id, $data);
                     echo "<script>alert('Compra anulada');window.location.href='".base_url()."/compras';</script>";
