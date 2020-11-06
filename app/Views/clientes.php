@@ -27,7 +27,7 @@
 					<th>Tipo de Documento</th>
                     <th>Documento</th>
                     <th>Dirección</th>
-                    <th>Email</th>
+                    <th>Correo Elec.</th>
                     <th>Teléfono</th>
 					<th>Acciones</th>
 				    </tr>

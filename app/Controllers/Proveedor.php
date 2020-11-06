@@ -16,13 +16,8 @@ class Proveedor extends Controller{
 
 	public function create(){
             		
-           if ($_POST['idtipodocumento']==1) {
-           	 $razon='nombrecomercial';
-           }else{
-           	$razon='razonsocial';
-           }
 
-			$data = array($razon => $_POST['proveedor'], 
+			$data = array('razonsocial' => $_POST['proveedor'], 
                           'idtipodocumento' => $_POST['idtipodocumento'],
                           'documento' => $_POST['documento'],
                           'direccion' => $_POST['direccion'],

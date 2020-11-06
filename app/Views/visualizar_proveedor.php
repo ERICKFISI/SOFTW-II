@@ -24,8 +24,11 @@
                                         <tr class="text-center">
                                             <th>Id</th>
                                             <th>Proveedor</th>
-                                            <th>Dirección</th>
+                                            <th>Tipo de Documento</th>
                                             <th>Documento</th>
+                                            <th>Dirección</th>
+                                            <th>Correo Elec.</th>
+                                            <th>Teléfono    </th>
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
@@ -36,16 +39,16 @@
                                                 <tr>  
                                                     <td> <?= $value["idproveedor"] ?>  </td>
                                                     <td> <?= $value["razonsocial"] ?> </td>
-                                                    <td> <?= $value["direccion"] ?> </td>
+                                                    <td> <?= $value["tipodocumento"] ?> </td>
                                                     <td> <?= $value["documento"] ?> </td>
-                                                    <td class="text-center row">
-                                                        <div class="col-12 col-md-6 col-sm-10 col-lg-4 px-1 mx-auto">
-                                                          <a href="<?= base_url() . "/visualizarProveedor/getupdatever/" . $value["idproveedor"]; ?>" class="btn btn-secondary  btn-sm mx-auto col-12" ><i class="fa fa-pencil tema">Ver</i></a>
-                                                        </div>
-                                                        <div class="col-12 col-md-6 col-sm-10 col-lg-4 px-1 mx-auto">
+                                                    <td> <?= $value["direccion"] ?> </td>
+                                                    <td> <?= $value["email"] ?> </td>
+                                                    <td> <?= $value["telefono_cel"] ?> </td>
+                                                    <td class="px-0 text-center">
+                                                        <div class="col-12 mx-auto text-align py-0">
                                                           <a href="<?= base_url() . "/VisualizarProveedor/getupdate/" . $value["idproveedor"]; ?>" class="btn btn-info btn-sm mx-auto col-12" ><i class="fa fa-pencil tema">Modificar</i></a>
                                                         </div>
-                                                        <div class="col-12 col-md-6 col-sm-10 col-lg-4 px-1  mx-auto" >
+                                                        <div class="col-12 mx-auto text-align py-0">
                                                           <a onclick="return alerta();" href="<?= base_url() . "/VisualizarProveedor/delete/" . $value['idproveedor']; ?>"   class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o tema">Eliminar</i></a>
                                                         </div>
 						    </td>

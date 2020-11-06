@@ -8,7 +8,7 @@ class ModeloProveedor extends Model{
 	protected $table = 'proveedor';
 	protected $primaryKey = 'idproveedor';
 	protected $returnType = 'array';
-	protected $allowedFields = ['idtipodocumento', 'documento', 'razonsocial','nombrecomercial',
+	protected $allowedFields = ['idtipodocumento', 'documento', 'razonsocial',
                                 'direccion','email','telefono_cel', 'estadoproveedor'];
 
     public function traerProveedores()

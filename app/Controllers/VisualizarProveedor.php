@@ -5,6 +5,7 @@ use CodeIgniter\Controller;
 use App\Models\ProveedorModel;
 use App\Controllers\TipoDocumento;
 use App\Models\ModeloPermiso;
+use App\Models\ModeloProveedor;
 
 class VisualizarProveedor extends BaseController
 {
@@ -22,13 +23,9 @@ class VisualizarProveedor extends BaseController
                 $perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 10 );
                 if( !empty( $perfil ) )
                 {
-                    $db = \Config\Database::connect();
-                    $sql = 'SELECT p.*';
-                    $sql .= ' FROM proveedor AS p ';
-                    $sql .= ' where p.estadoproveedor = 1';
-                    $model = $db->query($sql);
-                    $datos["Resultado"] = $model->getResultArray();
-                    echo $this->use_layout('visualizar_proveedor', $datos);
+                    $model = new ModeloProveedor();
+                    $datos[ 'Resultado' ] = $model->traerProveedores();
+                    echo $this->use_layout( 'visualizar_proveedor', $datos );
                 }
                 else
                 {
@@ -92,14 +89,8 @@ class VisualizarProveedor extends BaseController
                 {
                     $request = \Config\Services::request();
                     $model = new ProveedorModel();
-                    if ($_POST['idtipodocumento']==1) {
-                         $razon='nombrecomercial';
-                       }else{
-                        $razon='razonsocial';
-                       }
-
                     $datos = [
-                        $razon => $request->getPost('proveedor'),
+                        'razonsocial' => $request->getPost('proveedor'),
                         'idtipodocumento' => $request->getPost('idtipodocumento'),
                         'documento' => $request->getPost('documento'),
                         'direccion' => $request->getPost('direccion'),

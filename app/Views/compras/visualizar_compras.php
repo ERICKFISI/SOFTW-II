@@ -54,14 +54,14 @@
                             <?php
                             if ($valor["estadocompra"] == 1) {
                             ?>
-                            <div class="col-lg-5 col-md-5 mx-auto px-0">
+                            <div class="col-lg-10 col-md-10 mx-auto px-0">
                               <a href="<?= base_url().'/compras/ver/'.$valor["idcompra"] ?>" class="btn btn-secondary btn-sm mx-auto col-12"><i class="fa fa-eye tema">Ver</i> </a>
                             </div>
-                            <div class="col-lg-6 col-md-5 mx-auto px-0" >
+                           <div class="col-lg-10 col-md-10 mx-auto px-0">
                               <a href="<?= base_url().'/compras/eliminar/'.$valor["idcompra"] ?>" onclick="return alerta()" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o tema">Anular</i></a>
                             </div>
                             <?php } else {?>
-                             <div class="col-lg-5 col-md-5 mx-auto px-0">
+                             <div class="col-lg-10 col-md-10 mx-auto px-0"> 
                               <a href="<?= base_url().'/compras/ver/'.$valor["idcompra"] ?>" class="btn btn-secondary btn-sm mx-auto col-12"><i class="fa fa-eye tema">Ver</i> </a>
                             </div>
                             <?php } ?>
