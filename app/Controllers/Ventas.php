@@ -162,7 +162,8 @@ class Ventas extends BaseController
                     $dataVenta = ["idcliente"        => $_POST["idcliente"],
                                   "direccioncliente" => $_POST["direccioncliente"],
                                   "idusuario"        => $_POST["idusuario"],
-                                  "idcomprobante"    => $_POST["idcomprobante"],
+                                  "idseriecorrelativo"    => $_POST["idseriecorrelativo"],
+                                  "serie"    => $_POST["serie"],
                                   "fechaventa"       => $_POST["fechaventa"],
                                   "totalventa"       => $_POST["totalventa"]];
 
@@ -188,22 +189,29 @@ class Ventas extends BaseController
                         echo "<script>alert('No hay esas cantidades para vender');window.location.href='".base_url()."/ventas/registrar';</script>";
                         return;
                     }
-                    
-                    $mventas = new ModeloVentas();
-                    $idventa = $mventas->insert($dataVenta);
-
-                    // Realizamos el numero de serie
-                    $mcompro = new ComprobanteModel();
-                    $compro = $mcompro->traerComprobantePorId($_POST["idcomprobante"]);
-                    $correlativo = $compro[0]["correlativo"];
-                    $contador = $compro[0]["contador"];
-                    $serie = $correlativo."-".$contador;
-
-                    $mventas->update($idventa, ["serie" => $serie]); // Insertamos el numero de serie
-
-                    // Actualizamos el contador del numero de serie
-                    $contador += 1;
-                    $mcompro->update($_POST["idcomprobante"], ["contador" => $contador]);
+                    $model = new ModeloVentas();
+                    $ventanueva = $model->insert( $dataVenta );
+                    $mseriecorrelativo = new ModeloSerieComprobante();
+                   $datos = $_POST[ "serie" ];
+                   $datos = $datos + 1;
+                   $data = $mseriecorrelativo->find( $_POST[ 'idseriecorrelativo' ] );
+                   switch( strlen($datos) )
+                   {
+                        case '1':
+                            $datos = "000".$datos;
+                            break;
+                        case '2':
+                            $datos = "00".$datos;
+                            break;
+                        case '3':
+                            $datos = "0".$datos;
+                            break;
+                        default;
+                   }
+                   $correlativo = array(
+                    'correlativosc' => $datos
+                   );
+                  $updatecorrelativo = $mseriecorrelativo->update( $data[ 'idseriecorrelativo' ], $correlativo  );
 
 
                     $mdetalle = new ModeloDetVenPro();

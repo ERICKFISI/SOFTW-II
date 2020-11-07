@@ -223,7 +223,7 @@
 		    </div> 
 
 		    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Dirección de Compra
+                        <label class="control-label col-md-3 col-sm-3 ">Dirección de Proveedor
                         </label>
                         <div class="col-md-9 col-sm-9 ">
 			    <input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>

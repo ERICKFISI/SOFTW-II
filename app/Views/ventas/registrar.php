@@ -177,7 +177,7 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Registrar nueva venta</h3>
+            <h3>Registrar Nueva Venta</h3>
         </div>
     </div>
     <div class="col-md-3-6 ">
@@ -239,20 +239,19 @@
                             </select>
                         </div>
 		    </div>
-            <div class="form-group row ">           
-                        <label class="control-label col-md-3 col-sm-3 ">Número de Comprobante
+            <div class="form-group row ">
+                <label class="control-label col-md-3 col-sm-3 ">Número de Comprobante</label>
+                        <label class="control-label col-md-2 col-sm-2 "> Serie
                         </label>
-                        <div class="col-md-9 col-sm-9 ">
+                        <div class="col-md-2 col-sm-2 ">
                             <select class="form-control" id="idseriecorrelativo" name="idseriecorrelativo" required="">
                                 <option value="">Seleccione ...</option>
-                                <?php
-                                $html = '';
-                                foreach ($seriecomprobantes as $key => $value) {
-                                    $html .= '<option value=' . $value['idseriecorrelativo'] . '">' . $value['seriesc'] . '</option>';
-                                }
-                                echo $html;
-                                ?>
                             </select>
+                        </div>
+                        <label class="control-label col-md-2 col-sm-2 "> Correlativo
+                        </label>
+                        <div class="col-md-2 col-sm-2 ">
+                            <input type="text" class="form-control" name="serie" id="serie" readonly >
                         </div>
             </div>
 		    
@@ -290,15 +289,15 @@
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">Cantidad:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" onchange="ponerSubtotal(this.value)" class="form-control" value="" id="cantidad" name="cantidad" >
+                            <input type="text" onchange="ponerSubtotal(this.value)" minlength="1" maxlength="3" class="form-control" value="" id="cantidad" name="cantidad" >
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">Precio:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control" value="" id="preciounidad" name="preciounidad" >
+                            <input type="text" class="form-control" value="" id="preciounidad" name="preciounidad" readonly >
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">SubTotal:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control" value="" id="subtotal" name="subtotal" >
+                            <input type="text" class="form-control" value="" id="subtotal" name="subtotal" readonly >
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <button type="button" class="btn btn-round btn-primary" onclick="agregarProducto();"><i class="fa fa-level-down"> Agregar</i></button>
@@ -345,8 +344,51 @@
 </div> 
 </div>
 <script type="text/javascript">
+    let a =  '<?php echo json_encode( $seriecomprobantes ); ?>' ;
+    a = JSON.parse(a);
     let idcomprobante = document.getElementById( 'idcomprobante' );
      idcomprobante.addEventListener( 'change', function()
+        {
+            let seriecorrelativo = document.getElementById( 'idseriecorrelativo' );
+            while(seriecorrelativo.firstChild)
+            {
+                seriecorrelativo.removeChild(seriecorrelativo.firstChild);
+            }
+            if( this.value == "1" )
+            {
+                
+                a.forEach( function( valor, indice, array )
+                    {
+                        if( valor[ 'idcomprobante' ] == "1" && valor[ 'correlativosc' ] != "9999" )
+                        {
+                            console.log(valor);
+                        let option = document.createElement( 'option' );
+                        option.text = valor[ 'seriesc' ];
+                        option.value = valor[ 'idseriecorrelativo' ];
+                        seriecorrelativo.add( option );
+                        let serie = document.getElementById( 'serie' );
+                        serie.value = valor[ 'correlativosc' ];
+                        }
+                    } );   
+            }
+            else if( this.value == "2" )
+            {
+                 a.forEach( function( valor, indice, array )
+                    {
+                        if( valor[ 'idcomprobante' ] == "2" && valor[ 'correlativosc' ] != "9999" )
+                        {
+                        let option = document.createElement( 'option' );
+                        option.text = valor[ 'seriesc' ];
+                        option.value = valor[ 'idseriecorrelativo' ];
+                        seriecorrelativo.add( option );
+                        let serie = document.getElementById( 'serie' );
+                        serie.value = valor[ 'correlativosc' ];
+                        }
+                    } );   
+            }
+        } );
+     let cantid = document.getElementById( 'cantidad' );
+    cantid.addEventListener( 'input', function()
         {
             
             if( this.value < 0 )
@@ -370,4 +412,6 @@
                 this.value = "";
             } 
         } );
+
+</script>
 </script>

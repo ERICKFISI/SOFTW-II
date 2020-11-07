@@ -28,7 +28,7 @@ class ModeloVentas extends Model
                 ->where("v.idventa", $id)
                 ->join("cliente c", "v.idcliente = c.idcliente")
                 ->join("usuario u", "v.idusuario = u.idusuario")
-                ->join("comprobante co", "v.idcomprobante = co.idcomprobante")                
+                ->join("seriecorrelativo sc", "v.idseriecorrelativo = sc.idseriecorrelativo")                
                 ->get()->getResultArray();
     }
 
