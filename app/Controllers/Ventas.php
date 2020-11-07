@@ -10,6 +10,7 @@ use App\Models\ProductoModel;
 use App\Models\ComprobanteModel;
 use App\Models\ModeloDetVenPro;
 use App\Models\ModeloPermiso;
+use App\Models\ModeloSerieComprobante;
 
 class Ventas extends BaseController
 {
@@ -64,15 +65,18 @@ class Ventas extends BaseController
                     $musuarios = new UsuarioModel();
                     $mcomprobantes = new ComprobanteModel();
                     $mproductos = new ProductoModel();
+                    $mseriecomprobantes = new ModeloSerieComprobante();
 
                     $clientes = $mclientes->traerClientes();
                     $usuarios = $musuarios->traerUsuarios();
                     $comprobantes = $mcomprobantes->traerComprobantes();
+                    $seriecomprobantes = $mseriecomprobantes->traerSerieComprobante();
                     $productos = $mproductos->traerProductos();
 
                     $data = ["clientes"     => $clientes,
                              "usuarios"     => $usuarios,
                              "comprobantes" => $comprobantes,
+                             "seriecomprobantes"=> $seriecomprobantes,
                              "productos"    => $productos];
                     
                     echo $this->use_layout("ventas/registrar", $data);

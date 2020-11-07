@@ -2,7 +2,7 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Visualizar compra</h3>
+            <h3>Visualizar Compra</h3>
         </div>
     </div>
     <div class="col-md-3-6 ">
@@ -14,14 +14,20 @@
                         <label class="control-label col-md-3 col-sm-3 ">Proveedor
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idcliente" name="idcliente" readonly>
+                            <select class="form-control" id="idcliente" name="idcliente" disabled>
                                 <option value=""><?= $compra["razonsocial"]; ?></option>
                             </select>
                         </div>
                     </div>
-
+                    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Documento de Proveedor
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                <input type="text" class="form-control" id="documento" name="documento" value="<?= $compra["documento"]; ?>" readonly>
+                        </div>
+            </div> 
 			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Compra
+                            <label class="control-label col-md-3 col-sm-3 ">Dirección de Compra
                             </label>
                             <div class="col-md-9 col-sm-9 ">
 				<input type="text" class="form-control"  value="<?= $compra['direccioncompra']; ?>" id="direccioncliente" name="direccioncliente" readonly>
@@ -29,17 +35,23 @@
 			</div>           
 
                     <div class="form-group row ">			
-                        <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
+                        <label class="control-label col-md-3 col-sm-3 ">Tipo de Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" id="idcomprobante" name="idcomprobante" readonly>
+                            <select class="form-control" id="idcomprobante" name="idcomprobante" disabled>
                                 <option value=""><?= $compra["comprobante"]; ?></option>
                             </select>
                         </div>
 		    </div>
-		    
+		    <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Número de Comprobante
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                <input type="text" class="form-control" pattern="[0-9-]+$" id="comprobantecompra" name="comprobantecompra" value="<?= $compra["comprobantecompra"]; ?>" disabled>
+                        </div>
+                    </div>
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Fecha de compra
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha de Compra
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="date" class="form-control"  name="fechacompra" value="<?= $compra['fechacompra']; ?>" readonly>
@@ -47,7 +59,7 @@
                     </div>
 
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Compra S/.
+                        <label class="control-label col-md-3 col-sm-3 ">Total de Compra en Soles
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control"  id="totalcompra" name="totalcompra" value="<?= $compra['totalcompra']; ?>" readonly>
@@ -61,7 +73,7 @@
                                 <th>Producto</th>
                                 <th>Precio Unidad</th>
                                 <th>Sub Total</th>
-                                <th>Accion</th>
+                                <th>Acción</th>
                             </tr>
                         </thead>
                         <tbody>

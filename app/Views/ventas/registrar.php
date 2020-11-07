@@ -174,8 +174,6 @@
 
 
 </script>
-
-
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -223,14 +221,10 @@
                         </div>
 		    </div>           
 
-                    <div class="form-group row ">
-                        <div class="col-md-9 col-sm-9 ">
                             <input type="hidden" value="<?= $_SESSION["idusuario"];?>" class="form-control" id="idusuario" name="idusuario" required="">
-                        </div>
-		    </div>
 
                     <div class="form-group row ">			
-                        <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
+                        <label class="control-label col-md-3 col-sm-3 ">Tipo de Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idcomprobante" name="idcomprobante" required="">
@@ -245,6 +239,22 @@
                             </select>
                         </div>
 		    </div>
+            <div class="form-group row ">           
+                        <label class="control-label col-md-3 col-sm-3 ">Número de Comprobante
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                            <select class="form-control" id="idseriecorrelativo" name="idseriecorrelativo" required="">
+                                <option value="">Seleccione ...</option>
+                                <?php
+                                $html = '';
+                                foreach ($seriecomprobantes as $key => $value) {
+                                    $html .= '<option value=' . $value['idseriecorrelativo'] . '">' . $value['seriesc'] . '</option>';
+                                }
+                                echo $html;
+                                ?>
+                            </select>
+                        </div>
+            </div>
 		    
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Fecha de venta
@@ -334,3 +344,30 @@
     </div> 
 </div> 
 </div>
+<script type="text/javascript">
+    let idcomprobante = document.getElementById( 'idcomprobante' );
+     idcomprobante.addEventListener( 'change', function()
+        {
+            
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+</script>

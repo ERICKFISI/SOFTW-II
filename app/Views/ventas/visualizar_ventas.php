@@ -21,11 +21,11 @@
                                     <thead class="text-center">
                                         <tr class="text-center">
                                             <th>Id</th>
-					    <th>Serie</th>
+					    <th>Comprobante</th>
+                        <th>N° Comprobante</th>
                                             <th>Cliente</th>
-					    <th>Direccion</th>
+					    <th>Dirección</th>
                                             <th>Usuario</th>
-                                            <th>Comprobante</th>
                                             <th>Fecha</th>
 					    <th>Total</th>
 					    <th>Estado</th>
@@ -36,11 +36,11 @@
                                         <?php foreach ($ventas as $llave => $valor): ?>
 					    <tr>
 						<td> <?= $valor["idventa"]; ?></td>
-						<td> <?= $valor["serie"]; ?></td>
+                        <td> <?= $valor["comprobante"]; ?></td>
+						<td> <?= $valor["seriesc"]."-".$valor[ "serie" ]; ?></td>
 						<td> <?= $valor["razonsocial"]; ?></td>
 						<td> <?= $valor["direccioncliente"]; ?></td>
-						<td> <?= $valor["nombre"]; ?></td>
-						<td> <?= $valor["comprobante"]; ?></td>
+						<td> <?= $valor["nombre"]; ?></td>	
 						<td> <?= $valor["fechaventa"]; ?></td>
 						<td> <?= $valor["totalventa"]; ?></td>
 						<td>

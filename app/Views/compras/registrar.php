@@ -188,7 +188,7 @@
 <div class="">
     <div class="page-title">
         <div class="title_left">
-            <h3>Registrar nueva compra</h3>
+            <h3>Registrar Nueva Compra</h3>
         </div>
     </div>
     <div class="col-md-3-6 ">
@@ -215,15 +215,15 @@
                     </div>
 
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Documento
+                        <label class="control-label col-md-3 col-sm-3 ">Documento de Proveedor
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-			    <input type="text" class="form-control" value="" id="documento" name="comprobantecompra" readonly>
+			    <input type="text" class="form-control" id="documento" name="documento" readonly>
                         </div>
 		    </div> 
 
 		    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Dirección de compra
+                        <label class="control-label col-md-3 col-sm-3 ">Dirección de Compra
                         </label>
                         <div class="col-md-9 col-sm-9 ">
 			    <input type="text" class="form-control"  id="direccioncompra" name="direccioncompra" required>
@@ -232,7 +232,7 @@
 		    
 
                     <div class="form-group row ">           
-                        <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
+                        <label class="control-label col-md-3 col-sm-3 ">Tipo de Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idcomprobante" name="idcomprobante" required="">
@@ -244,12 +244,19 @@
                                 }
                                 echo $html;
                                 ?>
-                            </select>
+                            </select>                           
+                        </div> 
+                        </div>
+                        <div class="form-group row ">
+                        <label class="control-label col-md-3 col-sm-3 ">Número de Comprobante
+                        </label>
+                        <div class="col-md-9 col-sm-9 ">
+                <input type="text" class="form-control" pattern="[0-9-]+$" id="comprobantecompra" name="comprobantecompra"  >
                         </div>
                     </div>
 
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Fecha de compra
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha de Compra
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="date" class="form-control"  name="fechacompra" value="<?php echo date("Y-m-d"); ?>" required>
@@ -257,7 +264,7 @@
                     </div>
 
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Compra S/.
+                        <label class="control-label col-md-3 col-sm-3 ">Total de Compra en Soles
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control"  id="totalcompra" name="totalcompra" value="" readonly>
@@ -280,17 +287,17 @@
                                 ?>
                             </select>
                         </div>
-                        <label class="control-label col-md-1 col-sm-1 ">Precio:</label>
-                        <div class="col-md-1 col-sm-1">
-                            <input type="text"  class="form-control" value="" id="preciounidad" name="preciounidad" >
-                        </div>
                         <label class="control-label col-md-1 col-sm-1 ">Cantidad:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" onchange="ponerSubtotal(this.value)" class="form-control" value="" id="cantidad" name="cantidad" >
+                            <input type="text" onchange="ponerSubtotal(this.value)" minlength="1" maxlength="3" class="form-control" value="" id="cantidad" name="cantidad" >
+                        </div>
+                        <label class="control-label col-md-1 col-sm-1 ">Precio:</label>
+                        <div class="col-md-1 col-sm-1">
+                            <input type="text"  class="form-control" id="preciounidad" name="preciounidad" value="0" >
                         </div>
                         <label class="control-label col-md-1 col-sm-1 ">SubTotal:</label>
                         <div class="col-md-1 col-sm-1">
-                            <input type="text" class="form-control" value="" id="subtotal" name="subtotal" >
+                            <input type="text" class="form-control" id="subtotal" name="subtotal" value="0" disabled  >
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <button type="button" class="btn btn-round btn-primary" onclick="agregarProducto();"><i class="fa fa-level-down"> Agregar</i></button>
@@ -308,7 +315,7 @@
                             </tr>
                         </thead>
                         <tbody>
-			    
+			         
                         </tbody>
                         <tfoot>
                             <tr>
@@ -336,3 +343,63 @@
     </div> 
 </div> 
 </div>
+<script type="text/javascript">
+    let cantid = document.getElementById( 'cantidad' );
+    cantid.addEventListener( 'input', function()
+        {
+            
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+        let precio = document.getElementById( 'preciounidad' );
+        precio.addEventListener( 'input', function()
+        {
+            
+            if( this.value < 0 )
+            {
+                this.value = null;
+            }
+            else if( !Number.isInteger( this.value ) )
+            {
+                this.value = parseInt(this.value);
+                if( this.value == "NaN" )
+                {
+                    this.value = "";
+                }
+            }
+            else if( isNaN( this.value ) )
+            {
+                this.value = "";
+            }
+            else if( this.value == "NaN" )
+            {
+                this.value = "";
+            } 
+        } );
+        precio.addEventListener( 'input', function()
+        {
+            if( this.value != "" )
+            {
+                document.getElementById( 'subtotal' ).value = this.value*document.getElementById( 'cantidad' ).value;
+            } 
+        } );
+
+</script>

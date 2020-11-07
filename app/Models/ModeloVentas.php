@@ -9,7 +9,7 @@ class ModeloVentas extends Model
     protected $table = "venta";
     protected $primaryKey = 'idventa';
     protected $returnType = 'array';
-    protected $allowedFields = ['idcliente', 'idusuario', 'idcomprobante', 'fechaventa', "serie",
+    protected $allowedFields = ['idcliente', 'idusuario', 'idseriecorrelativo', 'fechaventa', "serie",
                                 'direccioncliente', 'totalventa', 'estadoventa'];
 
     public function traerVentas()
@@ -17,7 +17,8 @@ class ModeloVentas extends Model
         return $this->db->table("venta v")
                 ->join("cliente c", "v.idcliente = c.idcliente")
                 ->join("usuario u", "v.idusuario = u.idusuario")
-                ->join("comprobante co", "v.idcomprobante = co.idcomprobante")                
+                ->join("seriecorrelativo sc", "v.idseriecorrelativo = sc.idseriecorrelativo")
+                -> join( 'comprobante co', 'co.idcomprobante = sc.idcomprobante' )                
                 ->get()->getResultArray();
     }
 
