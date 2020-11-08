@@ -214,7 +214,7 @@
 
 
 		    <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
+                        <label class="control-label col-md-3 col-sm-3 ">Dirección Cliente
                         </label>
                         <div class="col-md-9 col-sm-9 ">
 			    <input type="text" class="form-control"  id="direccioncliente" name="direccioncliente" required>
@@ -256,7 +256,7 @@
             </div>
 		    
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Fecha de venta
+                        <label class="control-label col-md-3 col-sm-3 ">Fecha de Venta
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="date" class="form-control"  name="fechaventa" value="<?php echo date("Y-m-d"); ?>" max="<?= date("Y-m-d"); ?>" required>
@@ -264,7 +264,7 @@
                     </div>
 
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Total Soles Venta S/.
+                        <label class="control-label col-md-3 col-sm-3 ">Total de Venta en Soles
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <input type="text" class="form-control"  id="totalventa" name="totalventa" value="" readonly>
@@ -356,33 +356,43 @@
             }
             if( this.value == "1" )
             {
-                
+                let c = 0;
                 a.forEach( function( valor, indice, array )
                     {
                         if( valor[ 'idcomprobante' ] == "1" && valor[ 'correlativosc' ] != "9999" )
                         {
-                            console.log(valor);
+                        console.log(valor);
+                        c = c+1;
                         let option = document.createElement( 'option' );
                         option.text = valor[ 'seriesc' ];
                         option.value = valor[ 'idseriecorrelativo' ];
                         seriecorrelativo.add( option );
+                        if( c == "1" )
+                        {
                         let serie = document.getElementById( 'serie' );
                         serie.value = valor[ 'correlativosc' ];
                         }
-                    } );   
+                        }
+                    }  );   
             }
             else if( this.value == "2" )
             {
+                 let c = 0;
                  a.forEach( function( valor, indice, array )
                     {
                         if( valor[ 'idcomprobante' ] == "2" && valor[ 'correlativosc' ] != "9999" )
                         {
+                        c=c+1;
                         let option = document.createElement( 'option' );
                         option.text = valor[ 'seriesc' ];
                         option.value = valor[ 'idseriecorrelativo' ];
                         seriecorrelativo.add( option );
                         let serie = document.getElementById( 'serie' );
+                        if( c == "1" )
+                        {
+                        let serie = document.getElementById( 'serie' );
                         serie.value = valor[ 'correlativosc' ];
+                        }
                         }
                     } );   
             }
@@ -412,6 +422,22 @@
                 this.value = "";
             } 
         } );
-
 </script>
+<script type="text/javascript">
+    let b =  '<?php echo json_encode( $seriecomprobantes ); ?>' ;
+    b = JSON.parse(b);
+    let seriecorrelativo2 = document.getElementById( 'idseriecorrelativo' );
+    console.log(a);
+    seriecorrelativo2.addEventListener( 'change', function()
+    {
+        let comprobante2 = document.getElementById( 'idcomprobante' );
+        b.forEach( function( valor, indice, array )
+                    {
+                        if( valor[ 'idcomprobante' ] == comprobante2.value && valor[ 'idseriecorrelativo' ] == seriecorrelativo2.value )
+                        {
+                            let serie = document.getElementById( 'serie' );
+                            serie.value = valor[ 'correlativosc' ];
+                        }
+                    } );   
+    } );
 </script>

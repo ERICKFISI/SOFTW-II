@@ -21,7 +21,7 @@
                     </div>
 
 			<div class="form-group row ">
-                            <label class="control-label col-md-3 col-sm-3 ">Direcci&oacute;n Cliente
+                            <label class="control-label col-md-3 col-sm-3 ">Dirección Cliente
                             </label>
                             <div class="col-md-9 col-sm-9 ">
 				<input type="text" class="form-control"  value="<?= $venta['direccioncliente']; ?>" id="direccioncliente" name="direccioncliente" readonly>
@@ -29,7 +29,7 @@
 			</div>           
 
                     <div class="form-group row ">
-                        <label class="control-label col-md-3 col-sm-3 ">Usuario
+                        <label class="control-label col-md-3 col-sm-3 ">Vendedor
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idusuario" name="idusuario" readonly>
@@ -39,7 +39,7 @@
 		    </div>
 
                     <div class="form-group row ">			
-                        <label class="control-label col-md-3 col-sm-3 ">Tipo Comprobante
+                        <label class="control-label col-md-3 col-sm-3 ">Tipo de Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
                             <select class="form-control" id="idcomprobante" name="idcomprobante" readonly>
@@ -47,6 +47,21 @@
                             </select>
                         </div>
 		    </div>
+            <div class="form-group row ">
+                <label class="control-label col-md-3 col-sm-3 ">Número de Comprobante</label>
+                        <label class="control-label col-md-2 col-sm-2 "> Serie
+                        </label>
+                        <div class="col-md-2 col-sm-2 ">
+                            <select class="form-control" id="idseriecorrelativo" name="idseriecorrelativo" required="">
+                                <option value=""><?= $venta["seriesc"]; ?></option>
+                            </select>
+                        </div>
+                        <label class="control-label col-md-2 col-sm-2 "> Correlativo
+                        </label>
+                        <div class="col-md-2 col-sm-2 ">
+                            <input type="text" class="form-control" name="serie" id="serie" value="<?= $venta["serie"]; ?>"  readonly >
+                        </div>
+            </div>
 		    
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Fecha de venta

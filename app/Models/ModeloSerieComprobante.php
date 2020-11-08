@@ -3,12 +3,13 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class ModeloSerieComprobante extends Model{
+class ModeloSerieComprobante extends Model
+{
 
 	protected $table = 'seriecorrelativo';
 	protected $primaryKey = 'idseriecorrelativo';
 	protected $returnType = 'array';
-	protected $allowedFields = ['seriesc','correlativosc', 'estadoseriecorrelativo'];
+	protected $allowedFields = ['seriesc','correlativosc', 'estadoseriecorrelativo', 'idcomprobante'];
 
 	public function traerSerieComprobante()
 	{

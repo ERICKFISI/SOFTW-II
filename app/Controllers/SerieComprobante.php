@@ -3,6 +3,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\ModeloSerieComprobante;
 use App\Models\ModeloPermiso;
+use App\Models\ComprobanteModel;
 
 class SerieComprobante extends BaseController
 {
@@ -47,12 +48,12 @@ class SerieComprobante extends BaseController
 			else
 			{
 				$model = new ModeloPermiso();
-				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 7 );
+				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 8 );
 				if( !empty( $perfil ) )
 				{
-					$model = new ModeloClientes();
-					$datos[ 'tipodocumentos' ] = $model -> traerTipoDocumentos();
-					echo $this->use_layout( 'registrar_cliente', $datos );
+					$model = new ComprobanteModel();
+					$data[ 'comprobantes' ]	= $model->traerComprobantes();
+					echo $this->use_layout( 'registrar_seriecomprobante', $data );
 				}
 				else
 				{
@@ -77,13 +78,14 @@ class SerieComprobante extends BaseController
 			else
 			{
 				$model = new ModeloPermiso();
-				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 7 );
+				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 8 );
 				if( !empty( $perfil ) )
 				{
-					$model = new ModeloClientes();
-					$datos[ 'tipodocumentos' ] = $model -> traerTipoDocumentos();
-					$datos[ 'cliente' ] = $model -> traerClientePorId( $id );
-					echo $this->use_layout( 'modificar_cliente', $datos );
+					$model = new ComprobanteModel();
+					$data[ 'comprobantes' ]	= $model->traerComprobantes();
+					$model = new ModeloSerieComprobante();
+					$data[ 'seriecomprobante' ] = $model -> find( $id );
+					echo $this->use_layout( 'modificar_seriecomprobante', $data );
 				}
 				else
 				{
@@ -108,29 +110,29 @@ class SerieComprobante extends BaseController
 			else
 			{
 				$model = new ModeloPermiso();
-				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 7 );
+				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 8 );
 				if( !empty( $perfil ) )
 				{
 					if( $_SERVER[ 'REQUEST_METHOD' ] == "POST" )
 					{
-						$model = new ModeloClientes();
-						$cliente = $model -> where( 'estadocliente', 1 ) -> where( 'documento', $_POST[ 'documento' ] ) -> findAll();
-						if( !isset( $cliente[ '0' ] ) )
+						$model = new ModeloSerieComprobante();
+						$seriecomprobante = $model -> where( 'idcomprobante', $_POST[ 'idcomprobante' ] )
+						-> where( 'seriesc', $_POST[ 'seriesc' ] ) -> findAll();
+						if( empty( $seriecomprobante[ '0' ] ) )
 						{
 							$datos = array(
-									'idtipodocumento' => $_POST[ 'idtipodocumento' ],
-									'documento' => $_POST[ 'documento' ],
-									'razonsocial' => $_POST[ 'razonsocial' ],
-									'direccion' => $_POST[ 'direccion' ],
-									'email' => $_POST[ 'email' ],
-									'telefono_cel' => $_POST[ 'telefono_cel' ]
+									'idcomprobante' => $_POST[ 'idcomprobante' ],
+									'seriesc' => $_POST[ 'seriesc' ],
+									'correlativosc' => $_POST[ 'correlativosc' ]
 								);
-							$cliente = $model -> insert( $datos );
-							return redirect()->to( base_url() . '/Clientes' );
+							$model = new ModeloSerieComprobante();
+							$model->insert($datos);
+							return redirect()->to( base_url() . '/SerieComprobante' );
 						}
 						else
 						{
-							return redirect()->to( base_url() . '/Clientes' );
+							var_dump($seriecomprobante);die;
+							return redirect()->to( base_url() . '/SerieComprobante' );
 						}
 					}
 					else
@@ -162,35 +164,31 @@ class SerieComprobante extends BaseController
 			else
 			{
 				$model = new ModeloPermiso();
-				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 7 );
+				$perfil = $model->ComprobarPermisos( $_SESSION[ 'idperfil' ], 8 );
 				if( !empty( $perfil ) )
 				{
 					if( $_SERVER[ 'REQUEST_METHOD' ] == "POST" )
 					{
-						$model = new ModeloClientes();
-						$cliente = $model -> where( 'estadocliente', 1 ) -> where( 'documento', $_POST[ 'documento' ] ) -> findAll();
-						if( isset( $cliente[ '0' ] ) )
+						$model = new ModeloSerieComprobante();
+						$seriecomprobante = $model -> where( 'idcomprobante', $_POST[ 'idcomprobante' ] ) -> where( 'seriesc', $_POST[ 'seriesc' ] ) -> findAll();
+						if( empty( $seriecomprobante[ '0' ] ) )
 						{
 							$datos = array(
-									'idtipodocumento' => $_POST[ 'idtipodocumento' ],
-									'documento' => $_POST[ 'documento' ],
-									'razonsocial' => $_POST[ 'razonsocial' ],
-									'direccion' => $_POST[ 'direccion' ],
-									'email' => $_POST[ 'email' ],
-									'telefono_cel' => $_POST[ 'telefono_cel' ]
+									'idcomprobante' => $_POST[ 'idcomprobante' ],
+									'seriesc' => $_POST[ 'seriesc' ]
 								);
-							$cliente = $model -> update( $id , $datos );
-							return redirect()->to( base_url() . '/Clientes' );
+							$seriecomprobante = $model -> update( $id , $datos );
+							return redirect()->to( base_url() . '/SerieComprobante' );
 						}
 						else
 						{
-							return redirect()->to( base_url() . '/Clientes' );
+							return redirect()->to( base_url() . '/SerieComprobante' );
 						}
 					}
 					else
 					{
-						echo "Ya hay un cliente registrado con esa información";
-						return redirect()->to( base_url() . '/Clientes' );
+						echo "Ya hay una Serie registrado con esa información";
+						return redirect()->to( base_url() . '/SerieComprobante' );
 					}
 				}
 				else

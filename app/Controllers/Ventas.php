@@ -190,7 +190,7 @@ class Ventas extends BaseController
                         return;
                     }
                     $model = new ModeloVentas();
-                    $ventanueva = $model->insert( $dataVenta );
+                    $idventa = $model->insert( $dataVenta );
                     $mseriecorrelativo = new ModeloSerieComprobante();
                    $datos = $_POST[ "serie" ];
                    $datos = $datos + 1;

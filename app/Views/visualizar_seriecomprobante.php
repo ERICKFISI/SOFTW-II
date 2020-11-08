@@ -11,7 +11,7 @@
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel ">
                 <div class="x_title">
-                    <a href="<?= base_url() . "/visualizarcategoria/show"; ?>" class="btn btn-success">Registrar Serie de Comprobante</a>
+                    <a href="<?= base_url() . "/SerieComprobante/form"; ?>" class="btn btn-success">Registrar Serie de Comprobante</a>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -39,11 +39,8 @@
                                                     <td class="text-center"> <?= $value["seriesc"] ?>  </td>
                                                     <td class="text-center"> <?= $value["correlativosc"] ?> </td>
                                                     <td class="text-center row">
-                                                            <div class="col-12 col-md-5 col-sm-5 col-lg-4 px-0 mx-auto">
-                                                                <a href="<?= base_url() . "/visualizarcategoria/getupdate/" . $value["idseriecorrelativo"]; ?>" class="btn btn-info btn-sm col-12" ><i class="fa fa-pencil tema">Modificar</i></a>
-                                                            </div>
-                                                            <div class="col-lg-4 col-md-5 col-sm-5 col-12 mx-auto  px-0" >
-                                                                <a onclick="return alerta();" href="<?= base_url() . "/visualizarcategoria/delete/" . $value['idseriecorrelativo']; ?>"   class="btn btn-danger btn-sm col-12"><i class="fa fa-trash-o tema">Eliminar</i></a>
+                                                            <div class="col-12 col-md-8 col-sm-8 col-lg-6 px-0 mx-auto">
+                                                                <a href="<?= base_url() . "/SerieComprobante/show/" . $value["idseriecorrelativo"]; ?>" class="btn btn-info btn-sm col-12" ><i class="fa fa-pencil tema">Modificar</i></a>
                                                             </div>
                                                     </td> 
                                                 </tr>  
