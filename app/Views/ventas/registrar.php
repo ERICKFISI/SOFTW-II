@@ -48,11 +48,35 @@
      });
  }
 
+
  function ponerSubtotal(cantidad)
  {
-     precio = document.getElementById("preciounidad").value;
-     subtotal = precio * cantidad;
-     document.getElementById("subtotal").value = subtotal.toFixed(2);
+     var id_producto;
+
+     id_producto = document.forms[0].idproducto.value;
+     if (id_producto == "")
+     {
+	 document.getElementById("cantidad").value = "";
+	 return;
+     }
+
+     traerProducto(id_producto, function(respuesta) {
+	 var producto = JSON.parse(respuesta);
+
+	 if (parseInt(cantidad) > parseInt(producto.stock))
+	 {
+	     alert("No hay esa cantidad en stock");
+	     document.getElementById("cantidad").value = "";
+	     return;
+	 }
+	 precio = document.getElementById("preciounidad").value;
+	 subtotal = precio * cantidad;
+	 document.getElementById("subtotal").value = subtotal.toFixed(2);
+	 
+	 //document.getElementById("preciounidad").value = producto.preciounidad;
+     });
+     
+     
  }
 
  var total = 0;
