@@ -92,6 +92,14 @@
      var cuerpo = document.getElementById("tabla").getElementsByTagName("tbody")[0];
      var nuevaFila = cuerpo.insertRow(cuerpo.rows.length);
 
+     if (document.getElementById("cantidad").value == "" ||
+	 document.getElementById("subtotal").value == "" ||
+	 document.getElementById("preciounidad").value == "")
+     {
+	 alert("Hay campos vacios");
+	 return;
+     }
+
      id_producto = document.forms[0].idproducto.value;
 
      traerProducto(id_producto, function(respuesta) {
