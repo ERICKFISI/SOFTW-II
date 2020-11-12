@@ -35,11 +35,11 @@ class Login extends BaseController {
             $_SESSION['perfil'] = $perfil['nombre'];
             $_SESSION['perfil'] = die("<script>window.location='" . base_url() . "/sistema';</script>");
         } else {
-            die("<script>window.location='" . base_url() . "';</script>"); 
+            die("<script> alert('Usuario o contraseña incorrectos'); window.location='" . base_url() . "';</script>"); 
         }
-        // Si inicia sesion �a donde se le redigira y como?
+        // Si inicia sesion ¿a donde se le redigira y como?
         return redirect()->to( base_url().'/index.php/VisualizarUsuario');
-        // Si inicia sesion �a donde se le redigira y como?
+        // Si inicia sesion ï¿½a donde se le redigira y como?
     }
 
     public function cerrar_session() {

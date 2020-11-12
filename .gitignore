@@ -1,5 +1,6 @@
 /nbproject/private/
 .env
+app/Config/Database.php
 
 *~
 
