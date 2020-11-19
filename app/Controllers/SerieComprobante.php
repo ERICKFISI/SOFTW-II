@@ -85,6 +85,7 @@ class SerieComprobante extends BaseController
 					$data[ 'comprobantes' ]	= $model->traerComprobantes();
 					$model = new ModeloSerieComprobante();
 					$data[ 'seriecomprobante' ] = $model -> find( $id );
+                    $data["tseries"] = json_encode($model->traerSerieComprobante(), true);
 					echo $this->use_layout( 'modificar_seriecomprobante', $data );
 				}
 				else
@@ -243,5 +244,15 @@ class SerieComprobante extends BaseController
 			echo $e -> getMessage();
 		}
 	}
+
+
+    public function traerSeries()
+    {
+        $modelo = new ModeloSerieComprobante();
+
+        $series = $modelo->traerSerieComprobante();
+        return json_encode($series, true);
+    }
+
 
 }

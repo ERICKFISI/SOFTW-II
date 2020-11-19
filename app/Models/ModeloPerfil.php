@@ -14,4 +14,11 @@ class ModeloPerfil extends Model
     // Validaciones y mensajes
     protected $validationRules = ["nombre" => "required|string|max_length[50]"];
     protected $validationMessages = ["nombre" => ["max_length" => "Se  ha sobrepasado el tamanio del texto"]];
+
+    public function traerPerfiles()
+    {
+        return $this->db->table("perfil p")
+                ->where("p.estado", 1)
+                ->get()->getResultArray();
+    }
 }

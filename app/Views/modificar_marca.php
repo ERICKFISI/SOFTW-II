@@ -1,3 +1,21 @@
+<script>
+ function verificarMarca_2(entrada)
+ {
+     let marcas = <?= $tmarcas; ?>;
+     let marcaActual = entrada.value;
+
+     for (i in marcas)
+     {
+	 if (marcas[i]["marca"] === marcaActual)
+	 {
+	     alert("Este marca ya existe");
+	     document.getElementById("marca").value = "";
+	 }
+     }
+ }
+</script>
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +33,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Nombre de la marca
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" value="<?php echo $marca['marca']; ?>" class="form-control" name="marca" required>
+                            <input type="text" value="<?php echo $marca['marca']; ?>" id="marca" onchange="verificarMarca_2(this)" class="form-control" name="marca" required>
                         </div>
                     </div>
 

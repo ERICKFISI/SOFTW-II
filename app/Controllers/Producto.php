@@ -87,4 +87,13 @@ class Producto extends Controller{
 		return $data;
 	}
 			
+    public function traerProductos()
+    {
+        $modelo = new ProductoModel();
+
+        $productos = $modelo->traerProductos();
+        return json_encode($productos, true);
+    }
+
+
 }#fin CLASS

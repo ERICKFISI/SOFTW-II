@@ -85,5 +85,6 @@ class Usuario extends Perfil{
 		}
 		return $data;
 	}
+
 			
 }#fin CLASS

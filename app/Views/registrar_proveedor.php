@@ -1,3 +1,29 @@
+<script src="<?= base_url().'/public/js/ajax.js'; ?>" type="text/javascript"></script>
+
+<script>
+ 
+ function proveedor(respuesta, cadena)
+ {
+     let proveedores = JSON.parse(respuesta);
+     for (let i in proveedores)
+     {
+	 if (proveedores[i].documento === cadena)
+	 {
+	     alert("Este proveedor ya existe");
+	     document.getElementById("documento").value = "";
+	 }
+     }
+ }
+
+ function verificarProveedor(entrada)
+ {
+     ajax_get("../proveedor/traerProveedores", entrada.value, proveedor);
+ }
+ 
+</script>
+
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -30,7 +56,7 @@
                     <div class="form-group row">
                           <label class="control-label col-md-3 col-sm-3 ">Documento</label>
                           <div class="col-md-9 col-sm-9">
-                            <input type="text" class="form-control" maxlength="11" id="documento" name="documento" required>            
+                            <input type="text" class="form-control" onchange="verificarProveedor(this)" value="" maxlength="11" id="documento" name="documento" required>
                           </div>
                     </div>
                                  <div class="form-group row ">

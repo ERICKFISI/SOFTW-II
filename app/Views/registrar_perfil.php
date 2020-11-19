@@ -1,3 +1,34 @@
+<script>
+
+ function ajax_get(nombre_perfil)
+ {
+     let xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function()
+     {
+	 if (this.readyState == 4 && this.status == 200)
+	 {
+	     let perfiles = JSON.parse(this.responseText);
+	     for (let i in perfiles)
+	     {
+		 if (perfiles[i].nombre === nombre_perfil)
+		 {
+		     alert("Ya existe este perfil");
+		     document.getElementById("nombreperfil").value = "";
+		 }
+	     }
+	 }
+     }
+     xhttp.open("GET", "registrarperfil/traerPerfiles", true);
+     xhttp.send();
+ }
+
+ function verificarPerfil(entrada) // El input de nombre de perfil
+ {
+     ajax_get(entrada.value);
+ }
+ 
+</script>
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +46,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Nombre del perfil
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" name="nombreperfil" required>
+                            <input type="text" onchange="verificarPerfil(this)" id="nombreperfil" class="form-control" value="" name="nombreperfil" required>
                         </div>
                     </div>
                     <?php foreach ($registros as $registro): ?>

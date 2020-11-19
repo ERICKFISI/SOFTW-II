@@ -44,4 +44,13 @@ class Marca extends Controller{
 		}#fin ELSE
 	} 
 			
+    public function traerMarcas()
+    {
+        $modelo = new MarcaModel();
+
+        $marcas = $modelo->traerMarcas();
+        return json_encode($marcas, true);
+    }
+
+
 }#fin CLASS

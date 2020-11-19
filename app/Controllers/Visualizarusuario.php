@@ -59,6 +59,7 @@ class VisualizarUsuario extends BaseController {
                     $usuarios = new UsuarioModel();
                     $data['usuarios'] = $usuarios->where('estado', 1)->find($id);
                     $data['perfiles'] = $perfiles;
+                    $data["tusuarios"] = json_encode($usuarios->traerUsuarios(), true);
                     echo $this->use_layout('modificar_usuario', $data);
                 }
                 else
@@ -141,5 +142,14 @@ class VisualizarUsuario extends BaseController {
             echo $e -> getMessage();
         }
     }
+
+    public function traerUsuarios()
+    {
+        $modelo = new UsuarioModel();
+
+        $usuarios = $modelo->traerUsuarios();
+        return json_encode($usuarios, true);
+    }
+
 
 }

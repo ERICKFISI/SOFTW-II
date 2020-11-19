@@ -67,7 +67,8 @@ class VisualizarProducto extends BaseController
                     $data['producto'] = $productos->where('estadoproducto', 1)->find($id);
                     $data['categorias'] = $categorias;
                     $data['marcas'] = $marcas;
-                    $data['lineas'] = $lineas;        
+                    $data['lineas'] = $lineas;
+                    $data["tproductos"] = json_encode($productos->traerProductos(), true);
                     echo $this->use_layout('modificar_producto', $data);
                 }
                 else

@@ -1,3 +1,29 @@
+
+<script src="<?= base_url().'/public/js/ajax.js'; ?>" type="text/javascript"></script>
+
+<script>
+ 
+ function usuario(respuesta, cadena)
+ {
+     let usuarios = JSON.parse(respuesta);
+     for (let i in usuarios)
+     {
+	 if (usuarios[i].nombreusuario === cadena)
+	 {
+	     alert("Este nombre de usuario ya existe");
+	     document.getElementById("nombreusuario").value = "";
+	 }
+     }
+     
+ }
+
+ function verificarUsuario(entrada)
+ {
+     ajax_get("../visualizarusuario/traerUsuarios", entrada.value, usuario);
+ }
+ 
+</script>
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +41,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Nombre Usuario
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" name="nombreusuario" required>
+                            <input type="text" onchange="verificarUsuario(this)" id="nombreusuario" value="" class="form-control" name="nombreusuario" required>
                         </div>
                     </div>
 

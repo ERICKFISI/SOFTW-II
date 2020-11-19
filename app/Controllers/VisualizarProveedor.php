@@ -60,6 +60,7 @@ class VisualizarProveedor extends BaseController
 
                     $proveedor = new ProveedorModel();
                     $data['proveedor'] = $proveedor->where('estadoproveedor', 1)->find($id);
+                    $data["tproveedores"] = json_encode($proveedor->traerProveedores(), true);
 
                     echo $this->use_layout('modificar_proveedor', $data);
                 }

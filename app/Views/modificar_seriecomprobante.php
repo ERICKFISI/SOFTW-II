@@ -1,3 +1,43 @@
+<script>
+ function verificarSerie_2(entrada)
+ {
+     let series = <?= $tseries; ?>;
+     let serieActual = entrada.value;
+     let idcomprobante = document.forms[0].idcomprobante.value;
+
+     for (i in series)
+     {
+	 if (series[i]["seriesc"] === serieActual &&
+	     series[i]["idcomprobante"] === idcomprobante)
+	 {
+	     alert("Este serie ya existe");
+	     document.getElementById("seriesc").value = "";
+	 }
+     }
+ }
+
+ function verificarSerie_2B()
+ {
+     if (document.getElementById("seriesc").value == "")
+	 return;
+     let series = <?= $tseries; ?>;
+     let serieActual = document.getElementById("seriesc").value;
+     let idcomprobante = document.forms[0].idcomprobante.value;
+
+     for (i in series)
+     {
+	 if (series[i]["seriesc"] === serieActual &&
+	     series[i]["idcomprobante"] === idcomprobante)
+	 {
+	     alert("Este serie ya existe");
+	     document.getElementById("seriesc").value = "";
+	 }
+     }
+ }
+</script>
+
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +55,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Tipo de Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" name="idcomprobante" id="idcomprobante" required>
+                            <select class="form-control" onchange="verificarSerie_2B()" name="idcomprobante" id="idcomprobante" required>
 
                                 <?php
                                 foreach ($comprobantes as $comprobante) {
@@ -38,7 +78,7 @@
                    <div class="form-group row">
                           <label class="control-label col-md-3 col-sm-3 " for="seriesc">Serie</label>
                           <div class="col-md-9 col-sm-9">
-                            <input type="text" minlength="3" maxlength="3" class="form-control"  id="seriesc" name="seriesc" value="<?= $seriecomprobante[ 'seriesc' ] ?>" required>            
+                              <input type="text" minlength="3" maxlength="3" onchange="verificarSerie_2(this)" class="form-control"  id="seriesc" name="seriesc" value="<?= $seriecomprobante[ 'seriesc' ] ?>" required> 
                           </div>
                     </div>
                     <div class="form-group row">

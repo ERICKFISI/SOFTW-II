@@ -97,6 +97,7 @@ class VisualizarMarca extends BaseController
 			        $productos = new MarcaModel();
 			        
 			        $data['marca'] = $productos->where('estado', 1)->find($id);
+                    $data["tmarcas"] = json_encode($productos->traerMarcas(), true);
 			        echo $this->use_layout('modificar_marca', $data);
 				}
 				else

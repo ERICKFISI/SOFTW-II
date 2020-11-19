@@ -1,3 +1,44 @@
+
+<script src="<?= base_url().'/public/js/ajax.js'; ?>" type="text/javascript"></script>
+
+<script>
+ 
+ function serie(respuesta, cadena)
+ {
+     let series = JSON.parse(respuesta);
+     let idcomprobante = document.forms[0].idcomprobante.value;
+	 
+     for (let i in series)
+     {
+	 if (series[i].seriesc === cadena &&
+	     series[i].idcomprobante === idcomprobante)
+	 {
+	     alert("Este serie ya existe");
+	     document.getElementById("seriesc").value = "";
+	 }
+     }
+ }
+
+ function verificarSerie(entrada)
+ {
+     ajax_get("../serieComprobante/traerSeries", entrada.value, serie);
+ }
+
+ // Cuando se produce un cambio en el select
+ function verificarSerieB()
+ {
+     if (document.getElementById("seriesc").value == "")
+	 return;
+     let serieActual = document.getElementById("seriesc").value;
+     
+     ajax_get("../serieComprobante/traerSeries", serieActual, serie);
+ }
+ 
+</script>
+
+
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +56,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Tipo de Comprobante
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <select class="form-control" name="idcomprobante" id="idcomprobante" required>
+                            <select class="form-control" onchange="verificarSerieB()" name="idcomprobante" id="idcomprobante" required>
 
                                 <?php
                                 foreach ($comprobantes as $comprobante) {
@@ -30,7 +71,7 @@
                    <div class="form-group row">
                           <label class="control-label col-md-3 col-sm-3 " for="seriesc">Serie</label>
                           <div class="col-md-9 col-sm-9">
-                            <input type="text" minlength="3" maxlength="3" class="form-control"  id="seriesc" name="seriesc" required>            
+                            <input type="text" minlength="3" maxlength="3" value="" onchange="verificarSerie(this)" class="form-control"  id="seriesc" name="seriesc" required>
                           </div>
                     </div>
                     <div class="form-group row">

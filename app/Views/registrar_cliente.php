@@ -1,3 +1,31 @@
+
+<script src="<?= base_url().'/public/js/ajax.js'; ?>" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+ function cliente(respuesta, cadena)
+ {
+     let clientes = JSON.parse(respuesta);
+     for (let i in clientes)
+     {
+	 if (clientes[i].documento === cadena)
+	 {
+	     alert("Este cliente ya existe");
+	     document.getElementById("documento").value = "";
+	 }
+     }
+ }
+
+ function verificarDocumento(entrada)
+ {
+     ajax_get("traerClientes", entrada.value, cliente);
+ }
+ 
+</script>
+
+
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -29,7 +57,7 @@
                         <label class="control-label col-md-3 col-sm-3 " for="documento" >Documento
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" name="documento" id="documento" maxlength="11" required>
+                            <input type="text" class="form-control" value="" onchange="verificarDocumento(this)" name="documento" id="documento" maxlength="11" required>
                         </div>
                     </div>
 

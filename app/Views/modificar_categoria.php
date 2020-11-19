@@ -1,3 +1,21 @@
+<script>
+ function verificarCategoria_2(entrada)
+ {
+     let categorias = <?= $tcategorias; ?>;
+     let categoriaActual = entrada.value;
+
+     for (i in categorias)
+     {
+	 if (categorias[i]["categoria"] === categoriaActual)
+	 {
+	     alert("Este categoria ya existe");
+	     document.getElementById("categoria").value = "";
+	 }
+     }
+ }
+</script>
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +33,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Nombre de categoría
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" value="<?= $categoria['categoria'] ?>" name="categoria" required>
+                            <input type="text" onchange="verificarCategoria_2(this)" id="categoria" class="form-control" value="<?= $categoria['categoria'] ?>" name="categoria" required>
                         </div>
                     </div>
                     <!--
@@ -69,7 +87,7 @@
 <script type="text/javascript">
     function alerta()
     {
-        var m = confirm("¿Está seguro que desea modificar esta marca?");
+        var m = confirm("¿Está seguro que desea modificar esta categoría?");
         if (m)
         {
             return true;

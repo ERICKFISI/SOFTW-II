@@ -53,4 +53,14 @@ class Proveedor extends Controller{
 		return $data;
 	}
 			
+
+    public function traerProveedores()
+    {
+        $modelo = new ProveedorModel();
+
+        $proveedores = $modelo->traerProveedores();
+        return json_encode($proveedores, true);
+    }
+
+
 }#fin CLASS

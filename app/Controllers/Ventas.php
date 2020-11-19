@@ -240,7 +240,7 @@ class Ventas extends BaseController
         catch( exception $e )
         {
             echo $e -> getMessage();
-        }        
+        }
     }
 
     public function ver($id)
@@ -321,4 +321,5 @@ class Ventas extends BaseController
             echo $e -> getMessage();
         }
     }
+
 }

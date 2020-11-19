@@ -1,3 +1,21 @@
+<script>
+ function verificarUsuario_2(entrada)
+ {
+     let usuarios = <?= $tusuarios; ?>;
+     let usuarioActual = entrada.value;
+
+     for (i in usuarios)
+     {
+	 if (usuarios[i]["nombreusuario"] === usuarioActual)
+	 {
+	     alert("Este usuario ya existe");
+	     document.getElementById("nombreusuario").value = "";
+	 }
+     }
+ }
+</script>
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -14,7 +32,7 @@
                     <label class="control-label col-md-3 col-sm-3 ">Nombre Usuario
                     </label>
                     <div class="col-md-9 col-sm-9 ">
-                        <?= form_input(['type' => 'text', 'class' => 'form-control', 'value' => $usuarios['nombreusuario'], 'name' => 'nombreusuario', 'required']); ?>
+                        <?= form_input(['type' => 'text', 'class' => 'form-control', 'value' => $usuarios['nombreusuario'], 'name' => 'nombreusuario', 'id' => 'nombreusuario', 'onchange' => 'verificarUsuario_2(this)', 'required']); ?>
                     </div>
                 </div>
 

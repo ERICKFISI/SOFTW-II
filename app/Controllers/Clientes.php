@@ -84,6 +84,7 @@ class Clientes extends BaseController
 					$model = new ModeloClientes();
 					$datos[ 'tipodocumentos' ] = $model -> traerTipoDocumentos();
 					$datos[ 'cliente' ] = $model -> traerClientePorId( $id );
+                    $datos["clientes"] = json_encode($model->traerClientes(), true);
 					echo $this->use_layout( 'modificar_cliente', $datos );
 				}
 				else
@@ -246,5 +247,13 @@ class Clientes extends BaseController
 			echo $e -> getMessage();
 		}
 	}
+
+    public function traerClientes()
+    {
+        $modelo = new ModeloClientes();
+
+        $clientes = $modelo->traerClientes();
+        return json_encode($clientes, true);
+    }
 
 }

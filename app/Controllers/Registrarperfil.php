@@ -3,7 +3,8 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-//use App\Models\ModeloUsuarios;
+use App\Models\ModeloPerfil;
+use App\Models\ModeloPermiso;
 
 class Registrarperfil extends BaseController
 {
@@ -93,4 +94,13 @@ class Registrarperfil extends BaseController
         }
     }
     
+    // Funcion para traer los perfiles con ajax
+    public function traerPerfiles()
+    {
+        $modelo = new ModeloPerfil();
+        
+        $perfiles = $modelo->traerPerfiles();
+        return json_encode($perfiles, true);
+    }
+
 }

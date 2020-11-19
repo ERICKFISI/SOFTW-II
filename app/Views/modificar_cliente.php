@@ -1,3 +1,22 @@
+
+<script>
+ function verificarDocumento_2(entrada)
+ {
+     let clientes = <?= $clientes; ?>;
+     let docActual = entrada.value;
+
+     for (i in clientes)
+     {
+	 if (clientes[i]["documento"] === docActual)
+	 {
+	     alert("Este cliente ya existe");
+	     document.getElementById("documento").value = "";
+	 }
+     }
+ }
+</script>
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -39,7 +58,7 @@
                         <label class="control-label col-md-3 col-sm-3 " for="documento" >Documento
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" name="documento" id="documento" value="<?= $cliente[ '0' ][ 'documento' ];  ?>" maxlength="11" required>
+                            <input type="text" class="form-control" onchange="verificarDocumento_2(this)" name="documento" id="documento" value="<?= $cliente[ '0' ][ 'documento' ];  ?>" maxlength="11" required>
                         </div>
                     </div>
 

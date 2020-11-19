@@ -1,3 +1,21 @@
+<script>
+ function verificarProducto_2(entrada)
+ {
+     let productos = <?= $tproductos; ?>;
+     let productoActual = entrada.value;
+
+     for (i in productos)
+     {
+	 if (productos[i]["producto"] === productoActual)
+	 {
+	     alert("Este producto ya existe");
+	     document.getElementById("producto").value = "";
+	 }
+     }
+ }
+</script>
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +33,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Nombre del producto
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                          <?= form_input(["type"=>"text", "class"=>"form-control", "value" => $producto["producto"], "name"=>"producto", "required"]); ?>
+                            <?= form_input(["type"=>"text", "class"=>"form-control", "value" => $producto["producto"], "name"=>"producto", "id" => "producto", "onchange" => "verificarProducto_2(this)", "required"]); ?>
                         </div>
                     </div>
 

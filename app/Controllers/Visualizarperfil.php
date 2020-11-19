@@ -60,6 +60,7 @@ class VisualizarPerfil extends BaseController
 			        $data['permisos'] = $permisos->where( ['idperfil' => $id ,'estado' => 1])->findAll();
 			        $data['perfiles'] = $perfiles -> where( 'estado', 1 ) -> find( $id );
 			        $data['modulos'] = $modulos -> where( 'estado', 1 ) -> findAll();
+                    $data["tperfiles"] = json_encode($perfiles->traerPerfiles(), true);
 			        echo $this->use_layout('modificar_perfil', $data);
 				}
 				else

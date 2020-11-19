@@ -1,3 +1,29 @@
+<script src="<?= base_url().'/public/js/ajax.js'; ?>" type="text/javascript"></script>
+
+<script>
+ 
+ function categoria(respuesta, cadena)
+ {
+     let categorias = JSON.parse(respuesta);
+     for (let i in categorias)
+     {
+	 if (categorias[i].categoria === cadena)
+	 {
+	     alert("Este nombre de categoria ya existe");
+	     document.getElementById("categoria").value = "";
+	 }
+     }
+ }
+
+ function verificarCategoria(entrada)
+ {
+     ajax_get("../VisualizarCategoria/traerCategorias", entrada.value, categoria);
+ }
+ 
+</script>
+
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +41,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Nombre de categoría
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" value="" name="categoria" required>
+                            <input type="text" class="form-control" value="" id="categoria" onchange="verificarCategoria(this)" name="categoria" required>
                         </div>
                     </div>
                     <!--

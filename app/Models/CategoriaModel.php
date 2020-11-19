@@ -10,4 +10,10 @@ class CategoriaModel extends Model{
 	protected $returnType = 'array';
 	protected $allowedFields = ['categoria','estadocategoria'];
 
+    public function traerCategorias()
+    {
+        return $this->db->table("categoria c")
+                ->where("c.estadocategoria", 1)
+                ->get()->getResultArray();
+    }
 }

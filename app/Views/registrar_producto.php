@@ -1,3 +1,27 @@
+<script src="<?= base_url().'/public/js/ajax.js'; ?>" type="text/javascript"></script>
+
+<script>
+ 
+ function producto(respuesta, cadena)
+ {
+     let productos = JSON.parse(respuesta);
+     for (let i in productos)
+     {
+	 if (productos[i].producto === cadena)
+	 {
+	     alert("Este nombre de producto ya existe");
+	     document.getElementById("producto").value = "";
+	 }
+     }
+ }
+
+ function verificarProducto(entrada)
+ {
+     ajax_get("../producto/traerProductos", entrada.value, producto);
+ }
+ 
+</script>
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -15,7 +39,7 @@
                         <label class="control-label col-md-3 col-sm-3 ">Nombre del producto
                         </label>
                         <div class="col-md-9 col-sm-9 ">
-                            <input type="text" class="form-control" name="producto" required>
+                            <input type="text" class="form-control" id="producto" value="" onchange="verificarProducto(this)" name="producto" required>
                         </div>
                     </div>
 

@@ -1,3 +1,21 @@
+
+<script>
+ function verificarPerfil_2(entrada)
+ {
+     let perfiles = <?= $tperfiles; ?>;
+     let perfilActual = entrada.value;
+
+     for (i in perfiles)
+     {
+	 if (perfiles[i]["nombre"] === perfilActual)
+	 {
+	     alert("Este perfil ya existe");
+	     document.getElementById("nombre").value = "";
+	 }
+     }
+ }
+</script>
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -14,7 +32,7 @@
                     <label class="control-label col-md-3 col-sm-3 ">Nombre Perfil
                     </label>
                     <div class="col-md-9 col-sm-9 ">
-                        <?= form_input(['type' => 'text', 'class' => 'form-control', 'value' => $perfiles['nombre'], 'name' => 'nombre', 'required']); ?>
+                        <?= form_input(['type' => 'text', 'class' => 'form-control', 'value' => $perfiles['nombre'], 'name' => 'nombre', 'id' => 'nombre', 'onchange' => 'verificarPerfil_2(this)', 'required']); ?>
                     </div>
                 </div>
                 <br>

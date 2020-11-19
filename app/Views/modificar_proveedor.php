@@ -1,3 +1,21 @@
+<script>
+ function verificarProveedor_2(entrada)
+ {
+     let proveedores = <?= $tproveedores; ?>;
+     let proveedorActual = entrada.value;
+
+     for (i in proveedores)
+     {
+	 if (proveedores[i]["documento"] === proveedorActual)
+	 {
+	     alert("Este proveedor ya existe");
+	     document.getElementById("documento").value = "";
+	 }
+     }
+ }
+</script>
+
+
 <div class="">
     <div class="page-title">
         <div class="title_left">
@@ -33,7 +51,7 @@
 		    <div class="form-group row">
 		      <label class="control-label col-md-3 col-sm-3 ">Documento</label>
 		      <div class="col-md-9 col-sm-9">	
-            <?= form_input(["type"=>"text", "class"=>"form-control", "value" => $proveedor["documento"], "name"=>"documento","id"=>"documento", "maxlength"=>"11", "required"]); ?>		
+			  <?= form_input(["type"=>"text", "class"=>"form-control", "value" => $proveedor["documento"], "name"=>"documento","id"=>"documento", "onchange" => "verificarProveedor_2(this)", "maxlength"=>"11", "required"]); ?>
 		      </div>
 		    </div>
             <div class="form-group row ">

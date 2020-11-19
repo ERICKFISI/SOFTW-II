@@ -10,7 +10,14 @@ class ProveedorModel extends Model{
 	protected $returnType = 'array';
 	protected $allowedFields = ['idtipodocumento','documento','razonsocial','nombrecomercial','direccion','email','telefono_cel','estadoproveedor'];
 
-	   public function traerPorId($id)
+    public function traerProveedores()
+    {
+        return $this->db->table("proveedor p")
+                ->where("p.estadoproveedor", 1)
+                ->get()->getResultArray();
+    }
+
+    public function traerPorId($id)
     {
         return $this->db->table("proveedor p")
                 ->where("p.estadoproveedor", 1)
