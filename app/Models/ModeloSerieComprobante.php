@@ -20,4 +20,14 @@ class ModeloSerieComprobante extends Model
 		-> get() -> getResultArray();
 	}
 
+	public function traerSerieComprobantePorId($id)
+	{
+		return $this -> db -> table( 'seriecorrelativo sc' )
+                -> where( 'sc.estadoseriecorrelativo', 1 )
+                -> where( 'c.estadocomprobante', 1 )
+                -> where( 'sc.idseriecorrelativo', $id )
+                -> join(  'comprobante c', 'c.idcomprobante = sc.idcomprobante' )
+                -> get() -> getResultArray();
+	}
+
 }

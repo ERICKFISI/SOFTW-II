@@ -149,7 +149,6 @@
 	 check.name = "cantidades[]";
 	 check.style = "opacity:0; position:absolute; left:9999px;"
 	 document.getElementById(producto.idproducto).appendChild(check);
-
 	 
      });
  }
@@ -204,9 +203,9 @@
      });
  }
 
-
 </script>
-<div class="">
+
+<div class="" id="pag-pdf">
     <div class="page-title">
         <div class="title_left">
             <h3>Registrar Nueva Venta</h3>
@@ -253,7 +252,7 @@
                         </div>
 		    </div>           
 
-                            <input type="hidden" value="<?= $_SESSION["idusuario"];?>" class="form-control" id="idusuario" name="idusuario" required="">
+                    <input type="hidden" value="<?= $_SESSION["idusuario"];?>" class="form-control" id="idusuario" name="idusuario" required="">
 
                     <div class="form-group row ">			
                         <label class="control-label col-md-3 col-sm-3 ">Tipo de Comprobante
@@ -271,8 +270,8 @@
                             </select>
                         </div>
 		    </div>
-            <div class="form-group row ">
-                <label class="control-label col-md-3 col-sm-3 ">Número de Comprobante</label>
+		    <div class="form-group row ">
+			<label class="control-label col-md-3 col-sm-3 ">Número de Comprobante</label>
                         <label class="control-label col-md-2 col-sm-2 "> Serie
                         </label>
                         <div class="col-md-2 col-sm-2 ">
@@ -285,7 +284,7 @@
                         <div class="col-md-2 col-sm-2 ">
                             <input type="text" class="form-control" name="serie" id="serie" readonly >
                         </div>
-            </div>
+		    </div>
 		    
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Fecha de Venta
@@ -365,7 +364,7 @@
 		    
                     <div class="form-group row">
                         <center class="col-md-12 col-sm-12  offset-md-12">
-                            <button type="submit" class="btn btn-success">Guardar</button>
+                            <button  type="submit" class="btn btn-success">Pagar</button>
                             <a href="<?php echo base_url() . '/ventas' ?>" class="btn btn-primary">Cancelar</a>
                         </center>
                     </div>
@@ -375,6 +374,7 @@
     </div> 
 </div> 
 </div>
+
 <script type="text/javascript">
     let a =  '<?php echo json_encode( $seriecomprobantes ); ?>' ;
     a = JSON.parse(a);
@@ -455,21 +455,22 @@
             } 
         } );
 </script>
+
 <script type="text/javascript">
-    let b =  '<?php echo json_encode( $seriecomprobantes ); ?>' ;
-    b = JSON.parse(b);
-    let seriecorrelativo2 = document.getElementById( 'idseriecorrelativo' );
-    console.log(a);
-    seriecorrelativo2.addEventListener( 'change', function()
-    {
-        let comprobante2 = document.getElementById( 'idcomprobante' );
-        b.forEach( function( valor, indice, array )
-                    {
-                        if( valor[ 'idcomprobante' ] == comprobante2.value && valor[ 'idseriecorrelativo' ] == seriecorrelativo2.value )
-                        {
-                            let serie = document.getElementById( 'serie' );
-                            serie.value = valor[ 'correlativosc' ];
-                        }
-                    } );   
-    } );
+ let b =  '<?php echo json_encode( $seriecomprobantes ); ?>' ;
+ b = JSON.parse(b);
+ let seriecorrelativo2 = document.getElementById( 'idseriecorrelativo' );
+ console.log(a);
+ seriecorrelativo2.addEventListener( 'change', function()
+     {
+         let comprobante2 = document.getElementById( 'idcomprobante' );
+         b.forEach( function( valor, indice, array )
+             {
+                 if( valor[ 'idcomprobante' ] == comprobante2.value && valor[ 'idseriecorrelativo' ] == seriecorrelativo2.value )
+                 {
+                     let serie = document.getElementById( 'serie' );
+                     serie.value = valor[ 'correlativosc' ];
+                 }
+             } );   
+     } );
 </script>
