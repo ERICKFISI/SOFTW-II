@@ -309,8 +309,9 @@ class Ventas extends BaseController
 
             $sub = $data["cantidades"][$indice] * $productoActual["preciounidad"];
 
+            // uft8_decode para que se muestre correctamente los caracteres de espaniol
             $pdf->Cell($tams[0], 6, $data["cantidades"][$indice],'LR',0,'L',$lleno);
-            $pdf->Cell($tams[1], 6, $productoActual["producto"], 'LR', 0, 'L',$lleno);
+            $pdf->Cell($tams[1], 6, utf8_decode($productoActual["producto"]), 'LR', 0, 'L',$lleno);
             $pdf->Cell($tams[2], 6, number_format($productoActual["preciounidad"]),'LR',0,'R',$lleno);
             $pdf->Cell($tams[3], 6, number_format($sub),'LR',0,'R',$lleno);
             $pdf->Ln();
@@ -324,9 +325,25 @@ class Ventas extends BaseController
         $pdf->Cell($tams[3], 6, number_format($data["totalventa"]), 1, 0, "R");
                           
 
-        $this->response->setHeader('Content-Type', 'application/pdf');
-        $pdf->Output();
+        //$this->response->setHeader('Content-Type', 'application/pdf');
+        //$pdf->Output("D", "venta.pdf", true);
 
+        // F -> Obligar a descargar y guardar -- true -> Codificar con utf8
+
+        // La desventaja de esto es que el usuario tendría que buscar un pdf cada vez que genera...
+        // se debe tratar de poner en un ruta accesible y de rapido acceso
+        // Para el nombre se podria concatenar la fecha y hora [ date("Y-m-d H:i:s") ] con el nombre del cliente
+        // ($cliente) de esa manera se tiene nombres unicos de los pdf's
+        
+        // EDITADO: Tenia que hacerlo...ya que con el mismo nombre se sobreescribe el pdf
+        $ruta = "/var/www/html/motorepuestosjc/public/productos/"; // Poner ruta de windows
+        $nombre = date("Y-m-d_H:i:s")."_".$cliente.".pdf"; // Si desean primero el nombre del cliente
+        switch($pdf->Output("F", $ruta.$nombre))
+        {
+            default:
+                echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";
+        }
+        
     }
 
     // Colocar la cabecera de la boleta, en $data tiene que ir el numero de serie y el correlativo
@@ -347,13 +364,13 @@ class Ventas extends BaseController
     public function info_venta(&$pdf, $cliente, $direccion, $doc, $fecha)
     {
         $pdf->Ln();
-        $pdf->Cell(100, 10, "Señor (es): ".$cliente, 0);
+        $pdf->Cell(100, 10, utf8_decode("Señor (es): ".$cliente), 0);
         $pdf->Ln();
-        $pdf->Cell(100, 10, "Dirección: ".$direccion, 0);
+        $pdf->Cell(100, 10, utf8_decode("Dirección: ".$direccion), 0);
         $pdf->Ln();
-        $pdf->Cell(50, 10, "Documento: ".$doc, 0);
+        $pdf->Cell(50, 10, utf8_decode("Documento: ".$doc), 0);
         $pdf->Cell(60);
-        $pdf->Cell(50, 10, "Fecha: ".$fecha, 0);
+        $pdf->Cell(50, 10, utf8_decode("Fecha: ".$fecha), 0);
         $pdf->Ln();
     }
 
