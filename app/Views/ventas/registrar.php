@@ -215,7 +215,7 @@
         <div class="x_panel">
             <div class="x_content">
                 <br />
-                <form class="form-horizontal form-label-left h6" action="../ventas/crear" method="POST">
+                <form class="form-horizontal form-label-left h6" target="_blank"  action="../ventas/crear" method="POST">
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Cliente
                         </label>
@@ -364,7 +364,7 @@
 		    
                     <div class="form-group row">
                         <center class="col-md-12 col-sm-12  offset-md-12">
-                            <button  type="submit" class="btn btn-success">Pagar</button>
+                            <button type="submit"  onclick="ver_carga()"  class="btn btn-success">Pagar</button>
                             <a href="<?php echo base_url() . '/ventas' ?>" class="btn btn-primary">Cancelar</a>
                         </center>
                     </div>
@@ -374,6 +374,21 @@
     </div> 
 </div> 
 </div>
+
+<script>
+
+ function ver_carga()
+ {
+     let productos = document.getElementById("productos");
+     // Hay elementos en la tabla?
+     if (productos.childNodes.length > 1)
+     {
+	 window.location.href='../ventas';
+     }
+ }
+ 
+</script>
+
 
 <script type="text/javascript">
     let a =  '<?php echo json_encode( $seriecomprobantes ); ?>' ;

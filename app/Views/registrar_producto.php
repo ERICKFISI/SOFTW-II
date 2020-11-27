@@ -33,7 +33,7 @@
 
             <div class="x_content">
                 <br />
-                <form class="form-horizontal form-label-left h6" action="../producto/create" method="POST">
+                <form class="form-horizontal form-label-left h6" enctype="multipart/form-data"  action="../producto/create" method="POST">
 
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Nombre del producto

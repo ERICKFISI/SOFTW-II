@@ -232,9 +232,17 @@ class Ventas extends BaseController
                     }
                     //echo "<script>alert('Venta guardada');</script>";
                     //echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";
-                    $this->hacerPdf($_POST);
+                    $pdf = $this->hacerPdf($_POST);
+                    //$this->hacerPdf($_POST);
                     
+                    $this->response->setHeader('Content-Type', 'application/pdf');
+                    
+                    //echo "<script> window.open('data:application/pdf, encodeURI('".$pdf."')', '_blank') </script>";
 
+                    //echo "<script> window.open('".$pdf."', '_blank') </script>";
+                    //echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";
+                    print_r($pdf);
+                    //return;
                 }
                 else
                 {
@@ -328,22 +336,21 @@ class Ventas extends BaseController
         //$this->response->setHeader('Content-Type', 'application/pdf');
         //$pdf->Output("D", "venta.pdf", true);
 
-        // F -> Obligar a descargar y guardar -- true -> Codificar con utf8
-
-        // La desventaja de esto es que el usuario tendría que buscar un pdf cada vez que genera...
-        // se debe tratar de poner en un ruta accesible y de rapido acceso
-        // Para el nombre se podria concatenar la fecha y hora [ date("Y-m-d H:i:s") ] con el nombre del cliente
-        // ($cliente) de esa manera se tiene nombres unicos de los pdf's
-        
-        // EDITADO: Tenia que hacerlo...ya que con el mismo nombre se sobreescribe el pdf
+        /*
         $ruta = "/var/www/html/motorepuestosjc/public/productos/"; // Poner ruta de windows
         $nombre = date("Y-m-d_H:i:s")."_".$cliente.".pdf"; // Si desean primero el nombre del cliente
         switch($pdf->Output("F", $ruta.$nombre))
         {
             default:
-                echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";
+            echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";
         }
+        */
+        return $pdf->Output("S");
         
+        //$ruta = base_url()."/ventas/pdf_nuevo";
+        //$this->response->setHeader('Content-Type', 'application/pdf');
+        //echo "<script> window.open('".base_url()."', '_blank') </script>";
+        //echo "<script>alert('Venta guardada');window.location.href='".base_url()."/ventas';</script>";
     }
 
     // Colocar la cabecera de la boleta, en $data tiene que ir el numero de serie y el correlativo
@@ -416,6 +423,68 @@ class Ventas extends BaseController
             echo $e -> getMessage();
         }        
     }
+
+    public function ver_pdf($id)
+    {
+        $mventas = new ModeloVentas();
+
+        $venta = $mventas->traerVentaPorId($id);
+        $venta = $venta[0];
+        $detalle = $mventas->traerDetDeVenta($id);
+
+        $pdf = new \FPDF();
+        $pdf->SetFont("Arial", "", 12);
+        $pdf->AddPage();
+        $numeracion = [$venta["correlativosc"], $venta["seriesc"]];
+
+        $this->cabecera($pdf, $numeracion, $comprobante." DE VENTA");
+        $this->info_venta($pdf, $venta["razonsocial"], $venta["direccion"], $venta["documento"], $venta["fechaventa"]);
+
+        // Formamos la tabla
+        $cabecera = ["CANT.", "DESCRIPCION", "P. UNIT.", "IMPORTE"]; // Titulos de la tabla
+        $tams = [20, 80, 30, 50]; // Tamanio de las columnas (Ancho)
+        // Configaramos la colores para la cabecera de la tabla
+        $pdf->SetFillColor(255,0,0);
+        $pdf->SetTextColor(255);
+        $pdf->SetDrawColor(128,0,0);
+        $pdf->SetLineWidth(.3);
+        // Cabecera de la tabla
+        $c = 0;
+        foreach($cabecera as $col)
+            $pdf->Cell($tams[$c++], 7, $col, 1, 0, "C", true);
+        $pdf->Ln();
+        // Volvemos a los colores normales
+        $pdf->SetFillColor(224,235,255);
+        $pdf->SetTextColor(0);
+        $pdf->SetFont('');
+        $lleno = false;
+
+        // Productos - el cuerpo de la tabla
+        $indice = 0; // Para recorrer las cantidades
+        foreach ($detalle as $det)
+        {
+            $sub = $det["cantidadventa"] * $det["preciounidad"];
+
+            // uft8_decode para que se muestre correctamente los caracteres de espaniol
+            $pdf->Cell($tams[0], 6, $det["cantidadventa"], 'LR', 0, 'L',$lleno);
+            $pdf->Cell($tams[1], 6, utf8_decode($det["producto"]), 'LR', 0, 'L',$lleno);
+            $pdf->Cell($tams[2], 6, number_format($det["preciounidad"]),'LR',0,'R',$lleno);
+            $pdf->Cell($tams[3], 6, number_format($sub),'LR',0,'R',$lleno);
+            $pdf->Ln();
+            $lleno = !$lleno;
+            $indice++;
+        }
+        $pdf->Cell(array_sum($tams), 0, "", "T"); // Linea de cierre de la tabla
+        $pdf->Ln();
+        $pdf->Cell($tams[0] + $tams[1]); // Movernos y posicionarnos el la columa de P. UNIT
+        $pdf->Cell($tams[2], 6, "TOTAL", 1);
+        $pdf->Cell($tams[3], 6, number_format($venta["totalventa"]), 1, 0, "R");
+        
+
+        $this->response->setHeader('Content-Type', 'application/pdf');
+        $pdf->Output();
+    }
+
 
     public function eliminar($id)
     {

@@ -33,18 +33,18 @@ class Producto extends Controller{
                           'idlinea' => $_POST['idlinea'],
                           'descripcionproducto' => $_POST['descripcionproducto'],
                           'stock' => $_POST['stock'],
-                          'preciounidad' => $_POST['preciounidad'],
-                          'rutafoto' => $_POST['rutafoto']);
+                          'preciounidad' => $_POST['preciounidad']
+                          );
+
 
             // Modicamos la ruta foto -- Las fotos de los productos iran en public/productos
-            // TODO: No reconoce el id "rutafoto" el cual asi esta en el name del input
-            /*
-            $ruta = "public/productos/".$_FILES["rutafoto"]["name"];
-            $ruta2 = "../../public/productos/".$_FILES["rutafoto"]["name"];
-            move_upload_file($_FILES["rutafoto"]["tmp_name"], $ruta2);
+
+            $windows = "C:\\xampp\\htdocs\\motorepuestosjc\\"; 
+            $ruta = "/public/productos/".$_FILES["rutafoto"]["name"];
+            $ruta2 = $windows."public/productos/".$_FILES["rutafoto"]["name"];
+            move_uploaded_file($_FILES["rutafoto"]["tmp_name"], $ruta2);
 
             $data["rutafoto"] = $ruta;
-            */
             
 			$mensaje;
 

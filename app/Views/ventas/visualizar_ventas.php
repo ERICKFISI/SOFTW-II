@@ -22,7 +22,7 @@
                                         <tr class="text-center">
                                             <th>Id</th>
 					    <th>Comprobante</th>
-                        <th>N° Comprobante</th>
+					    <th>N° Comprobante</th>
                                             <th>Cliente</th>
 					    <th>Dirección</th>
                                             <th>Usuario</th>
@@ -36,7 +36,7 @@
                                         <?php foreach ($ventas as $llave => $valor): ?>
 					    <tr>
 						<td> <?= $valor["idventa"]; ?></td>
-                        <td> <?= $valor["comprobante"]; ?></td>
+						<td> <?= $valor["comprobante"]; ?></td>
 						<td> <?= $valor["seriesc"]."-".$valor[ "serie" ]; ?></td>
 						<td> <?= $valor["razonsocial"]; ?></td>
 						<td> <?= $valor["direccioncliente"]; ?></td>
@@ -52,21 +52,25 @@
 							<span class="badge badge-danger">Anulado</span>
 						    <?php } ?>
 						</td>
-                        <td class="text-center row">
-                        <?php
-                            if ($valor["estadoventa"] == 1) {
-                            ?>
-                            <div class="col-lg-10 col-md-10 mx-auto px-0">
-                            <a href="<?= base_url().'/ventas/ver/'.$valor["idventa"] ?>" class="btn btn-secondary btn-sm mx-auto col-12"><i class="fa fa-eye tema">Ver</i></a></div>
-                            <div class="col-lg-10 col-md-10 mx-auto px-0" >
-                            <a href="<?= base_url().'/ventas/eliminar/'.$valor["idventa"] ?>" onclick="return alerta()" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o tema">Eliminar</i></a></div>
-                            <?php } else {?>
-                            <div class="col-lg-10 col-md-10 mx-auto px-0">
-                            <a href="<?= base_url().'/ventas/ver/'.$valor["idventa"] ?>" class="btn btn-secondary btn-sm mx-auto col-12"><i class="fa fa-eye tema">Ver</i></a></div>
-                            <?php } ?>
+						<td class="text-center row">
+						    <?php
+						    if ($valor["estadoventa"] == 1) {
+						    ?>
+							<div class="col-lg-10 col-md-10 mx-auto px-0">
+							    <a href="<?= base_url().'/ventas/ver/'.$valor["idventa"] ?>" class="btn btn-secondary btn-sm mx-auto col-12"><i class="fa fa-eye tema">Ver</i></a></div>
+							<div class="col-lg-10 col-md-10 mx-auto px-0" >
+							    <a href="<?= base_url().'/ventas/eliminar/'.$valor["idventa"] ?>" onclick="return alerta()" class="btn btn-danger btn-sm mx-auto col-12"><i class="fa fa-trash-o tema">Eliminar</i></a></div>
+						    <?php } else {?>
+							<div class="col-lg-10 col-md-10 mx-auto px-0">
+							    <a href="<?= base_url().'/ventas/ver/'.$valor["idventa"] ?>" class="btn btn-secondary btn-sm mx-auto col-12"><i class="fa fa-eye tema">Ver</i></a></div>
+						    <?php } ?>
+
+						    <div class="col-lg-10 col-md-10 mx-auto px-0">
+							<a href="<?= base_url().'/ventas/ver_pdf/'.$valor["idventa"] ?>" target="_blank" class="btn btn-secondary btn-sm mx-auto col-12"><i class="fa fa-eye tema">PDF</i></a></div>
+						    
 						</td>
 					    </tr>
-					    <?php endforeach; ?>
+					<?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -78,23 +82,23 @@
     </div>
 </div>
 <style type="text/css">
-    .tema::before
-    {
-        margin-right: 5px !important;
-    }
+ .tema::before
+ {
+     margin-right: 5px !important;
+ }
 </style>
 <script type="text/javascript">
-      
-    function alerta()
-    {
-        var m = confirm("¿Está seguro que desea anular esta venta?");
-        if (m)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+ 
+ function alerta()
+ {
+     var m = confirm("¿Está seguro que desea anular esta venta?");
+     if (m)
+     {
+         return true;
+     }
+     else
+     {
+         return false;
+     }
+ }
 </script>
