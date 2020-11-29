@@ -27,7 +27,7 @@
 
             <div class="x_content">
               <br />
-                <?= form_open('VisualizarProducto/update/' . $producto['idproducto'], 'class="form-horizontal form-label-left h6" '); ?>	      
+              <?= form_open('VisualizarProducto/update/' . $producto['idproducto'], 'class="form-horizontal form-label-left h6", enctype="multipart/form-data", method="post"'); ?>
 
                     <div class="form-group row ">
                         <label class="control-label col-md-3 col-sm-3 ">Nombre del producto
@@ -123,7 +123,7 @@
                     <div class="form-group row">
                       <label class="control-label col-md-3 col-sm-3 ">Elija una foto</label>
 		      <div class="col-md-9 col-sm-9">
-			<?= form_input(["type"=>"file", "class"=>"form-control-file", "value"=>$producto["rutafoto"], "name"=>"rutafoto", "id"=>"rutafoto"]); ?>			
+			<?= form_input(["type"=>"file", "class"=>"form-control-file", "name"=>"rutafoto", "id"=>"rutafoto"]); ?>			
 		      </div>
                     </div>
 
